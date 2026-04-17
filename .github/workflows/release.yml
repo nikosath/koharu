@@ -2,6 +2,16 @@ name: Release
 
 on:
   workflow_dispatch:
+    inputs:
+      platform:
+        description: 'Target release platform'
+        required: true
+        type: choice
+        options:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+        default: ubuntu-latest
 
 permissions:
   contents: write
@@ -18,13 +28,14 @@ jobs:
     strategy:
       matrix:
         include:
-          - platform: 'macos-latest' # for Arm based macs (M1 and above).
-            args: '--target aarch64-apple-darwin'
           - platform: 'ubuntu-latest'
             args: ''
           - platform: 'windows-latest'
             args: ''
+          - platform: 'macos-latest'
+            args: '--target aarch64-apple-darwin'
 
+    if: ${{ github.event.inputs.platform == matrix.platform }}
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v6
