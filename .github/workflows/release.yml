@@ -7,6 +7,7 @@ on:
         description: 'Platform to release'
         required: true
         type: choice
+        default: 'windows-latest'
         options:
           - macos-latest
           - ubuntu-latest
