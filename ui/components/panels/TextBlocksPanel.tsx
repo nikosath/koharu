@@ -52,7 +52,7 @@ export function TextBlocksPanel() {
     const selectedLanguage = useEditorUiStore.getState().selectedLanguage
     const textBlockId = document.textBlocks[blockIndex]?.id
     const { renderEffect, renderStroke } = useEditorUiStore.getState()
-    const { customSystemPrompt } = usePreferencesStore.getState()
+    const { customSystemPrompt, temperature } = usePreferencesStore.getState()
     send({
       type: 'START_TRANSLATE_BLOCK',
       documentId,
@@ -60,6 +60,7 @@ export function TextBlocksPanel() {
         textBlockId,
         language: selectedLanguage,
         systemPrompt: customSystemPrompt,
+        temperature,
       },
       renderOptions: {
         shaderEffect: renderEffect,

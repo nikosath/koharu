@@ -14,7 +14,9 @@ import { useTranslation } from 'react-i18next'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
+import { Slider } from '@/components/ui/slider'
 import {
   Select,
   SelectContent,
@@ -130,13 +132,14 @@ function WorkflowButtons() {
         onClick={() => {
           const documentId = requireDocumentId()
           const selectedLanguage = useEditorUiStore.getState().selectedLanguage
-          const { customSystemPrompt } = usePreferencesStore.getState()
+          const { customSystemPrompt, temperature } = usePreferencesStore.getState()
           send({
             type: 'START_TRANSLATE',
             documentId,
             options: {
               language: selectedLanguage,
               systemPrompt: customSystemPrompt,
+              temperature,
             },
           })
         }}
@@ -207,6 +210,8 @@ function LlmStatusPopover() {
   const selectedTarget = useEditorUiStore((state) => state.selectedTarget)
   const customSystemPrompt = usePreferencesStore((state) => state.customSystemPrompt)
   const setCustomSystemPrompt = usePreferencesStore((state) => state.setCustomSystemPrompt)
+  const temperature = usePreferencesStore((state) => state.temperature)
+  const setTemperature = usePreferencesStore((state) => state.setTemperature)
   const llmSelectedLanguage = useEditorUiStore((state) => state.selectedLanguage)
   const { data: llmState } = useGetLlm()
   const llmReady = llmState?.status === 'ready'
@@ -446,6 +451,26 @@ function LlmStatusPopover() {
               rows={5}
               className='min-h-0 resize-y text-xs'
             />
+
+            <div className='flex flex-col gap-1.5'>
+              <div className='flex items-center justify-between'>
+                <Label className='text-[10px] text-muted-foreground uppercase'>
+                  {t('llm.temperature', { defaultValue: 'Temperature' })}
+                </Label>
+                <span className='text-[10px] text-muted-foreground tabular-nums'>
+                  {temperature ?? 0.7}
+                </span>
+              </div>
+              <Slider
+                data-testid='llm-temperature-slider'
+                value={[temperature ?? 0.7]}
+                onValueChange={([value]) => setTemperature(value)}
+                min={0}
+                max={2}
+                step={0.1}
+                className='h-1.5'
+              />
+            </div>
           </div>
         </div>
       </PopoverContent>

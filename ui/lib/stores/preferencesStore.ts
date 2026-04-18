@@ -13,6 +13,8 @@ type PreferencesState = {
   setDefaultFont: (font?: string) => void
   customSystemPrompt?: string
   setCustomSystemPrompt: (prompt?: string) => void
+  temperature?: number
+  setTemperature: (temperature?: number) => void
   shortcuts: {
     select: string
     block: string
@@ -56,6 +58,7 @@ export const usePreferencesStore = create<PreferencesState>()(
         })),
       setDefaultFont: (font) => set({ defaultFont: font }),
       setCustomSystemPrompt: (prompt) => set({ customSystemPrompt: prompt }),
+      setTemperature: (temperature) => set({ temperature }),
       setShortcuts: (shortcuts) =>
         set((state) => ({
           shortcuts: {
@@ -98,6 +101,7 @@ export const usePreferencesStore = create<PreferencesState>()(
         brushConfig: state.brushConfig,
         defaultFont: state.defaultFont,
         customSystemPrompt: state.customSystemPrompt,
+        temperature: state.temperature,
         shortcuts: state.shortcuts,
       }),
     },
