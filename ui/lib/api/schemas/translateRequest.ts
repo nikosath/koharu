@@ -10,5 +10,7 @@ export interface TranslateRequest {
   /** @nullable */
   systemPrompt?: string | null
   /** @nullable */
+  temperature?: number | null
+  /** @nullable */
   textBlockId?: string | null
 }

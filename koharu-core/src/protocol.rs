@@ -361,6 +361,7 @@ pub struct TranslateRequest {
     pub text_block_id: Option<String>,
     pub language: Option<String>,
     pub system_prompt: Option<String>,
+    pub temperature: Option<f64>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, ToSchema)]
