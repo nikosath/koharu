@@ -1,0 +1,2035 @@
+﻿2026-04-16T21:53:44.9821190Z Current runner version: '2.333.1'
+2026-04-16T21:53:44.9835610Z ##[group]Runner Image Provisioner
+2026-04-16T21:53:44.9836180Z Hosted Compute Agent
+2026-04-16T21:53:44.9836600Z Version: 20260415.520
+2026-04-16T21:53:44.9837040Z Commit: af089020f5f67b61ccc91db6c07980876c02bf7b
+2026-04-16T21:53:44.9837560Z Build Date: 2026-04-15T18:07:08Z
+2026-04-16T21:53:44.9838070Z Worker ID: {612986c7-0653-457f-a83e-45567c937e55}
+2026-04-16T21:53:44.9838680Z Azure Region: westus
+2026-04-16T21:53:44.9839110Z ##[endgroup]
+2026-04-16T21:53:44.9840070Z ##[group]Operating System
+2026-04-16T21:53:44.9840510Z macOS
+2026-04-16T21:53:44.9840900Z 15.7.4
+2026-04-16T21:53:44.9841260Z 24G517
+2026-04-16T21:53:44.9841630Z ##[endgroup]
+2026-04-16T21:53:44.9842010Z ##[group]Runner Image
+2026-04-16T21:53:44.9842450Z Image: macos-15-arm64
+2026-04-16T21:53:44.9842930Z Version: 20260414.0270.1
+2026-04-16T21:53:44.9843880Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20260414.0270/images/macos/macos-15-arm64-Readme.md
+2026-04-16T21:53:44.9845050Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20260414.0270
+2026-04-16T21:53:44.9845750Z ##[endgroup]
+2026-04-16T21:53:44.9846630Z ##[group]GITHUB_TOKEN Permissions
+2026-04-16T21:53:44.9847890Z Contents: write
+2026-04-16T21:53:44.9848290Z Metadata: read
+2026-04-16T21:53:44.9848680Z Packages: write
+2026-04-16T21:53:44.9849100Z ##[endgroup]
+2026-04-16T21:53:44.9850570Z Secret source: Actions
+2026-04-16T21:53:44.9851070Z Prepare workflow directory
+2026-04-16T21:53:45.0706980Z Prepare all required actions
+2026-04-16T21:53:45.0850500Z Getting action download info
+2026-04-16T21:53:45.7121970Z Download action repository 'actions/checkout@v6' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-04-16T21:53:46.0413350Z Download action repository 'oven-sh/setup-bun@v2' (SHA:0c5077e51419868618aeaa5fe8019c62421857d6)
+2026-04-16T21:53:46.6607650Z Download action repository 'Jimver/cuda-toolkit@master' (SHA:3d45d157f327c09c04b50ee6ccdea2d9d017ec76)
+2026-04-16T21:53:47.4467100Z Download action repository 'ilammy/msvc-dev-cmd@v1' (SHA:0b201ec74fa43914dc39ae48a89fd1d8cb592756)
+2026-04-16T21:53:47.9802880Z Download action repository 'tauri-apps/tauri-action@v0' (SHA:84b9d35b5fc46c1e45415bdb6144030364f7ebc5)
+2026-04-16T21:53:48.7051550Z Complete job name: release (macos-latest, --target aarch64-apple-darwin)
+2026-04-16T21:53:48.7475380Z ##[group]Run actions/checkout@v6
+2026-04-16T21:53:48.7475890Z with:
+2026-04-16T21:53:48.7476070Z   fetch-depth: 0
+2026-04-16T21:53:48.7476240Z   fetch-tags: true
+2026-04-16T21:53:48.7476420Z   repository: mayocream/koharu
+2026-04-16T21:53:48.7476880Z   token: ***
+2026-04-16T21:53:48.7477050Z   ssh-strict: true
+2026-04-16T21:53:48.7477220Z   ssh-user: git
+2026-04-16T21:53:48.7477390Z   persist-credentials: true
+2026-04-16T21:53:48.7477600Z   clean: true
+2026-04-16T21:53:48.7477850Z   sparse-checkout-cone-mode: true
+2026-04-16T21:53:48.7478100Z   show-progress: true
+2026-04-16T21:53:48.7478270Z   lfs: false
+2026-04-16T21:53:48.7478450Z   submodules: false
+2026-04-16T21:53:48.7478640Z   set-safe-directory: true
+2026-04-16T21:53:48.7478990Z env:
+2026-04-16T21:53:48.7479150Z   CARGO_TERM_COLOR: always
+2026-04-16T21:53:48.7479330Z   REGISTRY: ghcr.io
+2026-04-16T21:53:48.7479520Z   IMAGE_NAME: mayocream/koharu
+2026-04-16T21:53:48.7479720Z ##[endgroup]
+2026-04-16T21:53:49.3766380Z Syncing repository: mayocream/koharu
+2026-04-16T21:53:49.3767700Z ##[group]Getting Git version info
+2026-04-16T21:53:49.3768100Z Working directory is '/Users/runner/work/koharu/koharu'
+2026-04-16T21:53:49.3768730Z [command]/opt/homebrew/bin/git version
+2026-04-16T21:53:49.4502290Z git version 2.53.0
+2026-04-16T21:53:49.4695830Z ##[endgroup]
+2026-04-16T21:53:49.4709740Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/35f7ccff-1bdd-4107-b39e-8c78ceed0edf/.gitconfig'
+2026-04-16T21:53:49.4740340Z Temporarily overriding HOME='/Users/runner/work/_temp/35f7ccff-1bdd-4107-b39e-8c78ceed0edf' before making global git config changes
+2026-04-16T21:53:49.4757280Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-16T21:53:49.4759410Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/koharu/koharu
+2026-04-16T21:53:49.4763320Z Deleting the contents of '/Users/runner/work/koharu/koharu'
+2026-04-16T21:53:49.4765350Z ##[group]Initializing the repository
+2026-04-16T21:53:49.4766790Z [command]/opt/homebrew/bin/git init /Users/runner/work/koharu/koharu
+2026-04-16T21:53:49.5029120Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-04-16T21:53:49.5029850Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-04-16T21:53:49.5030480Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-04-16T21:53:49.5031030Z hint: call:
+2026-04-16T21:53:49.5031280Z hint:
+2026-04-16T21:53:49.5031630Z hint: 	git config --global init.defaultBranch <name>
+2026-04-16T21:53:49.5033110Z hint:
+2026-04-16T21:53:49.5033710Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-04-16T21:53:49.5034340Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-04-16T21:53:49.5034760Z hint:
+2026-04-16T21:53:49.5035090Z hint: 	git branch -m <name>
+2026-04-16T21:53:49.5037940Z hint:
+2026-04-16T21:53:49.5041190Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-04-16T21:53:49.5041840Z Initialized empty Git repository in /Users/runner/work/koharu/koharu/.git/
+2026-04-16T21:53:49.5043410Z [command]/opt/homebrew/bin/git remote add origin https://github.com/mayocream/koharu
+2026-04-16T21:53:49.5129790Z ##[endgroup]
+2026-04-16T21:53:49.5130500Z ##[group]Disabling automatic garbage collection
+2026-04-16T21:53:49.5132640Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2026-04-16T21:53:49.5213290Z ##[endgroup]
+2026-04-16T21:53:49.5214260Z ##[group]Setting up auth
+2026-04-16T21:53:49.5219770Z Removing SSH command configuration
+2026-04-16T21:53:49.5239450Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-16T21:53:49.5324900Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-16T21:53:49.7018810Z Removing HTTP extra header
+2026-04-16T21:53:49.7020200Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-16T21:53:49.7082170Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-16T21:53:49.8451960Z Removing includeIf entries pointing to credentials config files
+2026-04-16T21:53:49.8455260Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-16T21:53:49.8568960Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-16T21:53:49.9707550Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-04-16T21:53:49.9790690Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/koharu/koharu/.git.path /Users/runner/work/_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T21:53:49.9852550Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/koharu/koharu/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T21:53:49.9916910Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T21:53:49.9997570Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T21:53:50.0090110Z ##[endgroup]
+2026-04-16T21:53:50.0090720Z ##[group]Fetching the repository
+2026-04-16T21:53:50.0094490Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-04-16T21:53:51.6627380Z From https://github.com/mayocream/koharu
+2026-04-16T21:53:51.6633190Z  * [new branch]      candle-graph      -> origin/candle-graph
+2026-04-16T21:53:51.6634990Z  * [new branch]      copilot/sub-pr-89 -> origin/copilot/sub-pr-89
+2026-04-16T21:53:51.6636110Z  * [new branch]      copilot/update-renderer-font-size -> origin/copilot/update-renderer-font-size
+2026-04-16T21:53:51.6636940Z  * [new branch]      dependabot/bun/react-markdown-10.1.0 -> origin/dependabot/bun/react-markdown-10.1.0
+2026-04-16T21:53:51.6637620Z  * [new branch]      dependabot/cargo/indexmap-2.14.0 -> origin/dependabot/cargo/indexmap-2.14.0
+2026-04-16T21:53:51.6638280Z  * [new branch]      dependabot/cargo/libloading-0.9.0 -> origin/dependabot/cargo/libloading-0.9.0
+2026-04-16T21:53:51.6638850Z  * [new branch]      dependabot/cargo/rmcp-1.4.0 -> origin/dependabot/cargo/rmcp-1.4.0
+2026-04-16T21:53:51.6639450Z  * [new branch]      dependabot/cargo/tokio-1.51.1 -> origin/dependabot/cargo/tokio-1.51.1
+2026-04-16T21:53:51.6639940Z  * [new branch]      dom-render        -> origin/dom-render
+2026-04-16T21:53:51.6640400Z  * [new branch]      feat/downloader   -> origin/feat/downloader
+2026-04-16T21:53:51.6640860Z  * [new branch]      flash-attn        -> origin/flash-attn
+2026-04-16T21:53:51.6641270Z  * [new branch]      llm-dropdown      -> origin/llm-dropdown
+2026-04-16T21:53:51.6641680Z  * [new branch]      main              -> origin/main
+2026-04-16T21:53:51.6642100Z  * [new branch]      portable          -> origin/portable
+2026-04-16T21:53:51.6642640Z  * [new branch]      refactor/api      -> origin/refactor/api
+2026-04-16T21:53:51.6643160Z  * [new branch]      translation-locale-string -> origin/translation-locale-string
+2026-04-16T21:53:51.6643670Z  * [new branch]      v2                -> origin/v2
+2026-04-16T21:53:51.6644020Z  * [new branch]      wry               -> origin/wry
+2026-04-16T21:53:51.6645000Z  * [new tag]         0.1.1             -> 0.1.1
+2026-04-16T21:53:51.6645400Z  * [new tag]         0.1.10            -> 0.1.10
+2026-04-16T21:53:51.6645930Z  * [new tag]         0.1.11            -> 0.1.11
+2026-04-16T21:53:51.6646240Z  * [new tag]         0.1.2             -> 0.1.2
+2026-04-16T21:53:51.6646710Z  * [new tag]         0.10.0            -> 0.10.0
+2026-04-16T21:53:51.6647060Z  * [new tag]         0.10.1            -> 0.10.1
+2026-04-16T21:53:51.6647400Z  * [new tag]         0.11.0            -> 0.11.0
+2026-04-16T21:53:51.6647810Z  * [new tag]         0.12.0            -> 0.12.0
+2026-04-16T21:53:51.6648220Z  * [new tag]         0.12.1            -> 0.12.1
+2026-04-16T21:53:51.6648560Z  * [new tag]         0.13.0            -> 0.13.0
+2026-04-16T21:53:51.6648930Z  * [new tag]         0.13.1            -> 0.13.1
+2026-04-16T21:53:51.6649390Z  * [new tag]         0.14.0            -> 0.14.0
+2026-04-16T21:53:51.6649800Z  * [new tag]         0.14.1            -> 0.14.1
+2026-04-16T21:53:51.6650910Z  * [new tag]         0.14.2            -> 0.14.2
+2026-04-16T21:53:51.6652090Z  * [new tag]         0.14.3            -> 0.14.3
+2026-04-16T21:53:51.6653090Z  * [new tag]         0.14.4            -> 0.14.4
+2026-04-16T21:53:51.6654280Z  * [new tag]         0.14.5            -> 0.14.5
+2026-04-16T21:53:51.6655330Z  * [new tag]         0.15.0            -> 0.15.0
+2026-04-16T21:53:51.6656410Z  * [new tag]         0.16.0            -> 0.16.0
+2026-04-16T21:53:51.6656800Z  * [new tag]         0.17.0            -> 0.17.0
+2026-04-16T21:53:51.6657360Z  * [new tag]         0.18.0            -> 0.18.0
+2026-04-16T21:53:51.6657760Z  * [new tag]         0.19.0            -> 0.19.0
+2026-04-16T21:53:51.6658740Z  * [new tag]         0.2.0             -> 0.2.0
+2026-04-16T21:53:51.6660370Z  * [new tag]         0.2.1             -> 0.2.1
+2026-04-16T21:53:51.6669900Z  * [new tag]         0.2.2             -> 0.2.2
+2026-04-16T21:53:51.6670370Z  * [new tag]         0.2.3             -> 0.2.3
+2026-04-16T21:53:51.6671110Z  * [new tag]         0.2.3-alpha5      -> 0.2.3-alpha5
+2026-04-16T21:53:51.6671540Z  * [new tag]         0.2.4-alpha       -> 0.2.4-alpha
+2026-04-16T21:53:51.6672470Z  * [new tag]         0.2.4-alpha1      -> 0.2.4-alpha1
+2026-04-16T21:53:51.6673680Z  * [new tag]         0.2.4-alpha2      -> 0.2.4-alpha2
+2026-04-16T21:53:51.6674640Z  * [new tag]         0.2.4-alpha3      -> 0.2.4-alpha3
+2026-04-16T21:53:51.6675560Z  * [new tag]         0.20.0            -> 0.20.0
+2026-04-16T21:53:51.6676370Z  * [new tag]         0.21.0            -> 0.21.0
+2026-04-16T21:53:51.6677420Z  * [new tag]         0.22.0            -> 0.22.0
+2026-04-16T21:53:51.6677850Z  * [new tag]         0.23.0            -> 0.23.0
+2026-04-16T21:53:51.6678230Z  * [new tag]         0.23.1            -> 0.23.1
+2026-04-16T21:53:51.6678540Z  * [new tag]         0.24.0            -> 0.24.0
+2026-04-16T21:53:51.6678810Z  * [new tag]         0.25.0            -> 0.25.0
+2026-04-16T21:53:51.6679140Z  * [new tag]         0.25.1            -> 0.25.1
+2026-04-16T21:53:51.6679520Z  * [new tag]         0.25.2            -> 0.25.2
+2026-04-16T21:53:51.6679790Z  * [new tag]         0.25.3            -> 0.25.3
+2026-04-16T21:53:51.6680070Z  * [new tag]         0.25.4            -> 0.25.4
+2026-04-16T21:53:51.6680380Z  * [new tag]         0.26.0            -> 0.26.0
+2026-04-16T21:53:51.6681010Z  * [new tag]         0.26.1            -> 0.26.1
+2026-04-16T21:53:51.6681290Z  * [new tag]         0.26.2            -> 0.26.2
+2026-04-16T21:53:51.6681590Z  * [new tag]         0.27.0            -> 0.27.0
+2026-04-16T21:53:51.6681900Z  * [new tag]         0.27.1            -> 0.27.1
+2026-04-16T21:53:51.6682990Z  * [new tag]         0.27.2            -> 0.27.2
+2026-04-16T21:53:51.6684020Z  * [new tag]         0.28.0            -> 0.28.0
+2026-04-16T21:53:51.6684830Z  * [new tag]         0.29.0            -> 0.29.0
+2026-04-16T21:53:51.6685950Z  * [new tag]         0.3.0             -> 0.3.0
+2026-04-16T21:53:51.6687530Z  * [new tag]         0.3.1             -> 0.3.1
+2026-04-16T21:53:51.6689300Z  * [new tag]         0.30.0            -> 0.30.0
+2026-04-16T21:53:51.6690310Z  * [new tag]         0.30.1            -> 0.30.1
+2026-04-16T21:53:51.6691120Z  * [new tag]         0.31.0            -> 0.31.0
+2026-04-16T21:53:51.6692040Z  * [new tag]         0.31.1            -> 0.31.1
+2026-04-16T21:53:51.6692790Z  * [new tag]         0.31.2            -> 0.31.2
+2026-04-16T21:53:51.6694250Z  * [new tag]         0.31.3            -> 0.31.3
+2026-04-16T21:53:51.6694810Z  * [new tag]         0.31.4            -> 0.31.4
+2026-04-16T21:53:51.6695130Z  * [new tag]         0.31.5            -> 0.31.5
+2026-04-16T21:53:51.6695400Z  * [new tag]         0.31.6            -> 0.31.6
+2026-04-16T21:53:51.6695680Z  * [new tag]         0.32.0            -> 0.32.0
+2026-04-16T21:53:51.6696390Z  * [new tag]         0.32.1            -> 0.32.1
+2026-04-16T21:53:51.6696790Z  * [new tag]         0.32.2            -> 0.32.2
+2026-04-16T21:53:51.6697080Z  * [new tag]         0.32.3            -> 0.32.3
+2026-04-16T21:53:51.6697390Z  * [new tag]         0.32.4            -> 0.32.4
+2026-04-16T21:53:51.6697650Z  * [new tag]         0.32.5            -> 0.32.5
+2026-04-16T21:53:51.6698040Z  * [new tag]         0.32.6            -> 0.32.6
+2026-04-16T21:53:51.6698310Z  * [new tag]         0.32.7            -> 0.32.7
+2026-04-16T21:53:51.6698580Z  * [new tag]         0.32.8            -> 0.32.8
+2026-04-16T21:53:51.6698880Z  * [new tag]         0.33.0            -> 0.33.0
+2026-04-16T21:53:51.6699150Z  * [new tag]         0.34.0            -> 0.34.0
+2026-04-16T21:53:51.6699490Z  * [new tag]         0.35.0            -> 0.35.0
+2026-04-16T21:53:51.6699800Z  * [new tag]         0.36.0            -> 0.36.0
+2026-04-16T21:53:51.6700420Z  * [new tag]         0.36.1            -> 0.36.1
+2026-04-16T21:53:51.6700690Z  * [new tag]         0.37.0            -> 0.37.0
+2026-04-16T21:53:51.6700950Z  * [new tag]         0.38.0            -> 0.38.0
+2026-04-16T21:53:51.6701210Z  * [new tag]         0.38.1            -> 0.38.1
+2026-04-16T21:53:51.6701590Z  * [new tag]         0.39.0            -> 0.39.0
+2026-04-16T21:53:51.6701860Z  * [new tag]         0.4.0             -> 0.4.0
+2026-04-16T21:53:51.6702130Z  * [new tag]         0.40.0            -> 0.40.0
+2026-04-16T21:53:51.6702380Z  * [new tag]         0.40.1            -> 0.40.1
+2026-04-16T21:53:51.6702740Z  * [new tag]         0.41.0            -> 0.41.0
+2026-04-16T21:53:51.6703020Z  * [new tag]         0.41.1            -> 0.41.1
+2026-04-16T21:53:51.6703290Z  * [new tag]         0.41.2            -> 0.41.2
+2026-04-16T21:53:51.6703540Z  * [new tag]         0.41.3            -> 0.41.3
+2026-04-16T21:53:51.6703810Z  * [new tag]         0.41.4            -> 0.41.4
+2026-04-16T21:53:51.6704080Z  * [new tag]         0.42.0            -> 0.42.0
+2026-04-16T21:53:51.6704410Z  * [new tag]         0.42.1            -> 0.42.1
+2026-04-16T21:53:51.6704690Z  * [new tag]         0.42.2            -> 0.42.2
+2026-04-16T21:53:51.6705230Z  * [new tag]         0.42.3            -> 0.42.3
+2026-04-16T21:53:51.6705510Z  * [new tag]         0.42.4            -> 0.42.4
+2026-04-16T21:53:51.6705850Z  * [new tag]         0.43.0            -> 0.43.0
+2026-04-16T21:53:51.6706100Z  * [new tag]         0.43.1            -> 0.43.1
+2026-04-16T21:53:51.6706410Z  * [new tag]         0.43.2            -> 0.43.2
+2026-04-16T21:53:51.6706700Z  * [new tag]         0.44.0            -> 0.44.0
+2026-04-16T21:53:51.6707040Z  * [new tag]         0.44.1            -> 0.44.1
+2026-04-16T21:53:51.6707310Z  * [new tag]         0.44.2            -> 0.44.2
+2026-04-16T21:53:51.6707570Z  * [new tag]         0.44.3            -> 0.44.3
+2026-04-16T21:53:51.6708060Z  * [new tag]         0.44.4            -> 0.44.4
+2026-04-16T21:53:51.6708470Z  * [new tag]         0.44.5            -> 0.44.5
+2026-04-16T21:53:51.6708860Z  * [new tag]         0.44.6            -> 0.44.6
+2026-04-16T21:53:51.6709230Z  * [new tag]         0.5.0             -> 0.5.0
+2026-04-16T21:53:51.6709550Z  * [new tag]         0.6.0             -> 0.6.0
+2026-04-16T21:53:51.6726590Z  * [new tag]         0.6.1             -> 0.6.1
+2026-04-16T21:53:51.6726930Z  * [new tag]         0.7.0             -> 0.7.0
+2026-04-16T21:53:51.6727320Z  * [new tag]         0.7.1             -> 0.7.1
+2026-04-16T21:53:51.6727580Z  * [new tag]         0.7.2             -> 0.7.2
+2026-04-16T21:53:51.6727890Z  * [new tag]         0.7.3             -> 0.7.3
+2026-04-16T21:53:51.6728190Z  * [new tag]         0.7.4             -> 0.7.4
+2026-04-16T21:53:51.6728520Z  * [new tag]         0.7.5             -> 0.7.5
+2026-04-16T21:53:51.6728950Z  * [new tag]         0.7.6             -> 0.7.6
+2026-04-16T21:53:51.6729270Z  * [new tag]         0.8.0             -> 0.8.0
+2026-04-16T21:53:51.6729690Z  * [new tag]         0.9.0             -> 0.9.0
+2026-04-16T21:53:51.6730180Z  * [new tag]         0.9.1             -> 0.9.1
+2026-04-16T21:53:51.6730560Z  * [new tag]         0.9.10            -> 0.9.10
+2026-04-16T21:53:51.6730980Z  * [new tag]         0.9.11            -> 0.9.11
+2026-04-16T21:53:51.6731270Z  * [new tag]         0.9.12            -> 0.9.12
+2026-04-16T21:53:51.6731560Z  * [new tag]         0.9.13            -> 0.9.13
+2026-04-16T21:53:51.6731860Z  * [new tag]         0.9.2             -> 0.9.2
+2026-04-16T21:53:51.6732250Z  * [new tag]         0.9.3             -> 0.9.3
+2026-04-16T21:53:51.6732530Z  * [new tag]         0.9.4             -> 0.9.4
+2026-04-16T21:53:51.6733010Z  * [new tag]         0.9.5             -> 0.9.5
+2026-04-16T21:53:51.6733320Z  * [new tag]         0.9.6             -> 0.9.6
+2026-04-16T21:53:51.6733640Z  * [new tag]         0.9.7             -> 0.9.7
+2026-04-16T21:53:51.6734000Z  * [new tag]         0.9.8             -> 0.9.8
+2026-04-16T21:53:51.6735770Z  * [new tag]         0.9.8-alpha.1     -> 0.9.8-alpha.1
+2026-04-16T21:53:51.6738350Z  * [new tag]         0.9.9             -> 0.9.9
+2026-04-16T21:53:51.6738690Z  * [new tag]         0.9.9-alpha.1     -> 0.9.9-alpha.1
+2026-04-16T21:53:51.6739070Z  * [new tag]         0.9.9-alpha.2     -> 0.9.9-alpha.2
+2026-04-16T21:53:51.6739420Z  * [new tag]         v0.1.0            -> v0.1.0
+2026-04-16T21:53:51.6739910Z  * [new tag]         v0.1.1            -> v0.1.1
+2026-04-16T21:53:51.7168580Z [command]/opt/homebrew/bin/git tag --list 0.44.6
+2026-04-16T21:53:51.7286960Z 0.44.6
+2026-04-16T21:53:51.7300520Z [command]/opt/homebrew/bin/git rev-parse refs/tags/0.44.6^{commit}
+2026-04-16T21:53:51.7404870Z b6b1dcdbf4fbff7f985a60580d558b01db631e6e
+2026-04-16T21:53:51.7409550Z ##[endgroup]
+2026-04-16T21:53:51.7410420Z ##[group]Determining the checkout info
+2026-04-16T21:53:51.7411440Z ##[endgroup]
+2026-04-16T21:53:51.7415350Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2026-04-16T21:53:51.7532450Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2026-04-16T21:53:51.7636150Z ##[group]Checking out the ref
+2026-04-16T21:53:51.7638720Z [command]/opt/homebrew/bin/git checkout --progress --force refs/tags/0.44.6
+2026-04-16T21:53:52.0690190Z HEAD is now at b6b1dcd chore(release): 0.44.6
+2026-04-16T21:53:52.0788190Z ##[endgroup]
+2026-04-16T21:53:52.1000170Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2026-04-16T21:53:52.1119280Z b6b1dcdbf4fbff7f985a60580d558b01db631e6e
+2026-04-16T21:53:52.1411750Z ##[group]Run oven-sh/setup-bun@v2
+2026-04-16T21:53:52.1412020Z with:
+2026-04-16T21:53:52.1412170Z   no-cache: false
+2026-04-16T21:53:52.1412460Z   token: ***
+2026-04-16T21:53:52.1412650Z env:
+2026-04-16T21:53:52.1412890Z   CARGO_TERM_COLOR: always
+2026-04-16T21:53:52.1413080Z   REGISTRY: ghcr.io
+2026-04-16T21:53:52.1413250Z   IMAGE_NAME: mayocream/koharu
+2026-04-16T21:53:52.1413480Z ##[endgroup]
+2026-04-16T21:53:52.7128190Z Downloading a new version of Bun: https://github.com/oven-sh/bun/releases/download/bun-v1.3.12/bun-darwin-aarch64.zip
+2026-04-16T21:53:53.0473350Z [command]/usr/bin/unzip -o -q /Users/runner/work/_temp/1a99ed44-93f7-4b17-a352-dac516ac7d2c.zip
+2026-04-16T21:53:53.7900290Z [command]/Users/runner/.bun/bin/bun --revision
+2026-04-16T21:53:53.8113790Z 1.3.12+700fc117a
+2026-04-16T21:53:53.8964500Z ##[group]Run bun install
+2026-04-16T21:53:53.8967030Z [36;1mbun install[0m
+2026-04-16T21:53:53.9119720Z shell: /bin/bash -e {0}
+2026-04-16T21:53:53.9120680Z env:
+2026-04-16T21:53:53.9121180Z   CARGO_TERM_COLOR: always
+2026-04-16T21:53:53.9121760Z   REGISTRY: ghcr.io
+2026-04-16T21:53:53.9122300Z   IMAGE_NAME: mayocream/koharu
+2026-04-16T21:53:53.9122890Z ##[endgroup]
+2026-04-16T21:53:53.9929920Z bun install v1.3.12 (700fc117)
+2026-04-16T21:54:05.6527650Z 
+2026-04-16T21:54:05.6530470Z + @playwright/test@1.59.1
+2026-04-16T21:54:05.6531130Z + @tauri-apps/cli@2.10.1
+2026-04-16T21:54:05.6531420Z + git-cliff@2.12.0
+2026-04-16T21:54:05.6531770Z + oxfmt@0.45.0
+2026-04-16T21:54:05.6532020Z 
+2026-04-16T21:54:05.6532200Z 584 packages installed [11.67s]
+2026-04-16T21:54:05.6990870Z ##[group]Run {
+2026-04-16T21:54:05.6991450Z [36;1m{[0m
+2026-04-16T21:54:05.6991910Z [36;1m  echo 'release_body<<EOF'[0m
+2026-04-16T21:54:05.6992390Z [36;1m  bun git-cliff --current --strip all[0m
+2026-04-16T21:54:05.6993270Z [36;1m  echo 'EOF'[0m
+2026-04-16T21:54:05.6993540Z [36;1m} >> "$GITHUB_OUTPUT"[0m
+2026-04-16T21:54:05.7382100Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-04-16T21:54:05.7382540Z env:
+2026-04-16T21:54:05.7382870Z   CARGO_TERM_COLOR: always
+2026-04-16T21:54:05.7383250Z   REGISTRY: ghcr.io
+2026-04-16T21:54:05.7383490Z   IMAGE_NAME: mayocream/koharu
+2026-04-16T21:54:05.7385790Z   GITHUB_TOKEN: ***
+2026-04-16T21:54:05.7386830Z ##[endgroup]
+2026-04-16T21:54:08.6237710Z ##[group]Run echo $APPLE_CERTIFICATE | base64 --decode > certificate.p12
+2026-04-16T21:54:08.6238450Z [36;1mecho $APPLE_CERTIFICATE | base64 --decode > certificate.p12[0m
+2026-04-16T21:54:08.6238970Z [36;1msecurity create-keychain -p "$KEYCHAIN_PASSWORD" build.keychain[0m
+2026-04-16T21:54:08.6246430Z [36;1msecurity default-keychain -s build.keychain[0m
+2026-04-16T21:54:08.6246900Z [36;1msecurity unlock-keychain -p "$KEYCHAIN_PASSWORD" build.keychain[0m
+2026-04-16T21:54:08.6247470Z [36;1msecurity set-keychain-settings -t 3600 -u build.keychain[0m
+2026-04-16T21:54:08.6249160Z [36;1msecurity import certificate.p12 -k build.keychain -P "$APPLE_CERTIFICATE_PASSWORD" -T /usr/bin/codesign[0m
+2026-04-16T21:54:08.6251820Z [36;1msecurity set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" build.keychain[0m
+2026-04-16T21:54:08.6253840Z [36;1msecurity find-identity -v -p codesigning build.keychain[0m
+2026-04-16T21:54:08.6351780Z shell: /bin/bash -e {0}
+2026-04-16T21:54:08.6352270Z env:
+2026-04-16T21:54:08.6352530Z   CARGO_TERM_COLOR: always
+2026-04-16T21:54:08.6352920Z   REGISTRY: ghcr.io
+2026-04-16T21:54:08.6353320Z   IMAGE_NAME: mayocream/koharu
+2026-04-16T21:54:08.6373820Z   APPLE_CERTIFICATE: ***
+
+2026-04-16T21:54:08.6374240Z   APPLE_CERTIFICATE_PASSWORD: 
+2026-04-16T21:54:08.6374550Z   KEYCHAIN_PASSWORD: ***
+2026-04-16T21:54:08.6374840Z ##[endgroup]
+2026-04-16T21:54:08.8889130Z 1 identity imported.
+2026-04-16T21:54:08.9394630Z keychain: "/Users/runner/Library/Keychains/build.keychain-db"
+2026-04-16T21:54:08.9395820Z version: 512
+2026-04-16T21:54:08.9397330Z class: 0x00000010 
+2026-04-16T21:54:08.9398740Z attributes:
+2026-04-16T21:54:08.9399780Z     0x00000000 <uint32>=0x00000010 
+2026-04-16T21:54:08.9400640Z     0x00000001 <blob>="Mayo Takanashi"
+2026-04-16T21:54:08.9401400Z     0x00000002 <blob>=<NULL>
+2026-04-16T21:54:08.9402180Z     0x00000003 <uint32>=0x00000001 
+2026-04-16T21:54:08.9402930Z     0x00000004 <uint32>=0x00000000 
+2026-04-16T21:54:08.9403670Z     0x00000005 <uint32>=0x00000000 
+2026-04-16T21:54:08.9405190Z     0x00000006 <blob>=0x23DC561A6AD60E497B248BC202B203AA76F49A71  "#\334V\032j\326\016I{$\213\302\002\262\003\252v\364\232q"
+2026-04-16T21:54:08.9406670Z     0x00000007 <blob>=<NULL>
+2026-04-16T21:54:08.9408370Z     0x00000008 <blob>=0x7B38373139316361322D306663392D313164342D383439612D3030303530326235323132327D00  "{87191ca2-0fc9-11d4-849a-000502b52122}\000"
+2026-04-16T21:54:08.9409680Z     0x00000009 <uint32>=0x0000002A  "\000\000\000*"
+2026-04-16T21:54:08.9410060Z     0x0000000A <uint32>=0x00000800 
+2026-04-16T21:54:08.9410410Z     0x0000000B <uint32>=0x00000800 
+2026-04-16T21:54:08.9410730Z     0x0000000C <blob>=0x0000000000000000 
+2026-04-16T21:54:08.9411860Z     0x0000000D <blob>=0x0000000000000000 
+2026-04-16T21:54:08.9412570Z     0x0000000E <uint32>=0x00000001 
+2026-04-16T21:54:08.9413130Z     0x0000000F <uint32>=0x00000001 
+2026-04-16T21:54:08.9413400Z     0x00000010 <uint32>=0x00000001 
+2026-04-16T21:54:08.9413690Z     0x00000011 <uint32>=0x00000000 
+2026-04-16T21:54:08.9413910Z     0x00000012 <uint32>=0x00000001 
+2026-04-16T21:54:08.9414140Z     0x00000013 <uint32>=0x00000001 
+2026-04-16T21:54:08.9414410Z     0x00000014 <uint32>=0x00000001 
+2026-04-16T21:54:08.9414640Z     0x00000015 <uint32>=0x00000001 
+2026-04-16T21:54:08.9414890Z     0x00000016 <uint32>=0x00000001 
+2026-04-16T21:54:08.9415120Z     0x00000017 <uint32>=0x00000001 
+2026-04-16T21:54:08.9415360Z     0x00000018 <uint32>=0x00000001 
+2026-04-16T21:54:08.9415590Z     0x00000019 <uint32>=0x00000001 
+2026-04-16T21:54:08.9415800Z     0x0000001A <uint32>=0x00000001 
+2026-04-16T21:54:09.0000020Z   1) BB1AB69E649D38E9F8C93608AC1C65B5E5F42C27 "Developer ID Application: Mayo Takanashi (***)"
+2026-04-16T21:54:09.0001650Z      1 valid identities found
+2026-04-16T21:54:09.0042540Z ##[group]Run CERT_INFO=$(security find-identity -v -p codesigning build.keychain | grep "Developer ID Application")
+2026-04-16T21:54:09.0043290Z [36;1mCERT_INFO=$(security find-identity -v -p codesigning build.keychain | grep "Developer ID Application")[0m
+2026-04-16T21:54:09.0044050Z [36;1mCERT_ID=$(echo "$CERT_INFO" | awk -F'"' '{print $2}')[0m
+2026-04-16T21:54:09.0044420Z [36;1mecho "CERT_ID=$CERT_ID" >> $GITHUB_ENV[0m
+2026-04-16T21:54:09.0044720Z [36;1mecho "Certificate imported."[0m
+2026-04-16T21:54:09.0084360Z shell: /bin/bash -e {0}
+2026-04-16T21:54:09.0084600Z env:
+2026-04-16T21:54:09.0084810Z   CARGO_TERM_COLOR: always
+2026-04-16T21:54:09.0085020Z   REGISTRY: ghcr.io
+2026-04-16T21:54:09.0085260Z   IMAGE_NAME: mayocream/koharu
+2026-04-16T21:54:09.0085490Z ##[endgroup]
+2026-04-16T21:54:09.0873040Z Certificate imported.
+2026-04-16T21:54:09.1061090Z ##[warning]Unexpected input(s) 'uploadUpdaterJson', 'uploadUpdaterSignatures', valid inputs are ['releaseId', 'tagName', 'releaseName', 'releaseBody', 'releaseDraft', 'prerelease', 'releaseCommitish', 'projectPath', 'distPath', 'iconPath', 'appName', 'appVersion', 'includeDebug', 'includeRelease', 'includeUpdaterJson', 'updaterJsonPreferNsis', 'updaterJsonKeepUniversal', 'tauriScript', 'args', 'retryAttempts', 'bundleIdentifier', 'owner', 'repo', 'githubBaseUrl', 'isGitea', 'assetNamePattern', 'uploadPlainBinary', 'generateReleaseNotes']
+2026-04-16T21:54:09.1074930Z ##[group]Run tauri-apps/tauri-action@v0
+2026-04-16T21:54:09.1075210Z with:
+2026-04-16T21:54:09.1075390Z   tauriScript: npx @tauri-apps/cli
+2026-04-16T21:54:09.1075610Z   tagName: 0.44.6
+2026-04-16T21:54:09.1075800Z   releaseName: 0.44.6
+2026-04-16T21:54:09.1081860Z   releaseBody: ## [0.44.6](https://github.com/mayocream/koharu/compare/0.44.5..0.44.6) - 2026-04-16
+
+### ⛰️  Features
+
+- Add Caiyun translation provider ([#478](https://github.com/mayocream/koharu/issues/478)) - ([f7fca6d](https://github.com/mayocream/koharu/commit/f7fca6dfbe93125a800db7bb178d48e50c6e4207))
+
+### 🐛 Bug Fixes
+
+- RTL Support and Text Alignment Overhaul ([#475](https://github.com/mayocream/koharu/issues/475)) - ([5411daf](https://github.com/mayocream/koharu/commit/5411daf27b4e5600fd4ab4de314c3763cbd69b96))
+- Default font not being applied in processing ([#456](https://github.com/mayocream/koharu/issues/456)) - ([d0d1a56](https://github.com/mayocream/koharu/commit/d0d1a5688ba6d7ca70799cc86bc3865993f7b529))
+- Resolve black ([#000000](https://github.com/mayocream/koharu/issues/000000)) text color not applying in render controls ([#482](https://github.com/mayocream/koharu/issues/482)) - ([7748937](https://github.com/mayocream/koharu/commit/77489374ba96d92754ee4ceb430f1c8e5e68e872))
+- Incorrect sorting by image name ([#455](https://github.com/mayocream/koharu/issues/455)) - ([3bdf850](https://github.com/mayocream/koharu/commit/3bdf8506c67e15d51940573fbc42824fe926640a))
+
+### 📚 Documentation
+
+- Add Portuguese (pt-BR) docs and assets ([#476](https://github.com/mayocream/koharu/issues/476)) - ([15dba78](https://github.com/mayocream/koharu/commit/15dba783725b5d50fe2d917a4f5df1e598a6a516))
+
+### ⚙️ Miscellaneous Tasks
+
+- Build pt-BR docs and fix Portuguese wording ([#481](https://github.com/mayocream/koharu/issues/481)) - ([5edb16e](https://github.com/mayocream/koharu/commit/5edb16e1d91ad2fc466e0f69ce22cd0c96aefe87))
+- Replace prettier with oxfmt and apply formatting ([#472](https://github.com/mayocream/koharu/issues/472)) - ([19be246](https://github.com/mayocream/koharu/commit/19be246108f8c479ebde8f21c706bc83cd859ab7))
+
+## New Contributors ❤️
+
+* @RexGhidorah made their first contribution in [#456](https://github.com/mayocream/koharu/pull/456)
+* @Mooshieblob1 made their first contribution in [#482](https://github.com/mayocream/koharu/pull/482)
+
+2026-04-16T21:54:09.1088000Z   releaseDraft: false
+2026-04-16T21:54:09.1088190Z   prerelease: false
+2026-04-16T21:54:09.1088400Z   args: --target aarch64-apple-darwin
+2026-04-16T21:54:09.1088660Z   uploadUpdaterJson: true
+2026-04-16T21:54:09.1088900Z   uploadUpdaterSignatures: true
+2026-04-16T21:54:09.1089110Z   uploadPlainBinary: true
+2026-04-16T21:54:09.1089340Z   projectPath: .
+2026-04-16T21:54:09.1089530Z   includeDebug: false
+2026-04-16T21:54:09.1089740Z   includeRelease: true
+2026-04-16T21:54:09.1089940Z   includeUpdaterJson: true
+2026-04-16T21:54:09.1090180Z   updaterJsonKeepUniversal: false
+2026-04-16T21:54:09.1090410Z   isGitea: false
+2026-04-16T21:54:09.1090620Z   generateReleaseNotes: false
+2026-04-16T21:54:09.1090820Z env:
+2026-04-16T21:54:09.1090990Z   CARGO_TERM_COLOR: always
+2026-04-16T21:54:09.1091570Z   REGISTRY: ghcr.io
+2026-04-16T21:54:09.1091770Z   IMAGE_NAME: mayocream/koharu
+2026-04-16T21:54:09.1092190Z   CERT_ID: Developer ID Application: Mayo Takanashi (***)
+2026-04-16T21:54:09.1092610Z   GITHUB_TOKEN: ***
+2026-04-16T21:54:09.1092810Z   APPLE_ID: ***
+2026-04-16T21:54:09.1093000Z   APPLE_PASSWORD: ***
+2026-04-16T21:54:09.1093510Z   APPLE_TEAM_ID: ***
+2026-04-16T21:54:09.1110900Z   APPLE_CERTIFICATE: ***
+
+2026-04-16T21:54:09.1111120Z   APPLE_CERTIFICATE_PASSWORD: 
+2026-04-16T21:54:09.1111500Z   APPLE_SIGNING_IDENTITY: Developer ID Application: Mayo Takanashi (***)
+2026-04-16T21:54:09.1111920Z   AZURE_CLIENT_ID: ***
+2026-04-16T21:54:09.1112210Z   AZURE_CLIENT_SECRET: ***
+2026-04-16T21:54:09.1112460Z   AZURE_TENANT_ID: ***
+2026-04-16T21:54:09.1114400Z   TAURI_SIGNING_PRIVATE_KEY: ***
+2026-04-16T21:54:09.1114700Z   TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ***
+2026-04-16T21:54:09.1115160Z   SENTRY_DSN: ***
+2026-04-16T21:54:09.1115590Z   NEXT_PUBLIC_SENTRY_DSN: ***
+2026-04-16T21:54:09.1116490Z   SENTRY_AUTH_TOKEN: ***
+2026-04-16T21:54:09.1116680Z ##[endgroup]
+2026-04-16T21:54:09.5000550Z running npx [ '@tauri-apps/cli', 'build', '--target', 'aarch64-apple-darwin' ]
+2026-04-16T21:54:10.9388460Z         Info `tauri` dependency has workspace inheritance enabled. The features array won't be automatically rewritten. Expected features: []
+2026-04-16T21:54:11.1056640Z         Info Looking up installed tauri packages to check mismatched versions...
+2026-04-16T21:54:12.0551290Z      Running beforeBuildCommand `bun --cwd ui build`
+2026-04-16T21:54:12.1021830Z $ next build
+2026-04-16T21:54:13.3415160Z [33m[1m⚠[22m[39m Specified "rewrites" will not automatically work with "output: export". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes
+2026-04-16T21:54:13.3546800Z [33m[1m⚠[22m[39m No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+2026-04-16T21:54:13.3916340Z [35m[1mAttention[22m[39m: Next.js now collects completely anonymous telemetry regarding usage.
+2026-04-16T21:54:13.4019750Z This information is used to shape Next.js' roadmap and prioritize features.
+2026-04-16T21:54:13.4105730Z You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2026-04-16T21:54:13.4119280Z [36mhttps://nextjs.org/telemetry[39m
+2026-04-16T21:54:13.4125090Z 
+2026-04-16T21:54:13.4227440Z [1m[38;2;173;127;168m▲ Next.js 16.2.4[39m[22m (Turbopack)
+2026-04-16T21:54:13.4232800Z - Experiments (use with caution):
+2026-04-16T21:54:13.4234240Z   · clientTraceMetadata
+2026-04-16T21:54:13.4235450Z   · proxyClientMaxBodySize: "1gb"
+2026-04-16T21:54:13.4236840Z   · proxyTimeout: 300000
+2026-04-16T21:54:13.4237110Z 
+2026-04-16T21:54:13.4392020Z [37m[1m [22m[39m Creating an optimized production build ...
+2026-04-16T21:54:13.8267710Z [33m[1m⚠[22m[39m Specified "rewrites" will not automatically work with "output: export". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes
+2026-04-16T21:54:30.2063530Z [32m[1m✓[22m[39m Compiled successfully in 16.4s
+2026-04-16T21:54:30.2218490Z [37m[1m [22m[39m Running next.config.js provided runAfterProductionCompile ...
+2026-04-16T21:54:30.5015350Z [@sentry/nextjs - After Production Compile] Info: Sending telemetry data on issues and performance to Sentry. To disable telemetry, set `options.telemetry` to `false`.
+2026-04-16T21:54:30.9264890Z [@sentry/nextjs - After Production Compile] Error: An error occurred. Couldn't finish all operations: Error: Command failed: /Users/runner/work/koharu/koharu/node_modules/@sentry/cli-darwin/bin/sentry-cli --header sentry-trace:392f014ae19d489e85a3f225d5d3feaa-8769631836c77baf releases new b6b1dcdbf4fbff7f985a60580d558b01db631e6e
+2026-04-16T21:54:30.9266340Z error: API request failed
+2026-04-16T21:54:30.9266560Z 
+2026-04-16T21:54:30.9266620Z Caused by:
+2026-04-16T21:54:30.9267010Z     sentry reported an error: Invalid org token (http status: 401)
+2026-04-16T21:54:30.9268420Z 
+2026-04-16T21:54:30.9268680Z Add --log-level=[info|debug] or export SENTRY_LOG_LEVEL=[info|debug] to see more output.
+2026-04-16T21:54:30.9269220Z Please attach the full debug log to all bug reports.
+2026-04-16T21:54:30.9269470Z 
+2026-04-16T21:54:30.9269750Z     at [3mignore-listed frames[23m {
+2026-04-16T21:54:30.9275680Z   code: 1,
+2026-04-16T21:54:30.9276150Z   killed: false,
+2026-04-16T21:54:30.9276490Z   signal: null,
+2026-04-16T21:54:30.9277280Z   cmd: '/Users/runner/work/koharu/koharu/node_modules/@sentry/cli-darwin/bin/sentry-cli --header sentry-trace:392f014ae19d489e85a3f225d5d3feaa-8769631836c77baf releases new b6b1dcdbf4fbff7f985a60580d558b01db631e6e'
+2026-04-16T21:54:30.9278180Z }
+2026-04-16T21:54:31.1015480Z error: API request failed
+2026-04-16T21:54:31.1019050Z 
+2026-04-16T21:54:31.1019710Z Caused by:
+2026-04-16T21:54:31.1020630Z     sentry reported an error: Invalid org token (http status: 401)
+2026-04-16T21:54:31.1021220Z 
+2026-04-16T21:54:31.1021900Z Add --log-level=[info|debug] or export SENTRY_LOG_LEVEL=[info|debug] to see more output.
+2026-04-16T21:54:31.1023150Z Please attach the full debug log to all bug reports.
+2026-04-16T21:54:31.1025260Z error: API request failed
+2026-04-16T21:54:31.1025750Z 
+2026-04-16T21:54:31.1026050Z Caused by:
+2026-04-16T21:54:31.1027720Z     sentry reported an error: Invalid org token (http status: 401)
+2026-04-16T21:54:31.1028640Z 
+2026-04-16T21:54:31.1029360Z Add --log-level=[info|debug] or export SENTRY_LOG_LEVEL=[info|debug] to see more output.
+2026-04-16T21:54:31.1030650Z Please attach the full debug log to all bug reports.
+2026-04-16T21:54:31.1047450Z [@sentry/nextjs - After Production Compile] Error: An error occurred. Couldn't finish all operations: Error: Command --header sentry-trace:148da4d40c874c6382cd09c46cfbffa9-aa4a00e007d1c7f1-1 --header baggage:sentry-environment=production,sentry-release=5.1.1,sentry-public_key=4c2bae7d9fbc413e8f7385f55c515d51,sentry-trace_id=148da4d40c874c6382cd09c46cfbffa9,sentry-sample_rate=1,sentry-transaction=Sentry%20Bundler%20Plugin%20execution,sentry-sampled=true sourcemaps upload -p nextjs --release b6b1dcdbf4fbff7f985a60580d558b01db631e6e /Users/runner/work/koharu/koharu/ui/.next/server --ignore /Users/runner/work/koharu/koharu/ui/.next/static/chunks/main-* --ignore /Users/runner/work/koharu/koharu/ui/.next/static/chunks/framework-* --ignore /Users/runner/work/koharu/koharu/ui/.next/static/chunks/framework.* --ignore /Users/runner/work/koharu/koharu/ui/.next/static/chunks/polyfills-* --ignore /Users/runner/work/koharu/koharu/ui/.next/static/chunks/webpack-* --ignore **/page_client-reference-manifest.js --ignore **/server-reference-manifest.js --ignore **/next-font-manifest.js --ignore **/middleware-build-manifest.js --ignore **/interception-route-rewrite-manifest.js --ignore **/route_client-reference-manifest.js --ignore **/middleware-react-loadable-manifest.js --rewrite failed with exit code 1
+2026-04-16T21:54:31.1081380Z     at [3mignore-listed frames[23m
+2026-04-16T21:54:31.1908060Z [32m[1m✓[22m[39m Completed runAfterProductionCompile in 988ms
+2026-04-16T21:54:31.1931600Z [37m[1m [22m[39m Running TypeScript ...
+2026-04-16T21:54:40.3708000Z [37m[1m [22m[39m Finished TypeScript in 9.2s ...
+2026-04-16T21:54:40.3767780Z [37m[1m [22m[39m Collecting page data using 2 workers ...
+2026-04-16T21:54:41.4628940Z [37m[1m [22m[39m Generating static pages using 2 workers (0/4) ...
+2026-04-16T21:54:41.8210510Z [37m[1m [22m[39m Generating static pages using 2 workers (1/4) 
+2026-04-16T21:54:41.8276970Z [37m[1m [22m[39m Generating static pages using 2 workers (2/4) 
+2026-04-16T21:54:41.8278090Z [37m[1m [22m[39m Generating static pages using 2 workers (3/4) 
+2026-04-16T21:54:41.8279290Z [32m[1m✓[22m[39m Generating static pages using 2 workers (4/4) in 365ms
+2026-04-16T21:54:41.8324620Z [37m[1m [22m[39m Finalizing page optimization ...
+2026-04-16T21:54:41.8462520Z [33m[1m⚠[22m[39m rewrites, redirects, and headers are not applied when exporting your application, detected (rewrites). See more info here: https://nextjs.org/docs/messages/export-no-custom-routes
+2026-04-16T21:54:42.0044510Z 
+2026-04-16T21:54:42.0063870Z [4mRoute (app)[24m
+2026-04-16T21:54:42.0064680Z ┌ ○ /
+2026-04-16T21:54:42.0065060Z ├ ○ /_not-found
+2026-04-16T21:54:42.0065440Z └ ○ /icon.png
+2026-04-16T21:54:42.0065620Z 
+2026-04-16T21:54:42.0072650Z 
+2026-04-16T21:54:42.0073680Z ○  (Static)  prerendered as static content
+2026-04-16T21:54:42.0074350Z 
+2026-04-16T21:54:42.7472980Z [1m[92m    Updating[0m git repository `https://github.com/mayocream/candle`
+2026-04-16T21:54:44.6879110Z [1m[92m    Updating[0m git repository `https://github.com/mayocream/ug`
+2026-04-16T21:54:45.3980080Z [1m[92m    Updating[0m crates.io index
+2026-04-16T21:54:47.0131320Z [1m[92m Downloading[0m crates ...
+2026-04-16T21:54:47.0920540Z [1m[92m  Downloaded[0m bytestring v1.5.0
+2026-04-16T21:54:47.1122820Z [1m[92m  Downloaded[0m icu_casemap_data v2.2.0
+2026-04-16T21:54:47.1201210Z [1m[92m  Downloaded[0m icu_properties v2.2.0
+2026-04-16T21:54:47.1420970Z [1m[92m  Downloaded[0m proc-macro-hack v0.5.20+deprecated
+2026-04-16T21:54:47.1744800Z [1m[92m  Downloaded[0m petname-macros v3.0.0
+2026-04-16T21:54:47.2024710Z [1m[92m  Downloaded[0m phf_generator v0.8.0
+2026-04-16T21:54:47.2385470Z [1m[92m  Downloaded[0m rand_chacha v0.3.1
+2026-04-16T21:54:47.2653980Z [1m[92m  Downloaded[0m sentry-tracing v0.47.0
+2026-04-16T21:54:47.2899190Z [1m[92m  Downloaded[0m zeroize_derive v1.4.3
+2026-04-16T21:54:47.3106530Z [1m[92m  Downloaded[0m objc2-io-surface v0.3.2
+2026-04-16T21:54:47.3325220Z [1m[92m  Downloaded[0m time-core v0.1.8
+2026-04-16T21:54:47.3608430Z [1m[92m  Downloaded[0m gemm-f32 v0.18.2
+2026-04-16T21:54:47.3933950Z [1m[92m  Downloaded[0m try-lock v0.2.5
+2026-04-16T21:54:47.4196480Z [1m[92m  Downloaded[0m profiling-procmacros v1.0.17
+2026-04-16T21:54:47.4472150Z [1m[92m  Downloaded[0m enum-as-inner v0.6.1
+2026-04-16T21:54:47.4748930Z [1m[92m  Downloaded[0m owned_ttf_parser v0.25.1
+2026-04-16T21:54:47.4898810Z [1m[92m  Downloaded[0m rawpointer v0.2.1
+2026-04-16T21:54:47.5191980Z [1m[92m  Downloaded[0m rgb v0.8.53
+2026-04-16T21:54:47.5372790Z [1m[92m  Downloaded[0m unic-ucd-version v0.9.0
+2026-04-16T21:54:47.5473760Z [1m[92m  Downloaded[0m unic-ucd-ident v0.9.0
+2026-04-16T21:54:47.5605250Z [1m[92m  Downloaded[0m spin v0.9.8
+2026-04-16T21:54:47.5779140Z [1m[92m  Downloaded[0m untrusted v0.9.0
+2026-04-16T21:54:47.5926180Z [1m[92m  Downloaded[0m unit-prefix v0.5.2
+2026-04-16T21:54:47.6072940Z [1m[92m  Downloaded[0m typed-path v0.12.3
+2026-04-16T21:54:47.6396320Z [1m[92m  Downloaded[0m reqwest v0.13.2
+2026-04-16T21:54:47.6914930Z [1m[92m  Downloaded[0m serde_json v1.0.149
+2026-04-16T21:54:47.7255950Z [1m[92m  Downloaded[0m unicode_categories v0.1.1
+2026-04-16T21:54:47.7378340Z [1m[92m  Downloaded[0m serde_with v3.18.0
+2026-04-16T21:54:47.8255470Z [1m[92m  Downloaded[0m unicode-segmentation v1.13.2
+2026-04-16T21:54:47.8407500Z [1m[92m  Downloaded[0m petgraph v0.8.3
+2026-04-16T21:54:47.9271890Z [1m[92m  Downloaded[0m rmcp v0.16.0
+2026-04-16T21:54:48.0026180Z [1m[92m  Downloaded[0m object v0.37.3
+2026-04-16T21:54:48.0536800Z [1m[92m  Downloaded[0m unicode-normalization-alignments v0.1.12
+2026-04-16T21:54:48.0830160Z [1m[92m  Downloaded[0m tracing v0.1.44
+2026-04-16T21:54:48.1759420Z [1m[92m  Downloaded[0m skrifa v0.42.0
+2026-04-16T21:54:48.2124020Z [1m[92m  Downloaded[0m reqwest v0.12.28
+2026-04-16T21:54:48.2391800Z [1m[92m  Downloaded[0m unicode-width v0.2.2
+2026-04-16T21:54:48.2555180Z [1m[92m  Downloaded[0m window-vibrancy v0.6.0
+2026-04-16T21:54:48.2885680Z [1m[92m  Downloaded[0m regex v1.12.3
+2026-04-16T21:54:48.3327940Z [1m[92m  Downloaded[0m quick-xml v0.38.4
+2026-04-16T21:54:48.3537110Z [1m[92m  Downloaded[0m glam v0.30.10
+2026-04-16T21:54:48.4876210Z [1m[92m  Downloaded[0m regex-syntax v0.8.10
+2026-04-16T21:54:48.5101330Z [1m[92m  Downloaded[0m unicode-xid v0.2.6
+2026-04-16T21:54:48.5303060Z [1m[92m  Downloaded[0m rayon v1.12.0
+2026-04-16T21:54:48.5712290Z [1m[92m  Downloaded[0m tokio v1.51.0
+2026-04-16T21:54:48.7126580Z [1m[92m  Downloaded[0m icu_collator v2.2.0
+2026-04-16T21:54:48.7806050Z [1m[92m  Downloaded[0m read-fonts v0.39.1
+2026-04-16T21:54:48.8552930Z [1m[92m  Downloaded[0m spm_precompiled v0.1.4
+2026-04-16T21:54:48.8688730Z [1m[92m  Downloaded[0m libc v0.2.184
+2026-04-16T21:54:49.0528910Z [1m[92m  Downloaded[0m regex-automata v0.4.14
+2026-04-16T21:54:49.0971830Z [1m[92m  Downloaded[0m onig_sys v69.9.1
+2026-04-16T21:54:49.1657750Z [1m[92m  Downloaded[0m unicode-ident v1.0.24
+2026-04-16T21:54:49.1744310Z [1m[92m  Downloaded[0m libz-sys v1.1.28
+2026-04-16T21:54:49.4851680Z [1m[92m  Downloaded[0m typenum v1.19.0
+2026-04-16T21:54:49.4941850Z [1m[92m  Downloaded[0m socket2 v0.6.3
+2026-04-16T21:54:49.5104970Z [1m[92m  Downloaded[0m socket2 v0.5.10
+2026-04-16T21:54:49.5181860Z [1m[92m  Downloaded[0m slotmap v1.1.1
+2026-04-16T21:54:49.5277770Z [1m[92m  Downloaded[0m serde_derive v1.0.228
+2026-04-16T21:54:49.5384970Z [1m[92m  Downloaded[0m glam v0.31.1
+2026-04-16T21:54:49.6586240Z [1m[92m  Downloaded[0m smallvec v1.15.1
+2026-04-16T21:54:49.6673910Z [1m[92m  Downloaded[0m slab v0.4.12
+2026-04-16T21:54:49.6713260Z [1m[92m  Downloaded[0m simba v0.9.1
+2026-04-16T21:54:49.6863660Z [1m[92m  Downloaded[0m sharded-slab v0.1.7
+2026-04-16T21:54:49.7006470Z [1m[92m  Downloaded[0m pxfm v0.1.28
+2026-04-16T21:54:49.7821490Z [1m[92m  Downloaded[0m servo_arc v0.2.0
+2026-04-16T21:54:49.7878000Z [1m[92m  Downloaded[0m serde_with_macros v3.18.0
+2026-04-16T21:54:49.8002320Z [1m[92m  Downloaded[0m raw-cpuid v11.6.0
+2026-04-16T21:54:49.8394230Z [1m[92m  Downloaded[0m icu_datetime_data v2.2.0
+2026-04-16T21:54:49.8892080Z [1m[92m  Downloaded[0m memmap2 v0.9.10
+2026-04-16T21:54:49.8926590Z [1m[92m  Downloaded[0m tracing-attributes v0.1.31
+2026-04-16T21:54:49.9001580Z [1m[92m  Downloaded[0m icu_segmenter v2.2.0
+2026-04-16T21:54:49.9499760Z [1m[92m  Downloaded[0m icu_calendar v2.2.1
+2026-04-16T21:54:50.0210190Z [1m[92m  Downloaded[0m ug-metal v0.5.0
+2026-04-16T21:54:50.0259130Z [1m[92m  Downloaded[0m sse-stream v0.2.1
+2026-04-16T21:54:50.0342240Z [1m[92m  Downloaded[0m simd-adler32 v0.3.9
+2026-04-16T21:54:50.0424790Z [1m[92m  Downloaded[0m signal-hook-registry v1.4.8
+2026-04-16T21:54:50.0457910Z [1m[92m  Downloaded[0m shlex v1.3.0
+2026-04-16T21:54:50.0498490Z [1m[92m  Downloaded[0m sha2 v0.10.9
+2026-04-16T21:54:50.0572500Z [1m[92m  Downloaded[0m sha1 v0.10.6
+2026-04-16T21:54:50.0629550Z [1m[92m  Downloaded[0m encoding_rs v0.8.35
+2026-04-16T21:54:50.1243390Z [1m[92m  Downloaded[0m serde_spanned v1.1.1
+2026-04-16T21:54:50.1271150Z [1m[92m  Downloaded[0m serde_plain v1.0.2
+2026-04-16T21:54:50.1309910Z [1m[92m  Downloaded[0m serde_path_to_error v0.1.20
+2026-04-16T21:54:50.1353700Z [1m[92m  Downloaded[0m serde_derive_internals v0.29.1
+2026-04-16T21:54:50.1381100Z [1m[92m  Downloaded[0m serde_core v1.0.228
+2026-04-16T21:54:50.1433690Z [1m[92m  Downloaded[0m regex-lite v0.1.9
+2026-04-16T21:54:50.1490740Z [1m[92m  Downloaded[0m quinn v0.11.9
+2026-04-16T21:54:50.1549730Z [1m[92m  Downloaded[0m pulp v0.22.2
+2026-04-16T21:54:50.1668590Z [1m[92m  Downloaded[0m rav1e v0.8.1
+2026-04-16T21:54:50.2403900Z [1m[92m  Downloaded[0m objc2-web-kit v0.3.2
+2026-04-16T21:54:50.2977390Z [1m[92m  Downloaded[0m unic-common v0.9.0
+2026-04-16T21:54:50.3016400Z [1m[92m  Downloaded[0m unic-char-range v0.9.0
+2026-04-16T21:54:50.3073610Z [1m[92m  Downloaded[0m unic-char-property v0.9.0
+2026-04-16T21:54:50.3120820Z [1m[92m  Downloaded[0m uname v0.1.1
+2026-04-16T21:54:50.3143170Z [1m[92m  Downloaded[0m typeid v1.0.3
+2026-04-16T21:54:50.3202840Z [1m[92m  Downloaded[0m socks v0.3.4
+2026-04-16T21:54:50.3249500Z [1m[92m  Downloaded[0m siphasher v1.0.2
+2026-04-16T21:54:50.3285010Z [1m[92m  Downloaded[0m ring v0.17.14
+2026-04-16T21:54:50.4513590Z [1m[92m  Downloaded[0m siphasher v0.3.11
+2026-04-16T21:54:50.4538730Z [1m[92m  Downloaded[0m simd_helpers v0.1.0
+2026-04-16T21:54:50.4556230Z [1m[92m  Downloaded[0m serialize-to-javascript-impl v0.1.2
+2026-04-16T21:54:50.4576350Z [1m[92m  Downloaded[0m serialize-to-javascript v0.1.2
+2026-04-16T21:54:50.4596390Z [1m[92m  Downloaded[0m serde_urlencoded v0.7.1
+2026-04-16T21:54:50.4628620Z [1m[92m  Downloaded[0m serde_repr v0.1.20
+2026-04-16T21:54:50.4670180Z [1m[92m  Downloaded[0m rfd v0.17.2
+2026-04-16T21:54:50.4771910Z [1m[92m  Downloaded[0m rayon-core v1.13.0
+2026-04-16T21:54:50.4845350Z [1m[92m  Downloaded[0m rand_distr v0.5.1
+2026-04-16T21:54:50.4915440Z [1m[92m  Downloaded[0m rand_core v0.9.5
+2026-04-16T21:54:50.4940220Z [1m[92m  Downloaded[0m qoi v0.4.1
+2026-04-16T21:54:50.4993250Z [1m[92m  Downloaded[0m pulp v0.21.5
+2026-04-16T21:54:50.5104830Z [1m[92m  Downloaded[0m objc2-app-kit v0.3.2
+2026-04-16T21:54:50.5823810Z [1m[92m  Downloaded[0m retry-policies v0.5.1
+2026-04-16T21:54:50.5888990Z [1m[92m  Downloaded[0m reqwest-retry v0.9.1
+2026-04-16T21:54:50.5932980Z [1m[92m  Downloaded[0m reqwest-middleware v0.5.1
+2026-04-16T21:54:50.5982420Z [1m[92m  Downloaded[0m ref-cast-impl v1.0.25
+2026-04-16T21:54:50.6005880Z [1m[92m  Downloaded[0m ref-cast v1.0.25
+2026-04-16T21:54:50.6099420Z [1m[92m  Downloaded[0m reborrow v0.5.5
+2026-04-16T21:54:50.6122080Z [1m[92m  Downloaded[0m rayon-cond v0.4.0
+2026-04-16T21:54:50.6146730Z [1m[92m  Downloaded[0m raw-window-handle v0.6.2
+2026-04-16T21:54:50.6219050Z [1m[92m  Downloaded[0m rand_pcg v0.2.1
+2026-04-16T21:54:50.6250680Z [1m[92m  Downloaded[0m rand_core v0.10.0
+2026-04-16T21:54:50.6284910Z [1m[92m  Downloaded[0m rand_core v0.6.4
+2026-04-16T21:54:50.6320370Z [1m[92m  Downloaded[0m rand_core v0.5.1
+2026-04-16T21:54:50.6351340Z [1m[92m  Downloaded[0m pulp-wasm-simd-flag v0.1.0
+2026-04-16T21:54:50.6378160Z [1m[92m  Downloaded[0m objc2-metal-performance-shaders-graph v0.3.2
+2026-04-16T21:54:50.6567040Z [1m[92m  Downloaded[0m memchr v2.8.0
+2026-04-16T21:54:50.6707200Z [1m[92m  Downloaded[0m libm v0.2.16
+2026-04-16T21:54:50.7154010Z [1m[92m  Downloaded[0m itertools v0.14.0
+2026-04-16T21:54:50.7349390Z [1m[92m  Downloaded[0m dyn-stack v0.13.2
+2026-04-16T21:54:50.7423650Z [1m[92m  Downloaded[0m ravif v0.13.0
+2026-04-16T21:54:50.7469840Z [1m[92m  Downloaded[0m quick-error v2.0.1
+2026-04-16T21:54:50.7526920Z [1m[92m  Downloaded[0m parking_lot v0.12.5
+2026-04-16T21:54:50.7615050Z [1m[92m  Downloaded[0m osakit v0.3.1
+2026-04-16T21:54:50.7711730Z [1m[92m  Downloaded[0m option-ext v0.2.0
+2026-04-16T21:54:50.7785900Z [1m[92m  Downloaded[0m open v5.3.3
+2026-04-16T21:54:50.7825850Z [1m[92m  Downloaded[0m onig v6.5.1
+2026-04-16T21:54:50.7906220Z [1m[92m  Downloaded[0m once_cell v1.21.4
+2026-04-16T21:54:50.8006950Z [1m[92m  Downloaded[0m mime v0.3.17
+2026-04-16T21:54:50.8072520Z [1m[92m  Downloaded[0m maybe-rayon v0.1.1
+2026-04-16T21:54:50.8107850Z [1m[92m  Downloaded[0m matrixmultiply v0.3.10
+2026-04-16T21:54:50.8193630Z [1m[92m  Downloaded[0m matchit v0.8.4
+2026-04-16T21:54:50.8261960Z [1m[92m  Downloaded[0m match_token v0.1.0
+2026-04-16T21:54:50.8281140Z [1m[92m  Downloaded[0m markup5ever v0.14.1
+2026-04-16T21:54:50.8331470Z [1m[92m  Downloaded[0m macro_rules_attribute-proc_macro v0.2.2
+2026-04-16T21:54:50.8357910Z [1m[92m  Downloaded[0m loop9 v0.1.5
+2026-04-16T21:54:50.8377720Z [1m[92m  Downloaded[0m log v0.4.29
+2026-04-16T21:54:50.8450700Z [1m[92m  Downloaded[0m litrs v1.0.0
+2026-04-16T21:54:50.8546950Z [1m[92m  Downloaded[0m litemap v0.8.2
+2026-04-16T21:54:50.8624680Z [1m[92m  Downloaded[0m language-tags v0.3.2
+2026-04-16T21:54:50.8680850Z [1m[92m  Downloaded[0m kuchikiki v0.8.8-speedreader
+2026-04-16T21:54:50.8741110Z [1m[92m  Downloaded[0m keyring v3.6.3
+2026-04-16T21:54:50.8809650Z [1m[92m  Downloaded[0m keyboard-types v0.7.0
+2026-04-16T21:54:50.8860070Z [1m[92m  Downloaded[0m jsonptr v0.6.3
+2026-04-16T21:54:50.8923170Z [1m[92m  Downloaded[0m jobserver v0.1.34
+2026-04-16T21:54:50.9072290Z [1m[92m  Downloaded[0m ixdtf v0.6.5
+2026-04-16T21:54:50.9182280Z [1m[92m  Downloaded[0m derive_more-impl v2.1.1
+2026-04-16T21:54:50.9367140Z [1m[92m  Downloaded[0m portable-atomic v1.13.1
+2026-04-16T21:54:50.9548130Z [1m[92m  Downloaded[0m icu_collator_data v2.2.0
+2026-04-16T21:54:50.9664190Z [1m[92m  Downloaded[0m objc2-osa-kit v0.3.2
+2026-04-16T21:54:50.9690310Z [1m[92m  Downloaded[0m memo-map v0.3.3
+2026-04-16T21:54:50.9712830Z [1m[92m  Downloaded[0m matches v0.1.10
+2026-04-16T21:54:50.9726710Z [1m[92m  Downloaded[0m matchers v0.2.0
+2026-04-16T21:54:50.9744900Z [1m[92m  Downloaded[0m malloc_buf v0.0.6
+2026-04-16T21:54:50.9754010Z [1m[92m  Downloaded[0m macro_rules_attribute v0.2.2
+2026-04-16T21:54:50.9792040Z [1m[92m  Downloaded[0m mac v0.1.1
+2026-04-16T21:54:50.9813690Z [1m[92m  Downloaded[0m lru-slab v0.1.2
+2026-04-16T21:54:50.9833200Z [1m[92m  Downloaded[0m lru v0.16.3
+2026-04-16T21:54:50.9852840Z [1m[92m  Downloaded[0m lock_api v0.4.14
+2026-04-16T21:54:50.9878270Z [1m[92m  Downloaded[0m icu_segmenter_data v2.2.0
+2026-04-16T21:54:51.0503300Z [1m[92m  Downloaded[0m metal v0.29.0
+2026-04-16T21:54:51.1095090Z [1m[92m  Downloaded[0m local-waker v0.1.4
+2026-04-16T21:54:51.1122780Z [1m[92m  Downloaded[0m libloading v0.8.9
+2026-04-16T21:54:51.1214250Z [1m[92m  Downloaded[0m lebe v0.5.3
+2026-04-16T21:54:51.1258120Z [1m[92m  Downloaded[0m lazy_static v1.5.0
+2026-04-16T21:54:51.1317690Z [1m[92m  Downloaded[0m json-patch v3.0.1
+2026-04-16T21:54:51.1377340Z [1m[92m  Downloaded[0m itoa v1.0.18
+2026-04-16T21:54:51.1420830Z [1m[92m  Downloaded[0m gemm-f64 v0.19.0
+2026-04-16T21:54:51.1441450Z [1m[92m  Downloaded[0m gemm-f64 v0.18.2
+2026-04-16T21:54:51.1471370Z [1m[92m  Downloaded[0m equator v0.4.2
+2026-04-16T21:54:51.1524090Z [1m[92m  Downloaded[0m enumflags2_derive v0.7.12
+2026-04-16T21:54:51.1551400Z [1m[92m  Downloaded[0m enumflags2 v0.7.12
+2026-04-16T21:54:51.1579640Z [1m[92m  Downloaded[0m embed_plist v1.2.2
+2026-04-16T21:54:51.1614440Z [1m[92m  Downloaded[0m embed-resource v3.0.8
+2026-04-16T21:54:51.1676880Z [1m[92m  Downloaded[0m either v1.15.0
+2026-04-16T21:54:51.1723470Z [1m[92m  Downloaded[0m dtoa v1.0.11
+2026-04-16T21:54:51.1790820Z [1m[92m  Downloaded[0m document-features v0.2.12
+2026-04-16T21:54:51.1823060Z [1m[92m  Downloaded[0m dispatch2 v0.3.1
+2026-04-16T21:54:51.1892160Z [1m[92m  Downloaded[0m digest v0.10.7
+2026-04-16T21:54:51.1947430Z [1m[92m  Downloaded[0m derive_more v2.1.1
+2026-04-16T21:54:51.3014520Z [1m[92m  Downloaded[0m derive_more v0.99.20
+2026-04-16T21:54:51.3243020Z [1m[92m  Downloaded[0m derive_builder_core v0.20.2
+2026-04-16T21:54:51.3335080Z [1m[92m  Downloaded[0m derive_builder v0.20.2
+2026-04-16T21:54:51.3573610Z [1m[92m  Downloaded[0m deranged v0.5.8
+2026-04-16T21:54:51.3630960Z [1m[92m  Downloaded[0m der v0.8.0
+2026-04-16T21:54:51.3917040Z [1m[92m  Downloaded[0m dary_heap v0.3.8
+2026-04-16T21:54:51.3917610Z [1m[92m  Downloaded[0m darling_core v0.23.0
+2026-04-16T21:54:51.4173690Z [1m[92m  Downloaded[0m darling_core v0.20.11
+2026-04-16T21:54:51.4401360Z [1m[92m  Downloaded[0m darling v0.23.0
+2026-04-16T21:54:51.4662440Z [1m[92m  Downloaded[0m darling v0.20.11
+2026-04-16T21:54:51.4832590Z [1m[92m  Downloaded[0m cssparser v0.29.6
+2026-04-16T21:54:51.4900370Z [1m[92m  Downloaded[0m crossbeam-utils v0.8.21
+2026-04-16T21:54:51.5004500Z [1m[92m  Downloaded[0m crossbeam-epoch v0.9.18
+2026-04-16T21:54:51.5067170Z [1m[92m  Downloaded[0m crossbeam-channel v0.5.15
+2026-04-16T21:54:51.5191530Z [1m[92m  Downloaded[0m zune-jpeg v0.5.15
+2026-04-16T21:54:51.5355960Z [1m[92m  Downloaded[0m zune-inflate v0.2.54
+2026-04-16T21:54:51.5408400Z [1m[92m  Downloaded[0m zune-core v0.5.1
+2026-04-16T21:54:51.5475840Z [1m[92m  Downloaded[0m url v2.5.8
+2026-04-16T21:54:51.5546590Z [1m[92m  Downloaded[0m ureq-proto v0.6.0
+2026-04-16T21:54:51.5673340Z [1m[92m  Downloaded[0m ureq v3.3.0
+2026-04-16T21:54:51.5833220Z [1m[92m  Downloaded[0m prettyplease v0.2.37
+2026-04-16T21:54:51.5900620Z [1m[92m  Downloaded[0m png v0.18.1
+2026-04-16T21:54:51.5982990Z [1m[92m  Downloaded[0m png v0.17.16
+2026-04-16T21:54:51.6076620Z [1m[92m  Downloaded[0m petname v3.0.0
+2026-04-16T21:54:51.6164920Z [1m[92m  Downloaded[0m ttf-parser v0.25.1
+2026-04-16T21:54:51.6367050Z [1m[92m  Downloaded[0m ttf-parser v0.21.1
+2026-04-16T21:54:51.6550830Z [1m[92m  Downloaded[0m tracing-subscriber v0.3.23
+2026-04-16T21:54:51.6718470Z [1m[92m  Downloaded[0m tower-http v0.6.8
+2026-04-16T21:54:51.6884160Z [1m[92m  Downloaded[0m tiny-skia v0.12.0
+2026-04-16T21:54:51.7537650Z [1m[92m  Downloaded[0m objc2-metal-performance-shaders v0.3.2
+2026-04-16T21:54:51.7916260Z [1m[92m  Downloaded[0m objc2-foundation v0.3.2
+2026-04-16T21:54:51.8504090Z [1m[92m  Downloaded[0m dyn-stack-macros v0.1.3
+2026-04-16T21:54:51.8522940Z [1m[92m  Downloaded[0m dyn-clone v1.0.20
+2026-04-16T21:54:51.8573950Z [1m[92m  Downloaded[0m dunce v1.0.5
+2026-04-16T21:54:51.8651910Z [1m[92m  Downloaded[0m dtoa-short v0.3.5
+2026-04-16T21:54:51.8652700Z [1m[92m  Downloaded[0m dpi v0.1.2
+2026-04-16T21:54:51.8653090Z [1m[92m  Downloaded[0m displaydoc v0.2.5
+2026-04-16T21:54:51.8769130Z [1m[92m  Downloaded[0m dirs-sys v0.5.0
+2026-04-16T21:54:51.8812530Z [1m[92m  Downloaded[0m dirs v6.0.0
+2026-04-16T21:54:51.8854050Z [1m[92m  Downloaded[0m derive_builder_macro v0.20.2
+2026-04-16T21:54:51.8876240Z [1m[92m  Downloaded[0m debugid v0.8.0
+2026-04-16T21:54:51.8920700Z [1m[92m  Downloaded[0m data-encoding v2.10.0
+2026-04-16T21:54:51.8966460Z [1m[92m  Downloaded[0m darling_macro v0.23.0
+2026-04-16T21:54:51.8978010Z [1m[92m  Downloaded[0m darling_macro v0.20.11
+2026-04-16T21:54:51.8995620Z [1m[92m  Downloaded[0m ctor v0.2.9
+2026-04-16T21:54:51.9021440Z [1m[92m  Downloaded[0m cssparser-macros v0.6.1
+2026-04-16T21:54:51.9038130Z [1m[92m  Downloaded[0m crypto-common v0.1.7
+2026-04-16T21:54:51.9066100Z [1m[92m  Downloaded[0m crossbeam-deque v0.8.6
+2026-04-16T21:54:51.9110100Z [1m[92m  Downloaded[0m crc32fast v1.5.0
+2026-04-16T21:54:51.9151300Z [1m[92m  Downloaded[0m cpufeatures v0.2.17
+2026-04-16T21:54:51.9204620Z [1m[92m  Downloaded[0m urlpattern v0.3.0
+2026-04-16T21:54:51.9279680Z [1m[92m  Downloaded[0m plist v1.8.0
+2026-04-16T21:54:51.9361630Z [1m[92m  Downloaded[0m pkg-config v0.3.32
+2026-04-16T21:54:51.9400040Z [1m[92m  Downloaded[0m pin-project-lite v0.2.17
+2026-04-16T21:54:51.9619170Z [1m[92m  Downloaded[0m phf_shared v0.10.0
+2026-04-16T21:54:51.9642550Z [1m[92m  Downloaded[0m phf_macros v0.11.3
+2026-04-16T21:54:51.9674810Z [1m[92m  Downloaded[0m phf v0.11.3
+2026-04-16T21:54:51.9716910Z [1m[92m  Downloaded[0m parking_lot_core v0.9.12
+2026-04-16T21:54:51.9803930Z [1m[92m  Downloaded[0m tungstenite v0.28.0
+2026-04-16T21:54:51.9942110Z [1m[92m  Downloaded[0m tower v0.5.3
+2026-04-16T21:54:52.0226760Z [1m[92m  Downloaded[0m toml v0.9.12+spec-1.1.0
+2026-04-16T21:54:52.0352450Z [1m[92m  Downloaded[0m tokio-util v0.7.18
+2026-04-16T21:54:52.0544900Z [1m[92m  Downloaded[0m tokenizers v0.22.2
+2026-04-16T21:54:52.0783980Z [1m[92m  Downloaded[0m futures-util v0.3.32
+2026-04-16T21:54:52.1196240Z [1m[92m  Downloaded[0m exr v1.74.0
+2026-04-16T21:54:52.1356580Z [1m[92m  Downloaded[0m time v0.3.47
+2026-04-16T21:54:52.1595440Z [1m[92m  Downloaded[0m tauri v2.10.3
+2026-04-16T21:54:52.1888040Z [1m[92m  Downloaded[0m tao v0.34.8
+2026-04-16T21:54:52.2083930Z [1m[92m  Downloaded[0m syn v2.0.117
+2026-04-16T21:54:52.2287600Z [1m[92m  Downloaded[0m objc2-metal v0.3.2
+2026-04-16T21:54:52.2594220Z [1m[92m  Downloaded[0m objc2 v0.6.4
+2026-04-16T21:54:52.2952430Z [1m[92m  Downloaded[0m nalgebra v0.34.2
+2026-04-16T21:54:52.3939870Z [1m[92m  Downloaded[0m zerocopy v0.8.48
+2026-04-16T21:54:52.4961300Z [1m[92m  Downloaded[0m brotli v8.0.2
+2026-04-16T21:54:52.5299880Z [1m[92m  Downloaded[0m profiling v1.0.17
+2026-04-16T21:54:52.5342920Z [1m[92m  Downloaded[0m precomputed-hash v0.1.1
+2026-04-16T21:54:52.5358510Z [1m[92m  Downloaded[0m ppv-lite86 v0.2.21
+2026-04-16T21:54:52.5391930Z [1m[92m  Downloaded[0m powerfmt v0.2.0
+2026-04-16T21:54:52.5419140Z [1m[92m  Downloaded[0m potential_utf v0.1.5
+2026-04-16T21:54:52.5445860Z [1m[92m  Downloaded[0m phf_shared v0.11.3
+2026-04-16T21:54:52.5472460Z [1m[92m  Downloaded[0m phf_shared v0.8.0
+2026-04-16T21:54:52.5491790Z [1m[92m  Downloaded[0m phf_macros v0.10.0
+2026-04-16T21:54:52.5515210Z [1m[92m  Downloaded[0m phf v0.10.1
+2026-04-16T21:54:52.5854750Z [1m[92m  Downloaded[0m phf v0.8.0
+2026-04-16T21:54:52.5880620Z [1m[92m  Downloaded[0m percent-encoding v2.3.2
+2026-04-16T21:54:52.5919700Z [1m[92m  Downloaded[0m pem-rfc7468 v1.0.0
+2026-04-16T21:54:52.5974470Z [1m[92m  Downloaded[0m pathdiff v0.2.3
+2026-04-16T21:54:52.5996540Z [1m[92m  Downloaded[0m pastey v0.2.1
+2026-04-16T21:54:52.6021730Z [1m[92m  Downloaded[0m pastey v0.1.1
+2026-04-16T21:54:52.6063060Z [1m[92m  Downloaded[0m paste v1.0.15
+2026-04-16T21:54:52.6163390Z [1m[92m  Downloaded[0m tray-icon v0.21.3
+2026-04-16T21:54:52.6207720Z [1m[92m  Downloaded[0m tracing-log v0.2.0
+2026-04-16T21:54:52.6236040Z [1m[92m  Downloaded[0m tracing-core v0.1.36
+2026-04-16T21:54:52.6286620Z [1m[92m  Downloaded[0m toml_parser v1.1.2+spec-1.1.0
+2026-04-16T21:54:52.6332540Z [1m[92m  Downloaded[0m toml_datetime v1.1.1+spec-1.1.0
+2026-04-16T21:54:52.6608930Z [1m[92m  Downloaded[0m toml_datetime v0.7.5+spec-1.1.0
+2026-04-16T21:54:52.6635240Z [1m[92m  Downloaded[0m toml v1.1.2+spec-1.1.0
+2026-04-16T21:54:52.6721110Z [1m[92m  Downloaded[0m tokio-stream v0.1.18
+2026-04-16T21:54:52.6811360Z [1m[92m  Downloaded[0m tokio-rustls v0.26.4
+2026-04-16T21:54:52.6846950Z [1m[92m  Downloaded[0m tinyvec v1.11.0
+2026-04-16T21:54:52.6888650Z [1m[92m  Downloaded[0m tiny-skia-path v0.12.0
+2026-04-16T21:54:52.6924110Z [1m[92m  Downloaded[0m strum_macros v0.28.0
+2026-04-16T21:54:52.6977130Z [1m[92m  Downloaded[0m string_cache v0.8.9
+2026-04-16T21:54:52.7083950Z [1m[92m  Downloaded[0m futures-sink v0.3.32
+2026-04-16T21:54:52.7108260Z [1m[92m  Downloaded[0m futures v0.3.32
+2026-04-16T21:54:52.7276770Z [1m[92m  Downloaded[0m fontdue v0.9.3
+2026-04-16T21:54:52.7431980Z [1m[92m  Downloaded[0m fontdb v0.23.0
+2026-04-16T21:54:52.7515260Z [1m[92m  Downloaded[0m fancy-regex v0.17.0
+2026-04-16T21:54:52.7671530Z [1m[92m  Downloaded[0m esaxx-rs v0.1.10
+2026-04-16T21:54:52.7778910Z [1m[92m  Downloaded[0m syn v1.0.109
+2026-04-16T21:54:52.8303450Z [1m[92m  Downloaded[0m objc2-core-foundation v0.3.2
+2026-04-16T21:54:52.8439680Z [1m[92m  Downloaded[0m rustix v1.1.4
+2026-04-16T21:54:52.8998970Z [1m[92m  Downloaded[0m glam v0.24.2
+2026-04-16T21:54:52.9843240Z [1m[92m  Downloaded[0m transpose v0.2.3
+2026-04-16T21:54:52.9876800Z [1m[92m  Downloaded[0m tower-service v0.3.3
+2026-04-16T21:54:53.0159170Z [1m[92m  Downloaded[0m tower-layer v0.3.3
+2026-04-16T21:54:53.0195730Z [1m[92m  Downloaded[0m toml_writer v1.1.1+spec-1.1.0
+2026-04-16T21:54:53.0240800Z [1m[92m  Downloaded[0m tokio-tungstenite v0.28.0
+2026-04-16T21:54:53.0312460Z [1m[92m  Downloaded[0m tokio-native-tls v0.3.1
+2026-04-16T21:54:53.0371730Z [1m[92m  Downloaded[0m tokio-macros v2.7.0
+2026-04-16T21:54:53.0405500Z [1m[92m  Downloaded[0m tinyvec_macros v0.1.1
+2026-04-16T21:54:53.0438630Z [1m[92m  Downloaded[0m tinystr v0.8.3
+2026-04-16T21:54:53.0886750Z [1m[92m  Downloaded[0m strum v0.28.0
+2026-04-16T21:54:53.0918000Z [1m[92m  Downloaded[0m strsim v0.11.1
+2026-04-16T21:54:53.0942400Z [1m[92m  Downloaded[0m string_cache_codegen v0.5.4
+2026-04-16T21:54:53.0959340Z [1m[92m  Downloaded[0m strict-num v0.1.1
+2026-04-16T21:54:53.0986320Z [1m[92m  Downloaded[0m strength_reduce v0.2.4
+2026-04-16T21:54:53.1025540Z [1m[92m  Downloaded[0m static_assertions v1.1.0
+2026-04-16T21:54:53.1061780Z [1m[92m  Downloaded[0m stable_deref_trait v1.2.1
+2026-04-16T21:54:53.1096470Z [1m[92m  Downloaded[0m gemm-f32 v0.19.0
+2026-04-16T21:54:53.1125550Z [1m[92m  Downloaded[0m gemm-f16 v0.19.0
+2026-04-16T21:54:53.1159190Z [1m[92m  Downloaded[0m gemm-common v0.19.0
+2026-04-16T21:54:53.1226480Z [1m[92m  Downloaded[0m gemm-common v0.18.2
+2026-04-16T21:54:53.1276890Z [1m[92m  Downloaded[0m gemm-c64 v0.18.2
+2026-04-16T21:54:53.1317850Z [1m[92m  Downloaded[0m gemm-c32 v0.19.0
+2026-04-16T21:54:53.1342090Z [1m[92m  Downloaded[0m gemm-c32 v0.18.2
+2026-04-16T21:54:53.1373270Z [1m[92m  Downloaded[0m gemm v0.19.0
+2026-04-16T21:54:53.1420590Z [1m[92m  Downloaded[0m gemm v0.18.2
+2026-04-16T21:54:53.1465560Z [1m[92m  Downloaded[0m futures-task v0.3.32
+2026-04-16T21:54:53.1504580Z [1m[92m  Downloaded[0m futures-executor v0.3.32
+2026-04-16T21:54:53.1556150Z [1m[92m  Downloaded[0m futures-channel v0.3.32
+2026-04-16T21:54:53.1611830Z [1m[92m  Downloaded[0m fs_extra v1.3.0
+2026-04-16T21:54:53.1648610Z [1m[92m  Downloaded[0m font-types v0.11.2
+2026-04-16T21:54:53.1708210Z [1m[92m  Downloaded[0m foldhash v0.2.0
+2026-04-16T21:54:53.1780470Z [1m[92m  Downloaded[0m foldhash v0.1.5
+2026-04-16T21:54:53.1791000Z [1m[92m  Downloaded[0m flate2 v1.1.9
+2026-04-16T21:54:53.1898960Z [1m[92m  Downloaded[0m fixedbitset v0.5.7
+2026-04-16T21:54:53.1957380Z [1m[92m  Downloaded[0m fixed_decimal v0.7.2
+2026-04-16T21:54:53.2026870Z [1m[92m  Downloaded[0m findshlibs v0.10.2
+2026-04-16T21:54:53.2063940Z [1m[92m  Downloaded[0m find-msvc-tools v0.1.9
+2026-04-16T21:54:53.2115720Z [1m[92m  Downloaded[0m filetime v0.2.27
+2026-04-16T21:54:53.2422900Z [1m[92m  Downloaded[0m fdeflate v0.3.7
+2026-04-16T21:54:53.2458800Z [1m[92m  Downloaded[0m fastrand v2.4.1
+2026-04-16T21:54:53.2481690Z [1m[92m  Downloaded[0m erased-serde v0.4.10
+2026-04-16T21:54:53.2523670Z [1m[92m  Downloaded[0m tiff v0.11.3
+2026-04-16T21:54:53.2597720Z [1m[92m  Downloaded[0m tauri-utils v2.8.3
+2026-04-16T21:54:53.2676420Z [1m[92m  Downloaded[0m tauri-plugin-updater v2.10.1
+2026-04-16T21:54:53.2735890Z [1m[92m  Downloaded[0m tauri-plugin-process v2.3.1
+2026-04-16T21:54:53.2793290Z [1m[92m  Downloaded[0m nom v8.0.0
+2026-04-16T21:54:53.2886930Z [1m[92m  Downloaded[0m moxcms v0.8.1
+2026-04-16T21:54:53.3121280Z [1m[92m  Downloaded[0m minijinja v2.19.0
+2026-04-16T21:54:53.3291860Z [1m[92m  Downloaded[0m zlib-rs v0.6.3
+2026-04-16T21:54:53.3469940Z [1m[92m  Downloaded[0m zip v8.5.1
+2026-04-16T21:54:53.3619610Z [1m[92m  Downloaded[0m rustls v0.23.37
+2026-04-16T21:54:53.3962680Z [1m[92m  Downloaded[0m rustfft v6.4.1
+2026-04-16T21:54:53.4252920Z [1m[92m  Downloaded[0m icu_experimental v0.5.0
+2026-04-16T21:54:53.4621510Z [1m[92m  Downloaded[0m glam v0.28.0
+2026-04-16T21:54:53.5169540Z [1m[92m  Downloaded[0m glam v0.25.0
+2026-04-16T21:54:53.6074660Z [1m[92m  Downloaded[0m gemm-f16 v0.18.2
+2026-04-16T21:54:53.6114060Z [1m[92m  Downloaded[0m gemm-c64 v0.19.0
+2026-04-16T21:54:53.6149180Z [1m[92m  Downloaded[0m fxhash v0.2.1
+2026-04-16T21:54:53.6172530Z [1m[92m  Downloaded[0m futures-macro v0.3.32
+2026-04-16T21:54:53.6465570Z [1m[92m  Downloaded[0m futures-io v0.3.32
+2026-04-16T21:54:53.6646290Z [1m[92m  Downloaded[0m futures-core v0.3.32
+2026-04-16T21:54:53.6698490Z [1m[92m  Downloaded[0m futf v0.1.5
+2026-04-16T21:54:53.6731530Z [1m[92m  Downloaded[0m form_urlencoded v1.2.2
+2026-04-16T21:54:53.6755810Z [1m[92m  Downloaded[0m foreign-types-shared v0.3.1
+2026-04-16T21:54:53.6778720Z [1m[92m  Downloaded[0m foreign-types-macros v0.2.3
+2026-04-16T21:54:53.6803480Z [1m[92m  Downloaded[0m icu_experimental_data v0.5.0
+2026-04-16T21:54:53.8698580Z [1m[92m  Downloaded[0m foreign-types v0.5.0
+2026-04-16T21:54:53.8729150Z [1m[92m  Downloaded[0m fnv v1.0.7
+2026-04-16T21:54:53.8765100Z [1m[92m  Downloaded[0m float8 v0.7.0
+2026-04-16T21:54:53.8814140Z [1m[92m  Downloaded[0m fax_derive v0.2.0
+2026-04-16T21:54:53.8872080Z [1m[92m  Downloaded[0m fax v0.2.6
+2026-04-16T21:54:53.8977180Z [1m[92m  Downloaded[0m errno v0.3.14
+2026-04-16T21:54:53.9050210Z [1m[92m  Downloaded[0m equivalent v1.0.2
+2026-04-16T21:54:53.9081960Z [1m[92m  Downloaded[0m equator-macro v0.4.2
+2026-04-16T21:54:53.9122270Z [1m[92m  Downloaded[0m time-macros v0.2.27
+2026-04-16T21:54:53.9202690Z [1m[92m  Downloaded[0m thread_local v1.1.9
+2026-04-16T21:54:53.9250960Z [1m[92m  Downloaded[0m thiserror-impl v2.0.18
+2026-04-16T21:54:53.9301130Z [1m[92m  Downloaded[0m thiserror-impl v1.0.69
+2026-04-16T21:54:53.9386850Z [1m[92m  Downloaded[0m thiserror v2.0.18
+2026-04-16T21:54:53.9710610Z [1m[92m  Downloaded[0m thiserror v1.0.69
+2026-04-16T21:54:53.9923730Z [1m[92m  Downloaded[0m tendril v0.4.3
+2026-04-16T21:54:53.9999980Z [1m[92m  Downloaded[0m tempfile v3.27.0
+2026-04-16T21:54:54.0092260Z [1m[92m  Downloaded[0m tauri-winres v0.3.5
+2026-04-16T21:54:54.0167830Z [1m[92m  Downloaded[0m tauri-runtime-wry v2.10.1
+2026-04-16T21:54:54.0252320Z [1m[92m  Downloaded[0m tauri-runtime v2.10.1
+2026-04-16T21:54:54.0308250Z [1m[92m  Downloaded[0m tauri-plugin-opener v2.5.3
+2026-04-16T21:54:54.0414660Z [1m[92m  Downloaded[0m tauri-plugin v2.5.4
+2026-04-16T21:54:54.0461870Z [1m[92m  Downloaded[0m tauri-macros v2.5.5
+2026-04-16T21:54:54.0546180Z [1m[92m  Downloaded[0m tauri-codegen v2.5.5
+2026-04-16T21:54:54.0917560Z [1m[92m  Downloaded[0m tauri-build v2.5.6
+2026-04-16T21:54:54.0964240Z [1m[92m  Downloaded[0m tar v0.4.45
+2026-04-16T21:54:54.1092590Z [1m[92m  Downloaded[0m synstructure v0.13.2
+2026-04-16T21:54:54.1125730Z [1m[92m  Downloaded[0m objc2-encode v4.1.0
+2026-04-16T21:54:54.1156780Z [1m[92m  Downloaded[0m objc2-core-graphics v0.3.2
+2026-04-16T21:54:54.1300560Z [1m[92m  Downloaded[0m num-rational v0.4.2
+2026-04-16T21:54:54.1326580Z [1m[92m  Downloaded[0m num-bigint v0.4.6
+2026-04-16T21:54:54.1405670Z [1m[92m  Downloaded[0m nom v7.1.3
+2026-04-16T21:54:54.1514060Z [1m[92m  Downloaded[0m muda v0.17.2
+2026-04-16T21:54:54.2101650Z [1m[92m  Downloaded[0m mio v1.2.0
+2026-04-16T21:54:54.2210980Z [1m[92m  Downloaded[0m zerovec v0.11.6
+2026-04-16T21:54:54.2314000Z [1m[92m  Downloaded[0m zerotrie v0.2.4
+2026-04-16T21:54:54.2413330Z [1m[92m  Downloaded[0m wry v0.54.4
+2026-04-16T21:54:54.2885570Z [1m[92m  Downloaded[0m winnow v0.7.15
+2026-04-16T21:54:54.3086730Z [1m[92m  Downloaded[0m webpki-roots v1.0.6
+2026-04-16T21:54:54.3149850Z [1m[92m  Downloaded[0m vcpkg v0.2.15
+2026-04-16T21:54:54.5466730Z [1m[92m  Downloaded[0m icu_locale_data v2.2.0
+2026-04-16T21:54:54.5576180Z [1m[92m  Downloaded[0m hashbrown v0.15.5
+2026-04-16T21:54:54.5693530Z [1m[92m  Downloaded[0m glam v0.18.0
+2026-04-16T21:54:54.5917320Z [1m[92m  Downloaded[0m system-configuration-sys v0.6.0
+2026-04-16T21:54:54.5949000Z [1m[92m  Downloaded[0m system-configuration v0.7.0
+2026-04-16T21:54:54.6011940Z [1m[92m  Downloaded[0m sysctl v0.6.0
+2026-04-16T21:54:54.6090220Z [1m[92m  Downloaded[0m sync_wrapper v1.0.2
+2026-04-16T21:54:54.6132560Z [1m[92m  Downloaded[0m swift-rs v1.0.7
+2026-04-16T21:54:54.6215290Z [1m[92m  Downloaded[0m subtle v2.6.1
+2026-04-16T21:54:54.6260730Z [1m[92m  Downloaded[0m num_cpus v1.17.0
+2026-04-16T21:54:54.6379250Z [1m[92m  Downloaded[0m num-traits v0.2.19
+2026-04-16T21:54:54.6445180Z [1m[92m  Downloaded[0m num-integer v0.1.46
+2026-04-16T21:54:54.6496470Z [1m[92m  Downloaded[0m miniz_oxide v0.8.9
+2026-04-16T21:54:54.6573290Z [1m[92m  Downloaded[0m minimal-lexical v0.2.1
+2026-04-16T21:54:54.6755850Z [1m[92m  Downloaded[0m minijinja-contrib v2.19.0
+2026-04-16T21:54:54.6850330Z [1m[92m  Downloaded[0m zmij v1.0.21
+2026-04-16T21:54:54.6949450Z [1m[92m  Downloaded[0m zip v7.2.0
+2026-04-16T21:54:54.7142490Z [1m[92m  Downloaded[0m zeroize v1.8.2
+2026-04-16T21:54:54.7235950Z [1m[92m  Downloaded[0m yoke-derive v0.8.2
+2026-04-16T21:54:54.7547020Z [1m[92m  Downloaded[0m winnow v1.0.1
+2026-04-16T21:54:54.8230590Z [1m[92m  Downloaded[0m wide v0.7.33
+2026-04-16T21:54:54.8391590Z [1m[92m  Downloaded[0m webpki-root-certs v1.0.6
+2026-04-16T21:54:54.8463290Z [1m[92m  Downloaded[0m utoipa-gen v5.4.0
+2026-04-16T21:54:54.8702520Z [1m[92m  Downloaded[0m serde-untagged v0.1.9
+2026-04-16T21:54:54.8760760Z [1m[92m  Downloaded[0m seq-macro v0.3.6
+2026-04-16T21:54:54.8818480Z [1m[92m  Downloaded[0m sentry-debug-images v0.47.0
+2026-04-16T21:54:54.8849740Z [1m[92m  Downloaded[0m sentry-contexts v0.47.0
+2026-04-16T21:54:54.8852010Z [1m[92m  Downloaded[0m rand_chacha v0.9.0
+2026-04-16T21:54:54.8890080Z [1m[92m  Downloaded[0m indicatif v0.18.4
+2026-04-16T21:54:54.9015850Z [1m[92m  Downloaded[0m image-webp v0.2.4
+2026-04-16T21:54:54.9157200Z [1m[92m  Downloaded[0m glam v0.29.3
+2026-04-16T21:54:55.0106180Z [1m[92m  Downloaded[0m av-scenechange v0.14.1
+2026-04-16T21:54:55.0446250Z [1m[92m  Downloaded[0m objc2-exception-helper v0.1.1
+2026-04-16T21:54:55.0483920Z [1m[92m  Downloaded[0m objc v0.2.7
+2026-04-16T21:54:55.0537500Z [1m[92m  Downloaded[0m num-iter v0.1.45
+2026-04-16T21:54:55.0559390Z [1m[92m  Downloaded[0m num-derive v0.4.2
+2026-04-16T21:54:55.0595570Z [1m[92m  Downloaded[0m num-conv v0.2.1
+2026-04-16T21:54:55.0613290Z [1m[92m  Downloaded[0m num-complex v0.4.6
+2026-04-16T21:54:55.0643150Z [1m[92m  Downloaded[0m num v0.4.3
+2026-04-16T21:54:55.0665610Z [1m[92m  Downloaded[0m nu-ansi-term v0.50.3
+2026-04-16T21:54:55.0712210Z [1m[92m  Downloaded[0m noop_proc_macro v0.3.0
+2026-04-16T21:54:55.0983820Z [1m[92m  Downloaded[0m nodrop v0.1.14
+2026-04-16T21:54:55.1062210Z [1m[92m  Downloaded[0m new_debug_unreachable v1.0.6
+2026-04-16T21:54:55.1082180Z [1m[92m  Downloaded[0m natord v1.0.9
+2026-04-16T21:54:55.1093550Z [1m[92m  Downloaded[0m native-tls v0.2.18
+2026-04-16T21:54:55.1122060Z [1m[92m  Downloaded[0m multer v3.1.0
+2026-04-16T21:54:55.1178180Z [1m[92m  Downloaded[0m monostate-impl v0.1.18
+2026-04-16T21:54:55.1194860Z [1m[92m  Downloaded[0m monostate v0.1.18
+2026-04-16T21:54:55.1241820Z [1m[92m  Downloaded[0m minisign-verify v0.2.5
+2026-04-16T21:54:55.1281550Z [1m[92m  Downloaded[0m zopfli v0.8.3
+2026-04-16T21:54:55.1349290Z [1m[92m  Downloaded[0m zerovec-derive v0.11.3
+2026-04-16T21:54:55.1396070Z [1m[92m  Downloaded[0m zerofrom-derive v0.1.7
+2026-04-16T21:54:55.1420690Z [1m[92m  Downloaded[0m zerocopy-derive v0.8.48
+2026-04-16T21:54:55.1618190Z [1m[92m  Downloaded[0m yoke v0.8.2
+2026-04-16T21:54:55.1665640Z [1m[92m  Downloaded[0m writeable v0.6.3
+2026-04-16T21:54:55.1721910Z [1m[92m  Downloaded[0m weezl v0.1.12
+2026-04-16T21:54:55.1776140Z [1m[92m  Downloaded[0m wasm-bindgen-macro-support v0.2.117
+2026-04-16T21:54:55.1827890Z [1m[92m  Downloaded[0m wasm-bindgen v0.2.117
+2026-04-16T21:54:55.1904230Z [1m[92m  Downloaded[0m v_frame v0.3.9
+2026-04-16T21:54:55.1977960Z [1m[92m  Downloaded[0m uuid v1.23.0
+2026-04-16T21:54:55.2109990Z [1m[92m  Downloaded[0m utoipa v5.4.0
+2026-04-16T21:54:55.2212320Z [1m[92m  Downloaded[0m serde v1.0.228
+2026-04-16T21:54:55.2690310Z [1m[92m  Downloaded[0m quinn-proto v0.11.14
+2026-04-16T21:54:55.2860550Z [1m[92m  Downloaded[0m primal-check v0.3.4
+2026-04-16T21:54:55.2888930Z [1m[92m  Downloaded[0m phf_generator v0.11.3
+2026-04-16T21:54:55.2928230Z [1m[92m  Downloaded[0m ipnet v2.12.0
+2026-04-16T21:54:55.2980210Z [1m[92m  Downloaded[0m impl-more v0.1.9
+2026-04-16T21:54:55.3041800Z [1m[92m  Downloaded[0m image v0.25.10
+2026-04-16T21:54:55.3309980Z [1m[92m  Downloaded[0m icu_plurals v2.2.0
+2026-04-16T21:54:55.3525800Z [1m[92m  Downloaded[0m icu_list_data v2.2.0
+2026-04-16T21:54:55.3575830Z [1m[92m  Downloaded[0m httpdate v1.0.3
+2026-04-16T21:54:55.3648940Z [1m[92m  Downloaded[0m hex v0.4.3
+2026-04-16T21:54:55.3690650Z [1m[92m  Downloaded[0m glam v0.22.0
+2026-04-16T21:54:55.4063450Z [1m[92m  Downloaded[0m zerofrom v0.1.7
+2026-04-16T21:54:55.4113250Z [1m[92m  Downloaded[0m yoke-derive v0.7.5
+2026-04-16T21:54:55.4172490Z [1m[92m  Downloaded[0m yoke v0.7.5
+2026-04-16T21:54:55.4241810Z [1m[92m  Downloaded[0m y4m v0.8.0
+2026-04-16T21:54:55.4265440Z [1m[92m  Downloaded[0m xattr v1.6.1
+2026-04-16T21:54:55.4310040Z [1m[92m  Downloaded[0m write16 v1.0.0
+2026-04-16T21:54:55.4333200Z [1m[92m  Downloaded[0m aws-lc-sys v0.39.1
+2026-04-16T21:54:56.0999940Z [1m[92m  Downloaded[0m wasm-bindgen-shared v0.2.117
+2026-04-16T21:54:56.1037430Z [1m[92m  Downloaded[0m wasm-bindgen-macro v0.2.117
+2026-04-16T21:54:56.1056360Z [1m[92m  Downloaded[0m want v0.3.1
+2026-04-16T21:54:56.1076590Z [1m[92m  Downloaded[0m walkdir v2.5.0
+2026-04-16T21:54:56.1128950Z [1m[92m  Downloaded[0m version_check v0.9.5
+2026-04-16T21:54:56.1183590Z [1m[92m  Downloaded[0m utoipa-axum v0.2.0
+2026-04-16T21:54:56.1231340Z [1m[92m  Downloaded[0m utf8parse v0.2.2
+2026-04-16T21:54:56.1262560Z [1m[92m  Downloaded[0m utf8_iter v1.0.4
+2026-04-16T21:54:56.1290090Z [1m[92m  Downloaded[0m utf8-zero v0.8.1
+2026-04-16T21:54:56.1343550Z [1m[92m  Downloaded[0m utf16_iter v1.0.5
+2026-04-16T21:54:56.1395430Z [1m[92m  Downloaded[0m utf-8 v0.7.6
+2026-04-16T21:54:56.1425610Z [1m[92m  Downloaded[0m serde_bytes v0.11.19
+2026-04-16T21:54:56.1466030Z [1m[92m  Downloaded[0m sentry-types v0.47.0
+2026-04-16T21:54:56.1520650Z [1m[92m  Downloaded[0m sentry-panic v0.47.0
+2026-04-16T21:54:56.1536640Z [1m[92m  Downloaded[0m sentry-core v0.47.0
+2026-04-16T21:54:56.1608640Z [1m[92m  Downloaded[0m sentry-actix v0.47.0
+2026-04-16T21:54:56.1637290Z [1m[92m  Downloaded[0m sentry v0.47.0
+2026-04-16T21:54:56.1720420Z [1m[92m  Downloaded[0m selectors v0.24.0
+2026-04-16T21:54:56.1757060Z [1m[92m  Downloaded[0m security-framework v3.7.0
+2026-04-16T21:54:56.1934150Z [1m[92m  Downloaded[0m schemars_derive v0.8.22
+2026-04-16T21:54:56.2040240Z [1m[92m  Downloaded[0m schemars v1.2.1
+2026-04-16T21:54:56.3286120Z [1m[92m  Downloaded[0m schemars v0.9.0
+2026-04-16T21:54:56.3718600Z [1m[92m  Downloaded[0m schemars v0.8.22
+2026-04-16T21:54:56.4280800Z [1m[92m  Downloaded[0m safe_arch v0.7.4
+2026-04-16T21:54:56.4638130Z [1m[92m  Downloaded[0m ryu v1.0.23
+2026-04-16T21:54:56.4869010Z [1m[92m  Downloaded[0m rustls-webpki v0.103.10
+2026-04-16T21:54:56.4948780Z [1m[92m  Downloaded[0m rustls-platform-verifier v0.6.2
+2026-04-16T21:54:56.5081560Z [1m[92m  Downloaded[0m rustdct v0.7.1
+2026-04-16T21:54:56.5213730Z [1m[92m  Downloaded[0m rmp-serde v1.3.1
+2026-04-16T21:54:56.5263670Z [1m[92m  Downloaded[0m rmp v0.8.15
+2026-04-16T21:54:56.5376720Z [1m[92m  Downloaded[0m imageproc v0.26.1
+2026-04-16T21:54:56.5598240Z [1m[92m  Downloaded[0m idna v1.1.0
+2026-04-16T21:54:56.5675880Z [1m[92m  Downloaded[0m ident_case v1.0.1
+2026-04-16T21:54:56.5713940Z [1m[92m  Downloaded[0m icu_properties_data v2.2.0
+2026-04-16T21:54:56.6143440Z [1m[92m  Downloaded[0m icu_pattern v0.4.2
+2026-04-16T21:54:56.6205820Z [1m[92m  Downloaded[0m icu_decimal v2.2.0
+2026-04-16T21:54:56.6281860Z [1m[92m  Downloaded[0m icu_datetime v2.2.0
+2026-04-16T21:54:56.6564570Z [1m[92m  Downloaded[0m icu v2.2.0
+2026-04-16T21:54:56.6652230Z [1m[92m  Downloaded[0m hyper-util v0.1.20
+2026-04-16T21:54:56.6791150Z [1m[92m  Downloaded[0m hashbrown v0.12.3
+2026-04-16T21:54:56.6897470Z [1m[92m  Downloaded[0m glam v0.19.0
+2026-04-16T21:54:56.7272540Z [1m[92m  Downloaded[0m git-version-macro v0.3.9
+2026-04-16T21:54:56.7302580Z [1m[92m  Downloaded[0m chrono v0.4.44
+2026-04-16T21:54:56.7462060Z [1m[92m  Downloaded[0m bindgen v0.72.1
+2026-04-16T21:54:56.7651460Z [1m[92m  Downloaded[0m actix-web v4.13.0
+2026-04-16T21:54:56.7952460Z [1m[92m  Downloaded[0m sentry-backtrace v0.47.0
+2026-04-16T21:54:56.7981120Z [1m[92m  Downloaded[0m semver v1.0.28
+2026-04-16T21:54:56.8039770Z [1m[92m  Downloaded[0m security-framework-sys v2.17.0
+2026-04-16T21:54:56.8120670Z [1m[92m  Downloaded[0m secrecy v0.10.3
+2026-04-16T21:54:56.8141010Z [1m[92m  Downloaded[0m scopeguard v1.2.0
+2026-04-16T21:54:56.8213090Z [1m[92m  Downloaded[0m schemars_derive v1.2.1
+2026-04-16T21:54:56.8263870Z [1m[92m  Downloaded[0m same-file v1.0.6
+2026-04-16T21:54:56.8290680Z [1m[92m  Downloaded[0m safetensors v0.7.0
+2026-04-16T21:54:56.8323880Z [1m[92m  Downloaded[0m safetensors v0.4.5
+2026-04-16T21:54:56.8353360Z [1m[92m  Downloaded[0m rustversion v1.0.22
+2026-04-16T21:54:56.8444840Z [1m[92m  Downloaded[0m rustls-pki-types v1.14.0
+2026-04-16T21:54:56.8514100Z [1m[92m  Downloaded[0m rustc_version v0.4.1
+2026-04-16T21:54:56.8545600Z [1m[92m  Downloaded[0m rustc-hash v2.1.2
+2026-04-16T21:54:56.8598970Z [1m[92m  Downloaded[0m rustc-demangle v0.1.27
+2026-04-16T21:54:56.8653380Z [1m[92m  Downloaded[0m rmpv v1.3.1
+2026-04-16T21:54:56.8705180Z [1m[92m  Downloaded[0m rmcp-macros v0.16.0
+2026-04-16T21:54:56.8740000Z [1m[92m  Downloaded[0m rand_chacha v0.2.2
+2026-04-16T21:54:56.8763610Z [1m[92m  Downloaded[0m rand v0.10.0
+2026-04-16T21:54:56.8885450Z [1m[92m  Downloaded[0m rand v0.9.2
+2026-04-16T21:54:56.8980120Z [1m[92m  Downloaded[0m rand v0.8.5
+2026-04-16T21:54:56.9101430Z [1m[92m  Downloaded[0m rand v0.7.3
+2026-04-16T21:54:56.9253190Z [1m[92m  Downloaded[0m indexmap v1.9.3
+2026-04-16T21:54:56.9320960Z [1m[92m  Downloaded[0m icu_time v2.2.0
+2026-04-16T21:54:56.9393780Z [1m[92m  Downloaded[0m icu_collections v2.2.0
+2026-04-16T21:54:56.9681720Z [1m[92m  Downloaded[0m ico v0.5.0
+2026-04-16T21:54:56.9748260Z [1m[92m  Downloaded[0m http-body v1.0.1
+2026-04-16T21:54:56.9776600Z [1m[92m  Downloaded[0m http v0.2.12
+2026-04-16T21:54:56.9856640Z [1m[92m  Downloaded[0m html5ever v0.29.1
+2026-04-16T21:54:56.9936900Z [1m[92m  Downloaded[0m hashbrown v0.16.1
+2026-04-16T21:54:57.0060990Z [1m[92m  Downloaded[0m getrandom v0.2.17
+2026-04-16T21:54:57.0165510Z [1m[92m  Downloaded[0m clap_builder v4.6.0
+2026-04-16T21:54:57.0356450Z [1m[92m  Downloaded[0m blake3 v1.8.4
+2026-04-16T21:54:57.0607260Z [1m[92m  Downloaded[0m axum v0.8.8
+2026-04-16T21:54:57.0853150Z [1m[92m  Downloaded[0m aws-lc-rs v1.16.2
+2026-04-16T21:54:57.1168850Z [1m[92m  Downloaded[0m quote v1.0.45
+2026-04-16T21:54:57.1290050Z [1m[92m  Downloaded[0m quinn-udp v0.5.14
+2026-04-16T21:54:57.1342990Z [1m[92m  Downloaded[0m proc-macro2 v1.0.106
+2026-04-16T21:54:57.1418790Z [1m[92m  Downloaded[0m phf_generator v0.10.0
+2026-04-16T21:54:57.1465080Z [1m[92m  Downloaded[0m is_terminal_polyfill v1.70.2
+2026-04-16T21:54:57.1526300Z [1m[92m  Downloaded[0m infer v0.19.0
+2026-04-16T21:54:57.2023820Z [1m[92m  Downloaded[0m idna_adapter v1.2.1
+2026-04-16T21:54:57.2049610Z [1m[92m  Downloaded[0m icu_provider v2.2.0
+2026-04-16T21:54:57.2117520Z [1m[92m  Downloaded[0m icu_normalizer v2.2.0
+2026-04-16T21:54:57.2257640Z [1m[92m  Downloaded[0m icu_locale v2.2.0
+2026-04-16T21:54:57.2315510Z [1m[92m  Downloaded[0m icu_calendar_data v2.2.0
+2026-04-16T21:54:57.2348870Z [1m[92m  Downloaded[0m hyper-tls v0.6.0
+2026-04-16T21:54:57.2376760Z [1m[92m  Downloaded[0m hyper-rustls v0.27.7
+2026-04-16T21:54:57.2457080Z [1m[92m  Downloaded[0m http-body-util v0.1.3
+2026-04-16T21:54:57.2519060Z [1m[92m  Downloaded[0m h2 v0.4.13
+2026-04-16T21:54:57.2719610Z [1m[92m  Downloaded[0m glob v0.3.3
+2026-04-16T21:54:57.2771270Z [1m[92m  Downloaded[0m glam v0.21.3
+2026-04-16T21:54:57.3184800Z [1m[92m  Downloaded[0m getrandom v0.1.16
+2026-04-16T21:54:57.3303020Z [1m[92m  Downloaded[0m generic-array v0.14.7
+2026-04-16T21:54:57.3336640Z [1m[92m  Downloaded[0m core-graphics v0.25.0
+2026-04-16T21:54:57.3386410Z [1m[92m  Downloaded[0m core-foundation-sys v0.8.7
+2026-04-16T21:54:57.3471450Z [1m[92m  Downloaded[0m cookie_store v0.22.1
+2026-04-16T21:54:57.3525040Z [1m[92m  Downloaded[0m cookie v0.18.1
+2026-04-16T21:54:57.3586490Z [1m[92m  Downloaded[0m compact_str v0.9.0
+2026-04-16T21:54:57.3683250Z [1m[92m  Downloaded[0m clap v4.6.0
+2026-04-16T21:54:57.4107600Z [1m[92m  Downloaded[0m clang-sys v1.8.1
+2026-04-16T21:54:57.4165050Z [1m[92m  Downloaded[0m chacha20 v0.10.0
+2026-04-16T21:54:57.4264540Z [1m[92m  Downloaded[0m cexpr v0.6.0
+2026-04-16T21:54:57.4333880Z [1m[92m  Downloaded[0m cc v1.2.59
+2026-04-16T21:54:57.4404990Z [1m[92m  Downloaded[0m cargo_toml v0.22.3
+2026-04-16T21:54:57.4445270Z [1m[92m  Downloaded[0m calendrical_calculations v0.2.4
+2026-04-16T21:54:57.4498790Z [1m[92m  Downloaded[0m bytes v1.11.1
+2026-04-16T21:54:57.4612040Z [1m[92m  Downloaded[0m bytemuck v1.25.0
+2026-04-16T21:54:57.4741980Z [1m[92m  Downloaded[0m bumpalo v3.20.2
+2026-04-16T21:54:57.4841350Z [1m[92m  Downloaded[0m bitstream-io v4.9.0
+2026-04-16T21:54:57.4936490Z [1m[92m  Downloaded[0m base64 v0.22.1
+2026-04-16T21:54:57.5075140Z [1m[92m  Downloaded[0m base64 v0.21.7
+2026-04-16T21:54:57.5240500Z [1m[92m  Downloaded[0m backtrace v0.3.76
+2026-04-16T21:54:57.5352530Z [1m[92m  Downloaded[0m anyhow v1.0.102
+2026-04-16T21:54:57.5486070Z [1m[92m  Downloaded[0m actix-server v2.6.0
+2026-04-16T21:54:57.5556520Z [1m[92m  Downloaded[0m phf_codegen v0.11.3
+2026-04-16T21:54:57.5581190Z [1m[92m  Downloaded[0m iri-string v0.7.12
+2026-04-16T21:54:57.5833210Z [1m[92m  Downloaded[0m imgref v1.12.0
+2026-04-16T21:54:57.5867800Z [1m[92m  Downloaded[0m icu_time_data v2.2.0
+2026-04-16T21:54:57.5897590Z [1m[92m  Downloaded[0m icu_plurals_data v2.2.0
+2026-04-16T21:54:57.5921820Z [1m[92m  Downloaded[0m icu_normalizer_data v2.2.0
+2026-04-16T21:54:57.5953280Z [1m[92m  Downloaded[0m icu_list v2.2.0
+2026-04-16T21:54:57.5975910Z [1m[92m  Downloaded[0m iana-time-zone v0.1.65
+2026-04-16T21:54:57.6023880Z [1m[92m  Downloaded[0m hyper v1.9.0
+2026-04-16T21:54:57.6133700Z [1m[92m  Downloaded[0m httparse v1.10.1
+2026-04-16T21:54:57.6196650Z [1m[92m  Downloaded[0m hostname v0.4.2
+2026-04-16T21:54:57.6237150Z [1m[92m  Downloaded[0m hf-hub v0.5.0
+2026-04-16T21:54:57.6273150Z [1m[92m  Downloaded[0m heck v0.5.0
+2026-04-16T21:54:57.6306850Z [1m[92m  Downloaded[0m harfrust v0.6.0
+2026-04-16T21:54:57.6486100Z [1m[92m  Downloaded[0m glam v0.27.0
+2026-04-16T21:54:57.6990530Z [1m[92m  Downloaded[0m glam v0.23.0
+2026-04-16T21:54:57.7483640Z [1m[92m  Downloaded[0m gif v0.14.1
+2026-04-16T21:54:57.7518940Z [1m[92m  Downloaded[0m core2 v0.4.0
+2026-04-16T21:54:57.7568380Z [1m[92m  Downloaded[0m core-foundation v0.10.1
+2026-04-16T21:54:57.7621970Z [1m[92m  Downloaded[0m convert_case v0.10.0
+2026-04-16T21:54:57.7698730Z [1m[92m  Downloaded[0m colorchoice v1.0.5
+2026-04-16T21:54:57.7717840Z [1m[92m  Downloaded[0m color_quant v1.1.0
+2026-04-16T21:54:57.7736680Z [1m[92m  Downloaded[0m cmake v0.1.58
+2026-04-16T21:54:57.7782470Z [1m[92m  Downloaded[0m clap_lex v1.1.0
+2026-04-16T21:54:57.7813050Z [1m[92m  Downloaded[0m clap_derive v4.6.0
+2026-04-16T21:54:57.7875820Z [1m[92m  Downloaded[0m cfg_aliases v0.2.1
+2026-04-16T21:54:57.7900540Z [1m[92m  Downloaded[0m cfb v0.7.3
+2026-04-16T21:54:57.8016320Z [1m[92m  Downloaded[0m castaway v0.2.4
+2026-04-16T21:54:57.8053860Z [1m[92m  Downloaded[0m cargo_metadata v0.19.2
+2026-04-16T21:54:57.8103070Z [1m[92m  Downloaded[0m cargo-platform v0.1.9
+2026-04-16T21:54:57.8157250Z [1m[92m  Downloaded[0m camino v1.2.2
+2026-04-16T21:54:57.8217010Z [1m[92m  Downloaded[0m bytemuck_derive v1.10.2
+2026-04-16T21:54:57.8244880Z [1m[92m  Downloaded[0m bitflags v2.11.0
+2026-04-16T21:54:57.8346360Z [1m[92m  Downloaded[0m bitflags v1.3.2
+2026-04-16T21:54:57.8419320Z [1m[92m  Downloaded[0m bit-vec v0.8.0
+2026-04-16T21:54:57.8463640Z [1m[92m  Downloaded[0m bit-set v0.8.0
+2026-04-16T21:54:57.8494630Z [1m[92m  Downloaded[0m base64ct v1.8.3
+2026-04-16T21:54:57.8620160Z [1m[92m  Downloaded[0m axum-core v0.5.6
+2026-04-16T21:54:57.8690480Z [1m[92m  Downloaded[0m avif-serialize v0.8.8
+2026-04-16T21:54:57.8715560Z [1m[92m  Downloaded[0m as-slice v0.2.1
+2026-04-16T21:54:57.8728280Z [1m[92m  Downloaded[0m arrayvec v0.7.6
+2026-04-16T21:54:57.8800340Z [1m[92m  Downloaded[0m arrayref v0.3.9
+2026-04-16T21:54:57.8835910Z [1m[92m  Downloaded[0m arg_enum_proc_macro v0.3.4
+2026-04-16T21:54:57.8864390Z [1m[92m  Downloaded[0m anstream v1.0.0
+2026-04-16T21:54:57.8906900Z [1m[92m  Downloaded[0m aligned-vec v0.6.4
+2026-04-16T21:54:57.8930500Z [1m[92m  Downloaded[0m aligned v0.4.3
+2026-04-16T21:54:57.8961930Z [1m[92m  Downloaded[0m actix-service v2.0.3
+2026-04-16T21:54:57.9038450Z [1m[92m  Downloaded[0m inventory v0.3.24
+2026-04-16T21:54:57.9088390Z [1m[92m  Downloaded[0m indexmap v2.13.1
+2026-04-16T21:54:57.9209970Z [1m[92m  Downloaded[0m icu_locale_core v2.2.0
+2026-04-16T21:54:57.9425680Z [1m[92m  Downloaded[0m icu_decimal_data v2.2.0
+2026-04-16T21:54:57.9506200Z [1m[92m  Downloaded[0m icu_casemap v2.2.0
+2026-04-16T21:54:57.9544400Z [1m[92m  Downloaded[0m http v1.4.0
+2026-04-16T21:54:57.9679530Z [1m[92m  Downloaded[0m glam v0.32.1
+2026-04-16T21:54:58.0512780Z [1m[92m  Downloaded[0m glam v0.20.5
+2026-04-16T21:54:58.0844800Z [1m[92m  Downloaded[0m glam v0.17.3
+2026-04-16T21:54:58.1067370Z [1m[92m  Downloaded[0m glam v0.16.0
+2026-04-16T21:54:58.1327810Z [1m[92m  Downloaded[0m glam v0.15.2
+2026-04-16T21:54:58.1537230Z [1m[92m  Downloaded[0m glam v0.14.0
+2026-04-16T21:54:58.1740270Z [1m[92m  Downloaded[0m gimli v0.32.3
+2026-04-16T21:54:58.1987050Z [1m[92m  Downloaded[0m getrandom v0.3.4
+2026-04-16T21:54:58.2152200Z [1m[92m  Downloaded[0m core-graphics-types v0.2.0
+2026-04-16T21:54:58.2202060Z [1m[92m  Downloaded[0m core-graphics-types v0.1.3
+2026-04-16T21:54:58.2278560Z [1m[92m  Downloaded[0m core-foundation v0.9.4
+2026-04-16T21:54:58.2365640Z [1m[92m  Downloaded[0m convert_case v0.4.0
+2026-04-16T21:54:58.2377740Z [1m[92m  Downloaded[0m constant_time_eq v0.4.2
+2026-04-16T21:54:58.2428060Z [1m[92m  Downloaded[0m cfg-if v1.0.4
+2026-04-16T21:54:58.2453690Z [1m[92m  Downloaded[0m built v0.8.0
+2026-04-16T21:54:58.2494560Z [1m[92m  Downloaded[0m block2 v0.6.2
+2026-04-16T21:54:58.2525620Z [1m[92m  Downloaded[0m block v0.1.6
+2026-04-16T21:54:58.2538460Z [1m[92m  Downloaded[0m bit_field v0.10.3
+2026-04-16T21:54:58.2562930Z [1m[92m  Downloaded[0m base64 v0.13.1
+2026-04-16T21:54:58.2628900Z [1m[92m  Downloaded[0m atomic-waker v1.1.2
+2026-04-16T21:54:58.2730660Z [1m[92m  Downloaded[0m async-trait v0.1.89
+2026-04-16T21:54:58.2774540Z [1m[92m  Downloaded[0m approx v0.5.1
+2026-04-16T21:54:58.2822020Z [1m[92m  Downloaded[0m anstyle-query v1.1.5
+2026-04-16T21:54:58.2873940Z [1m[92m  Downloaded[0m anstyle-parse v1.0.0
+2026-04-16T21:54:58.2911360Z [1m[92m  Downloaded[0m anstyle v1.0.14
+2026-04-16T21:54:58.2960830Z [1m[92m  Downloaded[0m alloc-stdlib v0.2.2
+2026-04-16T21:54:58.2983780Z [1m[92m  Downloaded[0m alloc-no-stdlib v2.0.4
+2026-04-16T21:54:58.3013520Z [1m[92m  Downloaded[0m aho-corasick v1.1.4
+2026-04-16T21:54:58.3115850Z [1m[92m  Downloaded[0m ahash v0.8.12
+2026-04-16T21:54:58.3151680Z [1m[92m  Downloaded[0m addr2line v0.25.1
+2026-04-16T21:54:58.3178680Z [1m[92m  Downloaded[0m actix-utils v3.0.1
+2026-04-16T21:54:58.3194880Z [1m[92m  Downloaded[0m actix-rt v2.11.0
+2026-04-16T21:54:58.3217110Z [1m[92m  Downloaded[0m actix-router v0.5.4
+2026-04-16T21:54:58.3250310Z [1m[92m  Downloaded[0m actix-http v3.12.0
+2026-04-16T21:54:58.3392760Z [1m[92m  Downloaded[0m actix-codec v0.5.2
+2026-04-16T21:54:58.3418530Z [1m[92m  Downloaded[0m ab_glyph_rasterizer v0.1.10
+2026-04-16T21:54:58.3435660Z [1m[92m  Downloaded[0m ab_glyph v0.2.32
+2026-04-16T21:54:58.3461000Z [1m[92m  Downloaded[0m phf_codegen v0.8.0
+2026-04-16T21:54:58.3484420Z [1m[92m  Downloaded[0m itertools v0.13.0
+2026-04-16T21:54:58.3593670Z [1m[92m  Downloaded[0m getrandom v0.4.2
+2026-04-16T21:54:58.3664470Z [1m[92m  Downloaded[0m byteorder-lite v0.1.0
+2026-04-16T21:54:58.3678990Z [1m[92m  Downloaded[0m byteorder v1.5.0
+2026-04-16T21:54:58.3706900Z [1m[92m  Downloaded[0m block-buffer v0.10.4
+2026-04-16T21:54:58.3722360Z [1m[92m  Downloaded[0m autocfg v1.5.0
+2026-04-16T21:54:58.3752170Z [1m[92m  Downloaded[0m allocator-api2 v0.2.21
+2026-04-16T21:54:58.3792020Z [1m[92m  Downloaded[0m adler2 v2.0.1
+2026-04-16T21:54:58.3811740Z [1m[92m  Downloaded[0m half v2.7.1
+2026-04-16T21:54:58.3852750Z [1m[92m  Downloaded[0m core_maths v0.1.1
+2026-04-16T21:54:58.3867640Z [1m[92m  Downloaded[0m git-version v0.3.9
+2026-04-16T21:54:58.3885830Z [1m[92m  Downloaded[0m console v0.16.3
+2026-04-16T21:54:58.3922320Z [1m[92m  Downloaded[0m brotli-decompressor v5.0.0
+2026-04-16T21:54:58.4134710Z [1m[92m  Downloaded[0m av1-grain v0.2.5
+2026-04-16T21:54:58.8845530Z [1m[92m   Compiling[0m proc-macro2 v1.0.106
+2026-04-16T21:54:58.8949270Z [1m[92m   Compiling[0m quote v1.0.45
+2026-04-16T21:54:58.9020660Z [1m[92m   Compiling[0m unicode-ident v1.0.24
+2026-04-16T21:54:59.3948780Z [1m[92m   Compiling[0m libc v0.2.184
+2026-04-16T21:55:03.8164770Z [1m[92m   Compiling[0m serde_core v1.0.228
+2026-04-16T21:55:04.0938380Z [1m[92m   Compiling[0m syn v2.0.117
+2026-04-16T21:55:04.1411960Z [1m[92m   Compiling[0m shlex v1.3.0
+2026-04-16T21:55:04.2594300Z [1m[92m   Compiling[0m jobserver v0.1.34
+2026-04-16T21:55:04.5818660Z [1m[92m   Compiling[0m find-msvc-tools v0.1.9
+2026-04-16T21:55:04.7556720Z [1m[92m   Compiling[0m cc v1.2.59
+2026-04-16T21:55:06.2343630Z [1m[92m   Compiling[0m cfg-if v1.0.4
+2026-04-16T21:55:06.2641760Z [1m[92m   Compiling[0m autocfg v1.5.0
+2026-04-16T21:55:06.2946260Z [1m[92m   Compiling[0m memchr v2.8.0
+2026-04-16T21:55:06.5830340Z [1m[92m   Compiling[0m bitflags v2.11.0
+2026-04-16T21:55:06.8993790Z [1m[92m   Compiling[0m zmij v1.0.21
+2026-04-16T21:55:06.9478820Z [1m[92m   Compiling[0m either v1.15.0
+2026-04-16T21:55:07.0848800Z [1m[92m   Compiling[0m synstructure v0.13.2
+2026-04-16T21:55:07.1227290Z [1m[92m   Compiling[0m smallvec v1.15.1
+2026-04-16T21:55:07.2769810Z [1m[92m   Compiling[0m libm v0.2.16
+2026-04-16T21:55:07.5109150Z [1m[92m   Compiling[0m stable_deref_trait v1.2.1
+2026-04-16T21:55:08.4658250Z [1m[92m   Compiling[0m serde_derive v1.0.228
+2026-04-16T21:55:09.5627240Z [1m[92m   Compiling[0m zerofrom-derive v0.1.7
+2026-04-16T21:55:10.0262030Z [1m[92m   Compiling[0m yoke-derive v0.8.2
+2026-04-16T21:55:11.5145530Z [1m[92m   Compiling[0m zerovec-derive v0.11.3
+2026-04-16T21:55:11.6302140Z [1m[92m   Compiling[0m displaydoc v0.2.5
+2026-04-16T21:55:12.4600670Z [1m[92m   Compiling[0m itoa v1.0.18
+2026-04-16T21:55:12.5245870Z [1m[92m   Compiling[0m serde v1.0.228
+2026-04-16T21:55:12.8002720Z [1m[92m   Compiling[0m icu_properties_data v2.2.0
+2026-04-16T21:55:12.8415200Z [1m[92m   Compiling[0m thiserror v2.0.18
+2026-04-16T21:55:12.9769420Z [1m[92m   Compiling[0m icu_normalizer_data v2.2.0
+2026-04-16T21:55:13.1467170Z [1m[92m   Compiling[0m thiserror-impl v2.0.18
+2026-04-16T21:55:13.1568160Z [1m[92m   Compiling[0m cmake v0.1.58
+2026-04-16T21:55:13.4350080Z [1m[92m   Compiling[0m log v0.4.29
+2026-04-16T21:55:13.5468880Z [1m[92m   Compiling[0m parking_lot_core v0.9.12
+2026-04-16T21:55:13.7034380Z [1m[92m   Compiling[0m zerofrom v0.1.7
+2026-04-16T21:55:13.7816010Z [1m[92m   Compiling[0m once_cell v1.21.4
+2026-04-16T21:55:13.9439790Z [1m[92m   Compiling[0m version_check v0.9.5
+2026-04-16T21:55:14.0478470Z [1m[92m   Compiling[0m yoke v0.8.2
+2026-04-16T21:55:14.1370910Z [1m[92m   Compiling[0m dunce v1.0.5
+2026-04-16T21:55:14.1851450Z [1m[92m   Compiling[0m num-traits v0.2.19
+2026-04-16T21:55:14.2301170Z [1m[92m   Compiling[0m getrandom v0.3.4
+2026-04-16T21:55:14.2571240Z [1m[92m   Compiling[0m zerovec v0.11.6
+2026-04-16T21:55:14.4781960Z [1m[92m   Compiling[0m writeable v0.6.3
+2026-04-16T21:55:15.1227140Z [1m[92m   Compiling[0m zerocopy v0.8.48
+2026-04-16T21:55:15.2858690Z [1m[92m   Compiling[0m pin-project-lite v0.2.17
+2026-04-16T21:55:15.3380420Z [1m[92m   Compiling[0m tinystr v0.8.3
+2026-04-16T21:55:15.5542770Z [1m[92m   Compiling[0m zerocopy-derive v0.8.48
+2026-04-16T21:55:15.5850080Z [1m[92m   Compiling[0m bytes v1.11.1
+2026-04-16T21:55:16.6634710Z [1m[92m   Compiling[0m litemap v0.8.2
+2026-04-16T21:55:16.8924470Z [1m[92m   Compiling[0m icu_locale_core v2.2.0
+2026-04-16T21:55:19.3569200Z [1m[92m   Compiling[0m ppv-lite86 v0.2.21
+2026-04-16T21:55:19.5866640Z [1m[92m   Compiling[0m potential_utf v0.1.5
+2026-04-16T21:55:19.7761680Z [1m[92m   Compiling[0m zerotrie v0.2.4
+2026-04-16T21:55:21.6852510Z [1m[92m   Compiling[0m utf8_iter v1.0.4
+2026-04-16T21:55:21.8299820Z [1m[92m   Compiling[0m icu_collections v2.2.0
+2026-04-16T21:55:22.0252970Z [1m[92m   Compiling[0m icu_provider v2.2.0
+2026-04-16T21:55:23.7482880Z [1m[92m   Compiling[0m serde_json v1.0.149
+2026-04-16T21:55:24.5266780Z [1m[92m   Compiling[0m rand_core v0.9.5
+2026-04-16T21:55:24.6792310Z [1m[92m   Compiling[0m anyhow v1.0.102
+2026-04-16T21:55:24.7635750Z [1m[92m   Compiling[0m rand_chacha v0.9.0
+2026-04-16T21:55:24.9639380Z [1m[92m   Compiling[0m bytemuck_derive v1.10.2
+2026-04-16T21:55:26.0694980Z [1m[92m   Compiling[0m pkg-config v0.3.32
+2026-04-16T21:55:26.4933870Z [1m[92m   Compiling[0m ident_case v1.0.1
+2026-04-16T21:55:26.5580910Z [1m[92m   Compiling[0m strsim v0.11.1
+2026-04-16T21:55:26.8309350Z [1m[92m   Compiling[0m bytemuck v1.25.0
+2026-04-16T21:55:26.9231840Z [1m[92m   Compiling[0m rand v0.9.2
+2026-04-16T21:55:27.1315530Z [1m[92m   Compiling[0m rand_core v0.10.0
+2026-04-16T21:55:27.2701340Z [1m[92m   Compiling[0m thiserror v1.0.69
+2026-04-16T21:55:27.5600070Z [1m[92m   Compiling[0m core-foundation-sys v0.8.7
+2026-04-16T21:55:27.6405720Z [1m[92m   Compiling[0m fnv v1.0.7
+2026-04-16T21:55:27.7010380Z [1m[92m   Compiling[0m getrandom v0.4.2
+2026-04-16T21:55:27.8153520Z [1m[92m   Compiling[0m getrandom v0.2.17
+2026-04-16T21:55:27.8795060Z [1m[92m   Compiling[0m errno v0.3.14
+2026-04-16T21:55:27.9126410Z [1m[92m   Compiling[0m crossbeam-utils v0.8.21
+2026-04-16T21:55:27.9780440Z [1m[92m   Compiling[0m rand_core v0.6.4
+2026-04-16T21:55:28.2982180Z [1m[92m   Compiling[0m thiserror-impl v1.0.69
+2026-04-16T21:55:28.4955700Z [1m[92m   Compiling[0m rand_chacha v0.3.1
+2026-04-16T21:55:28.8105380Z [1m[92m   Compiling[0m equivalent v1.0.2
+2026-04-16T21:55:28.8520080Z [1m[92m   Compiling[0m allocator-api2 v0.2.21
+2026-04-16T21:55:29.0235710Z [1m[92m   Compiling[0m crc32fast v1.5.0
+2026-04-16T21:55:29.2105320Z [1m[92m   Compiling[0m rand v0.8.5
+2026-04-16T21:55:29.7797010Z [1m[92m   Compiling[0m heck v0.5.0
+2026-04-16T21:55:29.9286020Z [1m[92m   Compiling[0m http v1.4.0
+2026-04-16T21:55:29.9712500Z [1m[92m   Compiling[0m percent-encoding v2.3.2
+2026-04-16T21:55:29.9851990Z [1m[92m   Compiling[0m foldhash v0.2.0
+2026-04-16T21:55:30.1801380Z [1m[92m   Compiling[0m hashbrown v0.16.1
+2026-04-16T21:55:30.6186100Z [1m[92m   Compiling[0m aho-corasick v1.1.4
+2026-04-16T21:55:30.9396500Z [1m[92m   Compiling[0m regex-syntax v0.8.10
+2026-04-16T21:55:31.8892570Z [1m[92m   Compiling[0m scopeguard v1.2.0
+2026-04-16T21:55:31.9180870Z [1m[92m   Compiling[0m fs_extra v1.3.0
+2026-04-16T21:55:31.9367350Z [1m[92m   Compiling[0m lock_api v0.4.14
+2026-04-16T21:55:32.1191770Z [1m[92m   Compiling[0m aws-lc-sys v0.39.1
+2026-04-16T21:55:32.4849250Z [1m[92m   Compiling[0m regex-automata v0.4.14
+2026-04-16T21:55:32.8396060Z [1m[92m   Compiling[0m icu_properties v2.2.0
+2026-04-16T21:55:34.2443640Z [1m[92m   Compiling[0m vcpkg v0.2.15
+2026-04-16T21:55:34.9481840Z [1m[92m   Compiling[0m write16 v1.0.0
+2026-04-16T21:55:35.0244720Z [1m[92m   Compiling[0m siphasher v1.0.2
+2026-04-16T21:55:35.2371120Z [1m[92m   Compiling[0m utf16_iter v1.0.5
+2026-04-16T21:55:35.2975140Z [1m[92m   Compiling[0m icu_normalizer v2.2.0
+2026-04-16T21:55:35.4490060Z [1m[92m   Compiling[0m phf_shared v0.11.3
+2026-04-16T21:55:35.5822490Z [1m[92m   Compiling[0m libz-sys v1.1.28
+2026-04-16T21:55:35.8219680Z [1m[92m   Compiling[0m regex v1.12.3
+2026-04-16T21:55:36.0778290Z [1m[92m   Compiling[0m parking_lot v0.12.5
+2026-04-16T21:55:36.4831270Z [1m[92m   Compiling[0m signal-hook-registry v1.4.8
+2026-04-16T21:55:36.8350280Z [1m[92m   Compiling[0m tokio-macros v2.7.0
+2026-04-16T21:55:36.8543080Z [1m[92m   Compiling[0m objc2-exception-helper v0.1.1
+2026-04-16T21:55:37.0070790Z [1m[92m   Compiling[0m socket2 v0.6.3
+2026-04-16T21:55:37.3021220Z [1m[92m   Compiling[0m mio v1.2.0
+2026-04-16T21:55:37.4070050Z [1m[92m   Compiling[0m futures-core v0.3.32
+2026-04-16T21:55:37.7909020Z [1m[92m   Compiling[0m tokio v1.51.0
+2026-04-16T21:55:38.4035740Z [1m[92m   Compiling[0m indexmap v2.13.1
+2026-04-16T21:55:39.7718330Z [1m[92m   Compiling[0m httparse v1.10.1
+2026-04-16T21:55:40.0014860Z [1m[92m   Compiling[0m simd-adler32 v0.3.9
+2026-04-16T21:55:40.2885200Z [1m[92m   Compiling[0m phf_generator v0.11.3
+2026-04-16T21:55:40.4084120Z [1m[92m   Compiling[0m form_urlencoded v1.2.2
+2026-04-16T21:55:40.5791670Z [1m[92m   Compiling[0m tracing-core v0.1.36
+2026-04-16T21:55:41.0847310Z [1m[92m   Compiling[0m serde_derive_internals v0.29.1
+2026-04-16T21:55:41.5481270Z [1m[92m   Compiling[0m siphasher v0.3.11
+2026-04-16T21:55:41.7647670Z [1m[92m   Compiling[0m objc2 v0.6.4
+2026-04-16T21:55:42.2413200Z [1m[92m   Compiling[0m tracing-attributes v0.1.31
+2026-04-16T21:55:42.9229540Z [1m[92m   Compiling[0m getrandom v0.1.16
+2026-04-16T21:55:43.1452850Z [1m[92m   Compiling[0m num-conv v0.2.1
+2026-04-16T21:55:43.1901920Z [1m[92m   Compiling[0m objc2-encode v4.1.0
+2026-04-16T21:55:43.2062860Z [1m[92m   Compiling[0m time-core v0.1.8
+2026-04-16T21:55:43.2736470Z [1m[92m   Compiling[0m aws-lc-rs v1.16.2
+2026-04-16T21:55:43.7563530Z [1m[92m   Compiling[0m tracing v0.1.44
+2026-04-16T21:55:44.1046420Z [1m[92m   Compiling[0m idna_adapter v1.2.1
+2026-04-16T21:55:44.3503870Z [1m[92m   Compiling[0m crossbeam-epoch v0.9.18
+2026-04-16T21:55:44.7423930Z [1m[92m   Compiling[0m darling_core v0.23.0
+2026-04-16T21:55:44.9544010Z [1m[92m   Compiling[0m rayon-core v1.13.0
+2026-04-16T21:55:45.1281740Z [1m[92m   Compiling[0m futures-sink v0.3.32
+2026-04-16T21:55:45.1905940Z [1m[92m   Compiling[0m adler2 v2.0.1
+2026-04-16T21:55:45.2753360Z [1m[92m   Compiling[0m typenum v1.19.0
+2026-04-16T21:55:45.5201260Z [1m[92m   Compiling[0m paste v1.0.15
+2026-04-16T21:55:45.7547840Z [1m[92m   Compiling[0m typeid v1.0.3
+2026-04-16T21:55:46.0389490Z [1m[92m   Compiling[0m glob v0.3.3
+2026-04-16T21:55:46.3246830Z [1m[92m   Compiling[0m miniz_oxide v0.8.9
+2026-04-16T21:55:47.4966630Z [1m[92m   Compiling[0m darling_macro v0.23.0
+2026-04-16T21:55:47.8367930Z [1m[92m   Compiling[0m crossbeam-deque v0.8.6
+2026-04-16T21:55:47.9477110Z [1m[92m   Compiling[0m idna v1.1.0
+2026-04-16T21:55:48.5826740Z [1m[92m   Compiling[0m camino v1.2.2
+2026-04-16T21:55:48.9700740Z [1m[92m   Compiling[0m rand_core v0.5.1
+2026-04-16T21:55:49.0957270Z [1m[92m   Compiling[0m url v2.5.8
+2026-04-16T21:55:50.7878500Z [1m[92m   Compiling[0m darling v0.23.0
+2026-04-16T21:55:51.5934830Z [1m[92m   Compiling[0m byteorder v1.5.0
+2026-04-16T21:55:51.7798060Z [1m[92m   Compiling[0m erased-serde v0.4.10
+2026-04-16T21:55:51.9585420Z [1m[92m   Compiling[0m system-configuration-sys v0.6.0
+2026-04-16T21:55:52.1012350Z [1m[92m   Compiling[0m syn v1.0.109
+2026-04-16T21:55:52.1445400Z [1m[92m   Compiling[0m slab v0.4.12
+2026-04-16T21:55:52.3163730Z [1m[92m   Compiling[0m futures-channel v0.3.32
+2026-04-16T21:55:52.4893430Z [1m[92m   Compiling[0m block2 v0.6.2
+2026-04-16T21:55:52.7677910Z [1m[92m   Compiling[0m objc2-core-foundation v0.3.2
+2026-04-16T21:55:55.5853320Z [1m[92m   Compiling[0m phf_macros v0.11.3
+2026-04-16T21:55:56.1085900Z [1m[92m   Compiling[0m uuid v1.23.0
+2026-04-16T21:55:56.7060420Z [1m[92m   Compiling[0m semver v1.0.28
+2026-04-16T21:56:00.0996060Z [1m[92m   Compiling[0m rayon v1.12.0
+2026-04-16T21:56:00.9887160Z [1m[92m   Compiling[0m rand_chacha v0.2.2
+2026-04-16T21:56:01.0671100Z [1m[92m   Compiling[0m rand_pcg v0.2.1
+2026-04-16T21:56:01.1170250Z [1m[92m   Compiling[0m phf_shared v0.8.0
+2026-04-16T21:56:01.1867840Z [1m[92m   Compiling[0m core-foundation v0.10.1
+2026-04-16T21:56:01.5883590Z [1m[92m   Compiling[0m futures-macro v0.3.32
+2026-04-16T21:56:01.8423260Z [1m[92m   Compiling[0m futures-io v0.3.32
+2026-04-16T21:56:01.9242140Z [1m[92m   Compiling[0m futures-task v0.3.32
+2026-04-16T21:56:01.9949960Z [1m[92m   Compiling[0m proc-macro-hack v0.5.20+deprecated
+2026-04-16T21:56:02.0323070Z [1m[92m   Compiling[0m futures-util v0.3.32
+2026-04-16T21:56:02.4881490Z [1m[92m   Compiling[0m rand v0.7.3
+2026-04-16T21:56:03.2041280Z [1m[92m   Compiling[0m objc2-foundation v0.3.2
+2026-04-16T21:56:04.8836800Z [1m[92m   Compiling[0m phf_shared v0.10.0
+2026-04-16T21:56:05.0315940Z [1m[92m   Compiling[0m rand_distr v0.5.1
+2026-04-16T21:56:05.7811820Z [1m[92m   Compiling[0m new_debug_unreachable v1.0.6
+2026-04-16T21:56:06.7197920Z [1m[92m   Compiling[0m half v2.7.1
+2026-04-16T21:56:07.3609560Z [1m[92m   Compiling[0m phf_generator v0.10.0
+2026-04-16T21:56:07.4650590Z [1m[92m   Compiling[0m phf_generator v0.8.0
+2026-04-16T21:56:08.2381660Z [1m[92m   Compiling[0m serde_with_macros v3.18.0
+2026-04-16T21:56:09.3057320Z [1m[92m   Compiling[0m phf_codegen v0.11.3
+2026-04-16T21:56:09.4145280Z [1m[92m   Compiling[0m string_cache_codegen v0.5.4
+2026-04-16T21:56:13.0852070Z [1m[92m   Compiling[0m precomputed-hash v0.1.1
+2026-04-16T21:56:13.1410490Z [1m[92m   Compiling[0m base64 v0.22.1
+2026-04-16T21:56:13.4274390Z [1m[92m   Compiling[0m mac v0.1.1
+2026-04-16T21:56:13.4775730Z [1m[92m   Compiling[0m zeroize v1.8.2
+2026-04-16T21:56:13.6147210Z [1m[92m   Compiling[0m winnow v1.0.1
+2026-04-16T21:56:14.4468930Z [1m[92m   Compiling[0m toml_parser v1.1.2+spec-1.1.0
+2026-04-16T21:56:15.0526360Z [1m[92m   Compiling[0m futf v0.1.5
+2026-04-16T21:56:16.2536900Z [1m[92m   Compiling[0m markup5ever v0.14.1
+2026-04-16T21:56:16.6465840Z [1m[92m   Compiling[0m phf_macros v0.10.0
+2026-04-16T21:56:17.4048810Z [1m[92m   Compiling[0m phf_codegen v0.8.0
+2026-04-16T21:56:17.8916470Z [1m[92m   Compiling[0m cssparser v0.29.6
+2026-04-16T21:56:19.1333830Z [1m[92m   Compiling[0m http-body v1.0.1
+2026-04-16T21:56:19.3006540Z [1m[92m   Compiling[0m num-integer v0.1.46
+2026-04-16T21:56:19.9707520Z [1m[92m   Compiling[0m generic-array v0.14.7
+2026-04-16T21:56:20.1965940Z [1m[92m   Compiling[0m toml_datetime v0.7.5+spec-1.1.0
+2026-04-16T21:56:20.5681920Z [1m[92m   Compiling[0m serde_spanned v1.1.1
+2026-04-16T21:56:20.8061970Z [1m[92m   Compiling[0m dtoa v1.0.11
+2026-04-16T21:56:21.0535540Z [1m[92m   Compiling[0m utf-8 v0.7.6
+2026-04-16T21:56:21.3028760Z [1m[92m   Compiling[0m zlib-rs v0.6.3
+2026-04-16T21:56:27.1392610Z [1m[92m   Compiling[0m bitflags v1.3.2
+2026-04-16T21:56:27.1918360Z [1m[92m   Compiling[0m toml_writer v1.1.1+spec-1.1.0
+2026-04-16T21:56:27.4847340Z [1m[92m   Compiling[0m winnow v0.7.15
+2026-04-16T21:56:28.9384850Z [1m[92m   Compiling[0m toml v0.9.12+spec-1.1.0
+2026-04-16T21:56:29.0185020Z [1m[92m   Compiling[0m flate2 v1.1.9
+2026-04-16T21:56:29.4099420Z [1m[92m   Compiling[0m tendril v0.4.3
+2026-04-16T21:56:29.5300470Z [1m[92m   Compiling[0m dtoa-short v0.3.5
+2026-04-16T21:56:29.8532260Z [1m[92m   Compiling[0m string_cache v0.8.9
+2026-04-16T21:56:29.9764890Z [1m[92m   Compiling[0m selectors v0.24.0
+2026-04-16T21:56:30.0646360Z [1m[92m   Compiling[0m phf v0.10.1
+2026-04-16T21:56:30.1602790Z [1m[92m   Compiling[0m phf v0.11.3
+2026-04-16T21:56:30.2892820Z [1m[92m   Compiling[0m cssparser-macros v0.6.1
+2026-04-16T21:56:30.3155190Z [1m[92m   Compiling[0m ctor v0.2.9
+2026-04-16T21:56:30.3515130Z [1m[92m   Compiling[0m indexmap v1.9.3
+2026-04-16T21:56:30.4963010Z [1m[92m   Compiling[0m alloc-no-stdlib v2.0.4
+2026-04-16T21:56:30.5931830Z [1m[92m   Compiling[0m nodrop v0.1.14
+2026-04-16T21:56:30.6672180Z [1m[92m   Compiling[0m unic-common v0.9.0
+2026-04-16T21:56:30.6774090Z [1m[92m   Compiling[0m convert_case v0.4.0
+2026-04-16T21:56:30.7431320Z [1m[92m   Compiling[0m matches v0.1.10
+2026-04-16T21:56:30.7658710Z [1m[92m   Compiling[0m unic-char-range v0.9.0
+2026-04-16T21:56:30.8333770Z [1m[92m   Compiling[0m unic-char-property v0.9.0
+2026-04-16T21:56:30.8946890Z [1m[92m   Compiling[0m unic-ucd-version v0.9.0
+2026-04-16T21:56:30.9354960Z [1m[92m   Compiling[0m servo_arc v0.2.0
+2026-04-16T21:56:30.9469010Z [1m[92m   Compiling[0m derive_more v0.99.20
+2026-04-16T21:56:31.0555260Z [1m[92m   Compiling[0m alloc-stdlib v0.2.2
+2026-04-16T21:56:31.5493710Z [1m[92m   Compiling[0m fxhash v0.2.1
+2026-04-16T21:56:31.6297200Z [1m[92m   Compiling[0m phf v0.8.0
+2026-04-16T21:56:31.8159550Z [1m[92m   Compiling[0m swift-rs v1.0.7
+2026-04-16T21:56:32.4181080Z [1m[92m   Compiling[0m num-complex v0.4.6
+2026-04-16T21:56:32.9300550Z [1m[92m   Compiling[0m match_token v0.1.0
+2026-04-16T21:56:33.2372430Z [1m[92m   Compiling[0m tower-service v0.3.3
+2026-04-16T21:56:33.2801810Z [1m[92m   Compiling[0m rustix v1.1.4
+2026-04-16T21:56:33.5324370Z [1m[92m   Compiling[0m hashbrown v0.12.3
+2026-04-16T21:56:33.7523390Z [1m[92m   Compiling[0m schemars v0.8.22
+2026-04-16T21:56:34.2219010Z [1m[92m   Compiling[0m html5ever v0.29.1
+2026-04-16T21:56:34.7598160Z [1m[92m   Compiling[0m brotli-decompressor v5.0.0
+2026-04-16T21:56:34.9759910Z [1m[92m   Compiling[0m unic-ucd-ident v0.9.0
+2026-04-16T21:56:35.1258720Z [1m[92m   Compiling[0m cfb v0.7.3
+2026-04-16T21:56:35.4652180Z [1m[92m   Compiling[0m rustls-pki-types v1.14.0
+2026-04-16T21:56:35.6130090Z [1m[92m   Compiling[0m tokio-util v0.7.18
+2026-04-16T21:56:36.1031420Z [1m[92m   Compiling[0m schemars_derive v0.8.22
+2026-04-16T21:56:36.5526360Z [1m[92m   Compiling[0m jsonptr v0.6.3
+2026-04-16T21:56:36.8247820Z [1m[92m   Compiling[0m cargo-platform v0.1.9
+2026-04-16T21:56:36.9531370Z [1m[92m   Compiling[0m ring v0.17.14
+2026-04-16T21:56:37.0926830Z [1m[92m   Compiling[0m base64 v0.21.7
+2026-04-16T21:56:37.5475910Z [1m[92m   Compiling[0m dyn-clone v1.0.20
+2026-04-16T21:56:37.5512220Z [1m[92m   Compiling[0m ryu v1.0.23
+2026-04-16T21:56:37.5971830Z [1m[92m   Compiling[0m same-file v1.0.6
+2026-04-16T21:56:37.6661760Z [1m[92m   Compiling[0m walkdir v2.5.0
+2026-04-16T21:56:38.9986200Z [1m[92m   Compiling[0m cargo_metadata v0.19.2
+2026-04-16T21:56:40.0304840Z [1m[92m   Compiling[0m json-patch v3.0.1
+2026-04-16T21:56:40.3133240Z [1m[92m   Compiling[0m infer v0.19.0
+2026-04-16T21:56:40.6054650Z [1m[92m   Compiling[0m brotli v8.0.2
+2026-04-16T21:56:43.2008600Z [1m[92m   Compiling[0m urlpattern v0.3.0
+2026-04-16T21:56:44.0152760Z [1m[92m   Compiling[0m serde-untagged v0.1.9
+2026-04-16T21:56:44.1682650Z [1m[92m   Compiling[0m kuchikiki v0.8.8-speedreader
+2026-04-16T21:56:44.9503190Z [1m[92m   Compiling[0m serde_with v3.18.0
+2026-04-16T21:56:46.2812020Z [1m[92m   Compiling[0m security-framework-sys v2.17.0
+2026-04-16T21:56:46.4039120Z [1m[92m   Compiling[0m try-lock v0.2.5
+2026-04-16T21:56:46.4433320Z [1m[92m   Compiling[0m powerfmt v0.2.0
+2026-04-16T21:56:46.5721340Z [1m[92m   Compiling[0m mime v0.3.17
+2026-04-16T21:56:46.8768440Z [1m[92m   Compiling[0m atomic-waker v1.1.2
+2026-04-16T21:56:46.9215030Z [1m[92m   Compiling[0m h2 v0.4.13
+2026-04-16T21:56:47.1320780Z [1m[92m   Compiling[0m deranged v0.5.8
+2026-04-16T21:56:47.7932870Z [1m[92m   Compiling[0m want v0.3.1
+2026-04-16T21:56:47.8693710Z [1m[92m   Compiling[0m security-framework v3.7.0
+2026-04-16T21:56:50.3929330Z [1m[92m   Compiling[0m tauri-utils v2.8.3
+2026-04-16T21:56:53.0392680Z [1m[92m   Compiling[0m http-body-util v0.1.3
+2026-04-16T21:56:53.1990600Z [1m[92m   Compiling[0m rustc_version v0.4.1
+2026-04-16T21:56:53.3397870Z [1m[92m   Compiling[0m time-macros v0.2.27
+2026-04-16T21:56:54.2030670Z [1m[92m   Compiling[0m fdeflate v0.3.7
+2026-04-16T21:56:54.9683130Z [1m[92m   Compiling[0m core-foundation v0.9.4
+2026-04-16T21:56:55.2596530Z [1m[92m   Compiling[0m core_maths v0.1.1
+2026-04-16T21:56:55.5081500Z [1m[92m   Compiling[0m untrusted v0.9.0
+2026-04-16T21:56:55.6047520Z [1m[92m   Compiling[0m httpdate v1.0.3
+2026-04-16T21:56:55.8363400Z [1m[92m   Compiling[0m hyper v1.9.0
+2026-04-16T21:57:00.0878040Z [1m[92m   Compiling[0m time v0.3.47
+2026-04-16T21:57:03.1206050Z [1m[92m   Compiling[0m system-configuration v0.7.0
+2026-04-16T21:57:03.4227460Z [1m[92m   Compiling[0m num-bigint v0.4.6
+2026-04-16T21:57:03.9732390Z [1m[92m   Compiling[0m dispatch2 v0.3.1
+2026-04-16T21:57:04.3272990Z [1m[92m   Compiling[0m sync_wrapper v1.0.2
+2026-04-16T21:57:04.3852860Z [1m[92m   Compiling[0m equator-macro v0.4.2
+2026-04-16T21:57:04.9625560Z [1m[92m   Compiling[0m itertools v0.14.0
+2026-04-16T21:57:06.5703400Z [1m[92m   Compiling[0m ipnet v2.12.0
+2026-04-16T21:57:06.9526470Z [1m[92m   Compiling[0m fastrand v2.4.1
+2026-04-16T21:57:07.1775890Z [1m[92m   Compiling[0m arrayvec v0.7.6
+2026-04-16T21:57:07.4587020Z [1m[92m   Compiling[0m rustls v0.23.37
+2026-04-16T21:57:07.4755910Z [1m[92m   Compiling[0m native-tls v0.2.18
+2026-04-16T21:57:07.5561580Z [1m[92m   Compiling[0m tower-layer v0.3.3
+2026-04-16T21:57:07.6718510Z [1m[92m   Compiling[0m tempfile v3.27.0
+2026-04-16T21:57:08.1708460Z [1m[92m   Compiling[0m hyper-util v0.1.20
+2026-04-16T21:57:08.2550160Z [1m[92m   Compiling[0m equator v0.4.2
+2026-04-16T21:57:08.3808380Z [1m[92m   Compiling[0m num-rational v0.4.2
+2026-04-16T21:57:09.2617490Z [1m[92m   Compiling[0m objc2-app-kit v0.3.2
+2026-04-16T21:57:18.3816470Z [1m[92m   Compiling[0m subtle v2.6.1
+2026-04-16T21:57:22.4848710Z [1m[92m   Compiling[0m aligned-vec v0.6.4
+2026-04-16T21:57:24.1708620Z [1m[92m   Compiling[0m tower v0.5.3
+2026-04-16T21:57:24.5124520Z [1m[92m   Compiling[0m pulp v0.22.2
+2026-04-16T21:57:24.7030980Z [1m[92m   Compiling[0m quick-xml v0.38.4
+2026-04-16T21:57:25.1885500Z [1m[92m   Compiling[0m encoding_rs v0.8.35
+2026-04-16T21:57:28.7688110Z [1m[92m   Compiling[0m icu_locale_data v2.2.0
+2026-04-16T21:57:28.8710550Z [1m[92m   Compiling[0m plist v1.8.0
+2026-04-16T21:57:29.3635620Z [1m[92m   Compiling[0m v_frame v0.3.9
+2026-04-16T21:57:29.7147960Z [1m[92m   Compiling[0m serde_urlencoded v0.7.1
+2026-04-16T21:57:29.8651650Z [1m[92m   Compiling[0m enum-as-inner v0.6.1
+2026-04-16T21:57:30.0877490Z [1m[92m   Compiling[0m as-slice v0.2.1
+2026-04-16T21:57:30.1227170Z [1m[92m   Compiling[0m option-ext v0.2.0
+2026-04-16T21:57:30.1516380Z [1m[92m   Compiling[0m av-scenechange v0.14.1
+2026-04-16T21:57:30.2697070Z [1m[92m   Compiling[0m pulp-wasm-simd-flag v0.1.0
+2026-04-16T21:57:30.3470570Z [1m[92m   Compiling[0m dyn-stack-macros v0.1.3
+2026-04-16T21:57:30.5406210Z [1m[92m   Compiling[0m reborrow v0.5.5
+2026-04-16T21:57:30.6378740Z [1m[92m   Compiling[0m built v0.8.0
+2026-04-16T21:57:30.8972640Z [1m[92m   Compiling[0m unicode-segmentation v1.13.2
+2026-04-16T21:57:31.2761270Z [1m[92m   Compiling[0m rav1e v0.8.1
+2026-04-16T21:57:34.8552170Z [1m[92m   Compiling[0m dyn-stack v0.13.2
+2026-04-16T21:57:34.9905530Z [1m[92m   Compiling[0m dirs-sys v0.5.0
+2026-04-16T21:57:35.0953480Z [1m[92m   Compiling[0m aligned v0.4.3
+2026-04-16T21:57:35.1450900Z [1m[92m   Compiling[0m sysctl v0.6.0
+2026-04-16T21:57:35.7343810Z [1m[92m   Compiling[0m tokio-native-tls v0.3.1
+2026-04-16T21:57:35.8016660Z [1m[92m   Compiling[0m embed-resource v3.0.8
+2026-04-16T21:57:35.9256580Z [1m[92m   Compiling[0m arg_enum_proc_macro v0.3.4
+2026-04-16T21:57:36.1990030Z [1m[92m   Compiling[0m profiling-procmacros v1.0.17
+2026-04-16T21:57:36.3527320Z [1m[92m   Compiling[0m raw-cpuid v11.6.0
+2026-04-16T21:57:38.3863470Z [1m[92m   Compiling[0m core2 v0.4.0
+2026-04-16T21:57:38.4136420Z [1m[92m   Compiling[0m nom v8.0.0
+2026-04-16T21:57:40.3732750Z [1m[92m   Compiling[0m quick-error v2.0.1
+2026-04-16T21:57:40.4074320Z [1m[92m   Compiling[0m y4m v0.8.0
+2026-04-16T21:57:40.5607100Z [1m[92m   Compiling[0m pastey v0.1.1
+2026-04-16T21:57:40.8006260Z [1m[92m   Compiling[0m iri-string v0.7.12
+2026-04-16T21:57:42.8987430Z [1m[92m   Compiling[0m seq-macro v0.3.6
+2026-04-16T21:57:43.2037870Z [1m[92m   Compiling[0m gemm-common v0.19.0
+2026-04-16T21:57:43.8684180Z [1m[92m   Compiling[0m tower-http v0.6.8
+2026-04-16T21:57:45.8036460Z [1m[92m   Compiling[0m av1-grain v0.2.5
+2026-04-16T21:57:47.8482200Z [1m[92m   Compiling[0m bitstream-io v4.9.0
+2026-04-16T21:57:48.2941860Z [1m[92m   Compiling[0m profiling v1.0.17
+2026-04-16T21:57:48.3206390Z [1m[92m   Compiling[0m tauri-winres v0.3.5
+2026-04-16T21:57:48.4836510Z [1m[92m   Compiling[0m hyper-tls v0.6.0
+2026-04-16T21:57:48.6302660Z [1m[92m   Compiling[0m icu_locale v2.2.0
+2026-04-16T21:57:49.7176300Z [1m[92m   Compiling[0m dirs v6.0.0
+2026-04-16T21:57:50.4369090Z [1m[92m   Compiling[0m cargo_toml v0.22.3
+2026-04-16T21:57:52.0770290Z [1m[92m   Compiling[0m maybe-rayon v0.1.1
+2026-04-16T21:57:52.1676290Z [1m[92m   Compiling[0m darling_core v0.20.11
+2026-04-16T21:57:53.5960640Z [1m[92m   Compiling[0m fax_derive v0.2.0
+2026-04-16T21:57:53.8742180Z [1m[92m   Compiling[0m num-derive v0.4.2
+2026-04-16T21:57:54.3146430Z [1m[92m   Compiling[0m simd_helpers v0.1.0
+2026-04-16T21:57:54.6086220Z [1m[92m   Compiling[0m raw-window-handle v0.6.2
+2026-04-16T21:57:54.7560030Z [1m[92m   Compiling[0m noop_proc_macro v0.3.0
+2026-04-16T21:57:54.9818500Z [1m[92m   Compiling[0m zune-core v0.5.1
+2026-04-16T21:57:55.4309480Z [1m[92m   Compiling[0m imgref v1.12.0
+2026-04-16T21:57:55.5524340Z [1m[92m   Compiling[0m weezl v0.1.12
+2026-04-16T21:57:56.3115520Z [1m[92m   Compiling[0m ref-cast v1.0.25
+2026-04-16T21:57:56.4861430Z [1m[92m   Compiling[0m loop9 v0.1.5
+2026-04-16T21:57:59.1719620Z [1m[92m   Compiling[0m zune-jpeg v0.5.15
+2026-04-16T21:58:03.0044770Z [1m[92m   Compiling[0m rustls-webpki v0.103.10
+2026-04-16T21:58:06.5388330Z [1m[92m   Compiling[0m fax v0.2.6
+2026-04-16T21:58:06.7936110Z [1m[92m   Compiling[0m darling_macro v0.20.11
+2026-04-16T21:58:07.3009530Z [1m[92m   Compiling[0m tauri-build v2.5.6
+2026-04-16T21:58:08.2096410Z [1m[92m   Compiling[0m tokio-rustls v0.26.4
+2026-04-16T21:58:08.8399550Z [1m[92m   Compiling[0m avif-serialize v0.8.8
+2026-04-16T21:58:09.3932350Z [1m[92m   Compiling[0m png v0.18.1
+2026-04-16T21:58:11.3449130Z [1m[92m   Compiling[0m zune-inflate v0.2.54
+2026-04-16T21:58:11.7154250Z [1m[92m   Compiling[0m iana-time-zone v0.1.65
+2026-04-16T21:58:11.7902450Z [1m[92m   Compiling[0m ref-cast-impl v1.0.25
+2026-04-16T21:58:12.1020240Z [1m[92m   Compiling[0m rgb v0.8.53
+2026-04-16T21:58:12.2827280Z [1m[92m   Compiling[0m byteorder-lite v0.1.0
+2026-04-16T21:58:12.4567940Z [1m[92m   Compiling[0m arrayref v0.3.9
+2026-04-16T21:58:12.4797860Z [1m[92m   Compiling[0m lebe v0.5.3
+2026-04-16T21:58:12.6050530Z [1m[92m   Compiling[0m pxfm v0.1.28
+2026-04-16T21:58:21.3885130Z [1m[92m   Compiling[0m rustversion v1.0.22
+2026-04-16T21:58:21.5499180Z [1m[92m   Compiling[0m color_quant v1.1.0
+2026-04-16T21:58:21.8554280Z [1m[92m   Compiling[0m bit_field v0.10.3
+2026-04-16T21:58:21.9159010Z [1m[92m   Compiling[0m exr v1.74.0
+2026-04-16T21:58:22.0128030Z [1m[92m   Compiling[0m gif v0.14.1
+2026-04-16T21:58:23.3479060Z [1m[92m   Compiling[0m moxcms v0.8.1
+2026-04-16T21:58:29.0990980Z [1m[92m   Compiling[0m image-webp v0.2.4
+2026-04-16T21:58:31.4613240Z [1m[92m   Compiling[0m ravif v0.13.0
+2026-04-16T21:58:32.6554850Z [1m[92m   Compiling[0m chrono v0.4.44
+2026-04-16T21:58:35.7698390Z [1m[92m   Compiling[0m hyper-rustls v0.27.7
+2026-04-16T21:58:35.8964800Z [1m[92m   Compiling[0m rustls-platform-verifier v0.6.2
+2026-04-16T21:58:36.1286950Z [1m[92m   Compiling[0m darling v0.20.11
+2026-04-16T21:58:36.1770980Z [1m[92m   Compiling[0m tiff v0.11.3
+2026-04-16T21:58:36.3136810Z [1m[92m   Compiling[0m tauri-plugin v2.5.4
+2026-04-16T21:58:37.1709250Z [1m[92m   Compiling[0m clang-sys v1.8.1
+2026-04-16T21:58:37.3946670Z [1m[92m   Compiling[0m schemars_derive v1.2.1
+2026-04-16T21:58:38.3741820Z [1m[92m   Compiling[0m utoipa-gen v5.4.0
+2026-04-16T21:58:38.7560810Z [1m[92m   Compiling[0m qoi v0.4.1
+2026-04-16T21:58:38.8917480Z [1m[92m   Compiling[0m onig_sys v69.9.1
+2026-04-16T21:58:39.0885060Z [1m[92m   Compiling[0m blake3 v1.8.4
+2026-04-16T21:58:39.3214200Z [1m[92m   Compiling[0m typed-path v0.12.3
+2026-04-16T21:58:41.8741230Z [1m[92m   Compiling[0m prettyplease v0.2.37
+2026-04-16T21:58:42.4000570Z [1m[92m   Compiling[0m lazy_static v1.5.0
+2026-04-16T21:58:42.7522130Z [1m[92m   Compiling[0m schemars v1.2.1
+2026-04-16T21:58:43.3061620Z [1m[92m   Compiling[0m utoipa v5.4.0
+2026-04-16T21:58:51.3426510Z [1m[92m   Compiling[0m image v0.25.10
+2026-04-16T21:58:58.9376220Z [1m[92m   Compiling[0m derive_builder_core v0.20.2
+2026-04-16T21:58:59.2710760Z [1m[92m   Compiling[0m reqwest v0.13.2
+2026-04-16T21:59:00.0708300Z [1m[92m   Compiling[0m tauri v2.10.3
+2026-04-16T21:59:01.6240110Z [1m[92m   Compiling[0m objc2-metal v0.3.2
+2026-04-16T21:59:08.2894820Z [1m[92m   Compiling[0m futures-executor v0.3.32
+2026-04-16T21:59:08.6311480Z [1m[92m   Compiling[0m strum_macros v0.28.0
+2026-04-16T21:59:09.8026160Z [1m[92m   Compiling[0m ahash v0.8.12
+2026-04-16T21:59:09.9195870Z [1m[92m   Compiling[0m cookie v0.18.1
+2026-04-16T21:59:10.0296020Z [1m[92m   Compiling[0m dpi v0.1.2
+2026-04-16T21:59:10.2384510Z [1m[92m   Compiling[0m serde_bytes v0.11.19
+2026-04-16T21:59:10.3541860Z [1m[92m   Compiling[0m num_cpus v1.17.0
+2026-04-16T21:59:10.4523480Z [1m[92m   Compiling[0m constant_time_eq v0.4.2
+2026-04-16T21:59:10.7510500Z [1m[92m   Compiling[0m esaxx-rs v0.1.10
+2026-04-16T21:59:10.8816430Z [1m[92m   Compiling[0m minimal-lexical v0.2.1
+2026-04-16T21:59:11.0570570Z [1m[92m   Compiling[0m utf8parse v0.2.2
+2026-04-16T21:59:11.3294160Z [1m[92m   Compiling[0m icu_calendar_data v2.2.0
+2026-04-16T21:59:11.4365120Z [1m[92m   Compiling[0m base64ct v1.8.3
+2026-04-16T21:59:11.7169790Z [1m[92m   Compiling[0m portable-atomic v1.13.1
+2026-04-16T21:59:11.9707680Z [1m[92m   Compiling[0m nom v7.1.3
+2026-04-16T21:59:13.0092820Z [1m[92m   Compiling[0m pem-rfc7468 v1.0.0
+2026-04-16T21:59:14.4698610Z [1m[92m   Compiling[0m anstyle-parse v1.0.0
+2026-04-16T21:59:17.5293830Z [1m[92m   Compiling[0m strum v0.28.0
+2026-04-16T21:59:17.9615280Z [1m[92m   Compiling[0m futures v0.3.32
+2026-04-16T21:59:18.8660950Z [1m[92m   Compiling[0m castaway v0.2.4
+2026-04-16T21:59:18.9363730Z [1m[92m   Compiling[0m derive_builder_macro v0.20.2
+2026-04-16T21:59:19.3342090Z [1m[92m   Compiling[0m block-buffer v0.10.4
+2026-04-16T21:59:19.4032280Z [1m[92m   Compiling[0m crypto-common v0.1.7
+2026-04-16T21:59:19.6078320Z [1m[92m   Compiling[0m gemm-f32 v0.19.0
+2026-04-16T21:59:21.7320590Z [1m[92m   Compiling[0m ttf-parser v0.25.1
+2026-04-16T21:59:23.1930350Z [1m[92m   Compiling[0m debugid v0.8.0
+2026-04-16T21:59:23.3771050Z [1m[92m   Compiling[0m safe_arch v0.7.4
+2026-04-16T21:59:23.7411250Z [1m[92m   Compiling[0m monostate-impl v0.1.18
+2026-04-16T21:59:24.1122210Z [1m[92m   Compiling[0m foreign-types-macros v0.2.3
+2026-04-16T21:59:24.7497570Z [1m[92m   Compiling[0m async-trait v0.1.89
+2026-04-16T21:59:24.7907160Z [1m[92m   Compiling[0m memmap2 v0.9.10
+2026-04-16T21:59:25.0045570Z [1m[92m   Compiling[0m libloading v0.8.9
+2026-04-16T21:59:25.1057910Z [1m[92m   Compiling[0m matrixmultiply v0.3.10
+2026-04-16T21:59:25.4549940Z [1m[92m   Compiling[0m bindgen v0.72.1
+2026-04-16T21:59:25.4940430Z [1m[92m   Compiling[0m is_terminal_polyfill v1.70.2
+2026-04-16T21:59:25.7075100Z [1m[92m   Compiling[0m colorchoice v1.0.5
+2026-04-16T21:59:25.7635840Z [1m[92m   Compiling[0m foreign-types-shared v0.3.1
+2026-04-16T21:59:26.1476550Z [1m[92m   Compiling[0m hex v0.4.3
+2026-04-16T21:59:26.2871330Z [1m[92m   Compiling[0m unicode-width v0.2.2
+2026-04-16T21:59:26.4569190Z [1m[92m   Compiling[0m anstyle v1.0.14
+2026-04-16T21:59:26.6084090Z [1m[92m   Compiling[0m anstyle-query v1.1.5
+2026-04-16T21:59:26.6685070Z [1m[92m   Compiling[0m icu_decimal_data v2.2.0
+2026-04-16T21:59:26.7232560Z [1m[92m   Compiling[0m static_assertions v1.1.0
+2026-04-16T21:59:26.7413940Z [1m[92m   Compiling[0m macro_rules_attribute-proc_macro v0.2.2
+2026-04-16T21:59:26.7826030Z [1m[92m   Compiling[0m icu_time_data v2.2.0
+2026-04-16T21:59:26.7953640Z [1m[92m   Compiling[0m icu_plurals_data v2.2.0
+2026-04-16T21:59:26.9056880Z [1m[92m   Compiling[0m base64 v0.13.1
+2026-04-16T21:59:26.9982260Z [1m[92m   Compiling[0m strength_reduce v0.2.4
+2026-04-16T21:59:27.0005900Z [1m[92m   Compiling[0m macro_rules_attribute v0.2.2
+2026-04-16T21:59:27.1238600Z [1m[92m   Compiling[0m transpose v0.2.3
+2026-04-16T21:59:27.1742960Z [1m[92m   Compiling[0m spm_precompiled v0.1.4
+2026-04-16T21:59:27.2139010Z [1m[92m   Compiling[0m compact_str v0.9.0
+2026-04-16T21:59:27.5294030Z [1m[92m   Compiling[0m anstream v1.0.0
+2026-04-16T21:59:27.9490300Z [1m[92m   Compiling[0m console v0.16.3
+2026-04-16T21:59:28.0608290Z [1m[92m   Compiling[0m sentry-types v0.47.0
+2026-04-16T21:59:28.8829290Z [1m[92m   Compiling[0m foreign-types v0.5.0
+2026-04-16T21:59:29.0475890Z [1m[92m   Compiling[0m itertools v0.13.0
+2026-04-16T21:59:30.7913580Z [1m[92m   Compiling[0m monostate v0.1.18
+2026-04-16T21:59:31.7786410Z [1m[92m   Compiling[0m wide v0.7.33
+2026-04-16T21:59:33.0283140Z [1m[92m   Compiling[0m png v0.17.16
+2026-04-16T21:59:33.2868000Z [1m[92m   Compiling[0m gemm-f16 v0.19.0
+2026-04-16T21:59:34.8717470Z [1m[92m   Compiling[0m digest v0.10.7
+2026-04-16T21:59:37.1681350Z [1m[92m   Compiling[0m onig v6.5.1
+2026-04-16T21:59:37.8637470Z [1m[92m   Compiling[0m derive_builder v0.20.2
+2026-04-16T21:59:38.2082720Z [1m[92m   Compiling[0m koharu-core v0.44.6 (/Users/runner/work/koharu/koharu/koharu-core)
+2026-04-16T21:59:39.4090020Z [1m[92m   Compiling[0m xattr v1.6.1
+2026-04-16T21:59:39.9287830Z [1m[92m   Compiling[0m der v0.8.0
+2026-04-16T21:59:41.9284530Z [1m[92m   Compiling[0m cexpr v0.6.0
+2026-04-16T21:59:42.3864600Z [1m[92m   Compiling[0m sharded-slab v0.1.7
+2026-04-16T21:59:42.8603310Z [1m[92m   Compiling[0m gemm-f64 v0.19.0
+2026-04-16T21:59:43.0497270Z [1m[92m   Compiling[0m gemm-c32 v0.19.0
+2026-04-16T21:59:44.5536730Z [1m[92m   Compiling[0m gemm-c64 v0.19.0
+2026-04-16T21:59:44.9655490Z [1m[92m   Compiling[0m objc2-web-kit v0.3.2
+2026-04-16T21:59:45.0592400Z [1m[92m   Compiling[0m rayon-cond v0.4.0
+2026-04-16T21:59:45.1562370Z [1m[92m   Compiling[0m calendrical_calculations v0.2.4
+2026-04-16T21:59:45.8671200Z [1m[92m   Compiling[0m webpki-roots v1.0.6
+2026-04-16T21:59:45.9268450Z [1m[92m   Compiling[0m webpki-root-certs v1.0.6
+2026-04-16T21:59:45.9744650Z [1m[92m   Compiling[0m primal-check v0.3.4
+2026-04-16T21:59:46.0616330Z [1m[92m   Compiling[0m ureq-proto v0.6.0
+2026-04-16T21:59:46.5812950Z [1m[92m   Compiling[0m core-graphics-types v0.2.0
+2026-04-16T21:59:46.6426160Z [1m[92m   Compiling[0m matchers v0.2.0
+2026-04-16T21:59:46.7222670Z [1m[92m   Compiling[0m socks v0.3.4
+2026-04-16T21:59:47.0436610Z [1m[92m   Compiling[0m tracing-log v0.2.0
+2026-04-16T21:59:47.2975960Z [1m[92m   Compiling[0m crossbeam-channel v0.5.15
+2026-04-16T21:59:47.7416800Z [1m[92m   Compiling[0m approx v0.5.1
+2026-04-16T21:59:47.7850350Z [1m[92m   Compiling[0m fixed_decimal v0.7.2
+2026-04-16T21:59:47.8261150Z [1m[92m   Compiling[0m dary_heap v0.3.8
+2026-04-16T21:59:47.9259250Z [1m[92m   Compiling[0m unicode-normalization-alignments v0.1.12
+2026-04-16T21:59:48.3640930Z [1m[92m   Compiling[0m filetime v0.2.27
+2026-04-16T21:59:48.4445580Z [1m[92m   Compiling[0m thread_local v1.1.9
+2026-04-16T21:59:48.6078820Z [1m[92m   Compiling[0m cpufeatures v0.2.17
+2026-04-16T21:59:48.6467830Z [1m[92m   Compiling[0m unicode_categories v0.1.1
+2026-04-16T21:59:48.7316370Z [1m[92m   Compiling[0m bumpalo v3.20.2
+2026-04-16T21:59:48.8875110Z [1m[92m   Compiling[0m nu-ansi-term v0.50.3
+2026-04-16T21:59:48.9337010Z [1m[92m   Compiling[0m icu_datetime_data v2.2.0
+2026-04-16T21:59:49.0405250Z [1m[92m   Compiling[0m rawpointer v0.2.1
+2026-04-16T21:59:49.0620870Z [1m[92m   Compiling[0m object v0.37.3
+2026-04-16T21:59:49.0756310Z [1m[92m   Compiling[0m ixdtf v0.6.5
+2026-04-16T21:59:49.2528850Z [1m[92m   Compiling[0m icu_list_data v2.2.0
+2026-04-16T21:59:49.2713900Z [1m[92m   Compiling[0m rustc-hash v2.1.2
+2026-04-16T21:59:49.3170370Z [1m[92m   Compiling[0m unit-prefix v0.5.2
+2026-04-16T21:59:49.3506370Z [1m[92m   Compiling[0m icu_casemap_data v2.2.0
+2026-04-16T21:59:49.3654240Z [1m[92m   Compiling[0m clap_lex v1.1.0
+2026-04-16T21:59:49.4527480Z [1m[92m   Compiling[0m wry v0.54.4
+2026-04-16T21:59:49.5909640Z [1m[92m   Compiling[0m utf8-zero v0.8.1
+2026-04-16T21:59:49.6046080Z [1m[92m   Compiling[0m icu_segmenter_data v2.2.0
+2026-04-16T21:59:49.6897310Z [1m[92m   Compiling[0m tauri-runtime v2.10.1
+2026-04-16T21:59:49.7899430Z [1m[92m   Compiling[0m icu_collator_data v2.2.0
+2026-04-16T21:59:50.0619620Z [1m[92m   Compiling[0m ureq v3.3.0
+2026-04-16T21:59:50.4495590Z [1m[92m   Compiling[0m clap_builder v4.6.0
+2026-04-16T21:59:58.1214770Z [1m[92m   Compiling[0m indicatif v0.18.4
+2026-04-16T22:00:01.8030980Z [1m[92m   Compiling[0m icu_calendar v2.2.1
+2026-04-16T22:00:04.9506790Z [1m[92m   Compiling[0m tracing-subscriber v0.3.23
+2026-04-16T22:00:05.2133150Z [1m[92m   Compiling[0m zopfli v0.8.3
+2026-04-16T22:00:06.4344120Z [1m[92m   Compiling[0m tokenizers v0.22.2
+2026-04-16T22:00:09.3911130Z [1m[92m   Compiling[0m sha2 v0.10.9
+2026-04-16T22:00:09.5991860Z [1m[92m   Compiling[0m tar v0.4.45
+2026-04-16T22:00:12.1662700Z [1m[92m   Compiling[0m simba v0.9.1
+2026-04-16T22:00:14.7801030Z [1m[92m   Compiling[0m core-graphics v0.25.0
+2026-04-16T22:00:15.3958820Z [1m[92m   Compiling[0m rustfft v6.4.1
+2026-04-16T22:00:17.1048920Z [1m[92m   Compiling[0m gemm v0.19.0
+2026-04-16T22:00:17.3048690Z [1m[92m   Compiling[0m ico v0.5.0
+2026-04-16T22:00:17.6687440Z [1m[92m   Compiling[0m sentry-core v0.47.0
+2026-04-16T22:00:19.4223260Z [1m[92m   Compiling[0m reqwest-middleware v0.5.1
+2026-04-16T22:00:20.3544200Z [1m[92m   Compiling[0m owned_ttf_parser v0.25.1
+2026-04-16T22:00:20.6310950Z [1m[92m   Compiling[0m candle-metal-kernels v0.9.2 (https://github.com/mayocream/candle?branch=cuda-dynamic-loading#59ad4a31)
+2026-04-16T22:00:22.0547630Z [1m[92m   Compiling[0m zip v7.2.0
+2026-04-16T22:00:23.5808190Z [1m[92m   Compiling[0m reqwest v0.12.28
+2026-04-16T22:00:23.6004880Z [1m[92m   Compiling[0m num-iter v0.1.45
+2026-04-16T22:00:23.6540900Z [1m[92m   Compiling[0m float8 v0.7.0
+2026-04-16T22:00:23.9996160Z [1m[92m   Compiling[0m safetensors v0.7.0
+2026-04-16T22:00:25.6587240Z [1m[92m   Compiling[0m clap_derive v4.6.0
+2026-04-16T22:00:26.8046890Z [1m[92m   Compiling[0m retry-policies v0.5.1
+2026-04-16T22:00:27.2499180Z [1m[92m   Compiling[0m font-types v0.11.2
+2026-04-16T22:00:27.5024080Z [1m[92m   Compiling[0m slotmap v1.1.1
+2026-04-16T22:00:27.6794010Z [1m[92m   Compiling[0m tauri-runtime-wry v2.10.1
+2026-04-16T22:00:27.7950260Z [1m[92m   Compiling[0m memo-map v0.3.3
+2026-04-16T22:00:27.8619920Z [1m[92m   Compiling[0m foldhash v0.1.5
+2026-04-16T22:00:28.0052430Z [1m[92m   Compiling[0m gimli v0.32.3
+2026-04-16T22:00:29.9739470Z [1m[92m   Compiling[0m ab_glyph_rasterizer v0.1.10
+2026-04-16T22:00:30.1340920Z [1m[92m   Compiling[0m bit-vec v0.8.0
+2026-04-16T22:00:30.2999340Z [1m[92m   Compiling[0m bit-set v0.8.0
+2026-04-16T22:00:32.0635220Z [1m[92m   Compiling[0m ab_glyph v0.2.32
+2026-04-16T22:00:32.8120300Z [1m[92m   Compiling[0m addr2line v0.25.1
+2026-04-16T22:00:33.0847700Z [1m[92m   Compiling[0m hashbrown v0.15.5
+2026-04-16T22:00:33.4785770Z [1m[92m   Compiling[0m minijinja v2.19.0
+2026-04-16T22:00:35.1987710Z [1m[92m   Compiling[0m sha1 v0.10.6
+2026-04-16T22:00:35.4717310Z [1m[92m   Compiling[0m read-fonts v0.39.1
+2026-04-16T22:00:36.2202680Z [1m[92m   Compiling[0m reqwest-retry v0.9.1
+2026-04-16T22:00:36.5302810Z [1m[92m   Compiling[0m clap v4.6.0
+2026-04-16T22:00:36.5697050Z [1m[92m   Compiling[0m hf-hub v0.5.0
+2026-04-16T22:00:39.5785980Z [1m[92m   Compiling[0m candle-core v0.9.2 (https://github.com/mayocream/candle?branch=cuda-dynamic-loading#59ad4a31)
+2026-04-16T22:00:50.4604310Z [1m[92m   Compiling[0m num v0.4.3
+2026-04-16T22:00:50.5219270Z [1m[92m   Compiling[0m icu_plurals v2.2.0
+2026-04-16T22:00:51.3001220Z [1m[92m   Compiling[0m icu_time v2.2.0
+2026-04-16T22:00:52.1948050Z [1m[92m   Compiling[0m icu_decimal v2.2.0
+2026-04-16T22:00:52.6098330Z [1m[92m   Compiling[0m tauri-codegen v2.5.5
+2026-04-16T22:00:53.0967050Z [1m[92m   Compiling[0m rustdct v0.7.1
+2026-04-16T22:00:53.4916210Z [1m[92m   Compiling[0m tao v0.34.8
+2026-04-16T22:00:54.2387590Z [1m[92m   Compiling[0m nalgebra v0.34.2
+2026-04-16T22:00:57.6596570Z [1m[92m   Compiling[0m koharu-llm v0.44.6 (/Users/runner/work/koharu/koharu/koharu-llm)
+2026-04-16T22:00:59.1029250Z [1m[92m   Compiling[0m zip v8.5.1
+2026-04-16T22:01:02.5276560Z [1m[92m   Compiling[0m keyboard-types v0.7.0
+2026-04-16T22:01:04.1796830Z [1m[92m   Compiling[0m objc2-core-graphics v0.3.2
+2026-04-16T22:01:04.2355420Z [1m[92m   Compiling[0m chacha20 v0.10.0
+2026-04-16T22:01:04.3677910Z [1m[92m   Compiling[0m icu_pattern v0.4.2
+2026-04-16T22:01:04.6082050Z [1m[92m   Compiling[0m multer v3.1.0
+2026-04-16T22:01:04.8400910Z [1m[92m   Compiling[0m enumflags2_derive v0.7.12
+2026-04-16T22:01:05.1877140Z [1m[92m   Compiling[0m serialize-to-javascript-impl v0.1.2
+2026-04-16T22:01:06.0004140Z [1m[92m   Compiling[0m tinyvec_macros v0.1.1
+2026-04-16T22:01:06.0824430Z [1m[92m   Compiling[0m rustc-demangle v0.1.27
+2026-04-16T22:01:06.8400980Z [1m[92m   Compiling[0m strict-num v0.1.1
+2026-04-16T22:01:06.9168690Z [1m[92m   Compiling[0m data-encoding v2.10.0
+2026-04-16T22:01:07.3558550Z [1m[92m   Compiling[0m inventory v0.3.24
+2026-04-16T22:01:07.4125390Z [1m[92m   Compiling[0m koharu-runtime v0.44.6 (/Users/runner/work/koharu/koharu/koharu-runtime)
+2026-04-16T22:01:08.9383180Z [1m[92m   Compiling[0m tungstenite v0.28.0
+2026-04-16T22:01:11.2783190Z [1m[92m   Compiling[0m tiny-skia-path v0.12.0
+2026-04-16T22:01:13.5828820Z [1m[92m   Compiling[0m backtrace v0.3.76
+2026-04-16T22:01:13.6283660Z [1m[92m   Compiling[0m tinyvec v1.11.0
+2026-04-16T22:01:13.8905350Z [1m[92m   Compiling[0m serialize-to-javascript v0.1.2
+2026-04-16T22:01:14.0106480Z [1m[92m   Compiling[0m enumflags2 v0.7.12
+2026-04-16T22:01:14.1172240Z [1m[92m   Compiling[0m icu_datetime v2.2.0
+2026-04-16T22:01:17.6002880Z [1m[92m   Compiling[0m rand v0.10.0
+2026-04-16T22:01:18.0679410Z [1m[92m   Compiling[0m objc2-metal-performance-shaders v0.3.2
+2026-04-16T22:01:20.7042260Z [1m[92m   Compiling[0m muda v0.17.2
+2026-04-16T22:01:24.1533170Z [1m[92m   Compiling[0m icu_collator v2.2.0
+2026-04-16T22:01:29.0645920Z [1m[92m   Compiling[0m icu_segmenter v2.2.0
+2026-04-16T22:01:31.1209120Z [1m[92m   Compiling[0m icu_casemap v2.2.0
+2026-04-16T22:01:32.0029460Z [1m[92m   Compiling[0m icu_list v2.2.0
+2026-04-16T22:01:32.4898610Z [1m[92m   Compiling[0m imageproc v0.26.1
+2026-04-16T22:01:40.5066530Z [1m[92m   Compiling[0m tauri-macros v2.5.5
+2026-04-16T22:01:41.9921430Z [1m[92m   Compiling[0m candle-nn v0.9.2 (https://github.com/mayocream/candle?branch=cuda-dynamic-loading#59ad4a31)
+2026-04-16T22:01:53.3555630Z [1m[92m   Compiling[0m minijinja-contrib v2.19.0
+2026-04-16T22:01:53.5668610Z [1m[92m   Compiling[0m fancy-regex v0.17.0
+2026-04-16T22:01:55.4795900Z [1m[92m   Compiling[0m window-vibrancy v0.6.0
+2026-04-16T22:01:55.6234880Z [1m[92m   Compiling[0m keyring v3.6.3
+2026-04-16T22:01:55.9866230Z [1m[92m   Compiling[0m serde_plain v1.0.2
+2026-04-16T22:01:56.1278580Z [1m[92m   Compiling[0m serde_repr v0.1.20
+2026-04-16T22:01:56.3727710Z [1m[92m   Compiling[0m findshlibs v0.10.2
+2026-04-16T22:01:56.5160250Z [1m[92m   Compiling[0m rfd v0.17.2
+2026-04-16T22:01:56.6338530Z [1m[92m   Compiling[0m pathdiff v0.2.3
+2026-04-16T22:01:56.6779250Z [1m[92m   Compiling[0m spin v0.9.8
+2026-04-16T22:01:56.7301730Z [1m[92m   Compiling[0m ttf-parser v0.21.1
+2026-04-16T22:01:56.7667010Z [1m[92m   Compiling[0m embed_plist v1.2.2
+2026-04-16T22:01:58.9487420Z [1m[92m   Compiling[0m fontdue v0.9.3
+2026-04-16T22:02:00.7931850Z [1m[92m   Compiling[0m open v5.3.3
+2026-04-16T22:02:00.9241300Z [1m[92m   Compiling[0m candle-transformers v0.9.2 (https://github.com/mayocream/candle?branch=cuda-dynamic-loading#59ad4a31)
+2026-04-16T22:02:11.4648710Z [1m[92m   Compiling[0m fontdb v0.23.0
+2026-04-16T22:02:12.7611630Z [1m[92m   Compiling[0m icu v2.2.0
+2026-04-16T22:02:12.8716870Z [1m[92m   Compiling[0m objc2-metal-performance-shaders-graph v0.3.2
+2026-04-16T22:02:15.2332110Z [1m[92m   Compiling[0m sentry-backtrace v0.47.0
+2026-04-16T22:02:16.8218810Z [1m[92m   Compiling[0m tiny-skia v0.12.0
+2026-04-16T22:02:21.6613690Z [1m[92m   Compiling[0m tokio-tungstenite v0.28.0
+2026-04-16T22:02:21.8486220Z [1m[92m   Compiling[0m skrifa v0.42.0
+2026-04-16T22:02:27.1382110Z [1m[92m   Compiling[0m harfrust v0.6.0
+2026-04-16T22:02:36.1250340Z [1m[92m   Compiling[0m tauri-plugin-updater v2.10.1
+2026-04-16T22:02:37.1180400Z [1m[92m   Compiling[0m tauri-plugin-opener v2.5.3
+2026-04-16T22:02:37.4992670Z [1m[92m   Compiling[0m tauri-plugin-process v2.3.1
+2026-04-16T22:02:37.8267240Z [1m[92m   Compiling[0m axum-core v0.5.6
+2026-04-16T22:02:37.8382930Z [1m[92m   Compiling[0m sentry-contexts v0.47.0
+2026-04-16T22:02:37.9724080Z [1m[92m   Compiling[0m rmp v0.8.15
+2026-04-16T22:02:38.2368990Z [1m[92m   Compiling[0m serde_path_to_error v0.1.20
+2026-04-16T22:02:38.5171420Z [1m[92m   Compiling[0m petname-macros v3.0.0
+2026-04-16T22:02:38.8117490Z [1m[92m   Compiling[0m toml_datetime v1.1.1+spec-1.1.0
+2026-04-16T22:02:39.0495880Z [1m[92m   Compiling[0m cfg_aliases v0.2.1
+2026-04-16T22:02:39.0751890Z [1m[92m   Compiling[0m matchit v0.8.4
+2026-04-16T22:02:39.3174750Z [1m[92m   Compiling[0m rmcp v0.16.0
+2026-04-16T22:02:39.4521430Z [1m[92m   Compiling[0m fixedbitset v0.5.7
+2026-04-16T22:02:39.5415860Z [1m[92m   Compiling[0m axum v0.8.8
+2026-04-16T22:02:39.7523510Z [1m[92m   Compiling[0m petgraph v0.8.3
+2026-04-16T22:02:41.4551740Z [1m[92m   Compiling[0m sentry v0.47.0
+2026-04-16T22:02:41.6087790Z [1m[92m   Compiling[0m toml v1.1.2+spec-1.1.0
+2026-04-16T22:02:44.7108660Z [1m[92m   Compiling[0m petname v3.0.0
+2026-04-16T22:02:44.8797490Z [1m[92m   Compiling[0m koharu-renderer v0.44.6 (/Users/runner/work/koharu/koharu/koharu-renderer)
+2026-04-16T22:02:46.7681970Z [1m[92m   Compiling[0m koharu-ml v0.44.6 (/Users/runner/work/koharu/koharu/koharu-ml)
+2026-04-16T22:02:52.1573760Z [1m[92m   Compiling[0m objc2-osa-kit v0.3.2
+2026-04-16T22:02:52.5636750Z [1m[92m   Compiling[0m sse-stream v0.2.1
+2026-04-16T22:02:52.7295270Z [1m[92m   Compiling[0m secrecy v0.10.3
+2026-04-16T22:02:52.7985590Z [1m[92m   Compiling[0m rmcp-macros v0.16.0
+2026-04-16T22:02:53.7152150Z [1m[92m   Compiling[0m tokio-stream v0.1.18
+2026-04-16T22:02:54.0454220Z [1m[92m   Compiling[0m lru v0.16.3
+2026-04-16T22:02:54.1366060Z [1m[92m   Compiling[0m hostname v0.4.2
+2026-04-16T22:02:54.2029540Z [1m[92m   Compiling[0m uname v0.1.1
+2026-04-16T22:02:54.2707550Z [1m[92m   Compiling[0m natord v1.0.9
+2026-04-16T22:02:54.4288460Z [1m[92m   Compiling[0m pastey v0.2.1
+2026-04-16T22:03:06.8103920Z [1m[92m   Compiling[0m koharu-app v0.44.6 (/Users/runner/work/koharu/koharu/koharu-app)
+2026-04-16T22:03:34.3313870Z [1m[92m   Compiling[0m osakit v0.3.1
+2026-04-16T22:03:34.9842970Z [1m[92m   Compiling[0m sentry-debug-images v0.47.0
+2026-04-16T22:03:35.6197800Z [1m[92m   Compiling[0m utoipa-axum v0.2.0
+2026-04-16T22:03:36.9901120Z [1m[92m   Compiling[0m rmp-serde v1.3.1
+2026-04-16T22:03:37.3531810Z [1m[92m   Compiling[0m rmpv v1.3.1
+2026-04-16T22:03:38.1090610Z [1m[92m   Compiling[0m sentry-panic v0.47.0
+2026-04-16T22:03:38.4636260Z [1m[92m   Compiling[0m sentry-tracing v0.47.0
+2026-04-16T22:03:40.5553920Z [1m[92m   Compiling[0m koharu-psd v0.44.6 (/Users/runner/work/koharu/koharu/koharu-psd)
+2026-04-16T22:03:42.3692840Z [1m[92m   Compiling[0m koharu v0.44.6 (/Users/runner/work/koharu/koharu/koharu)
+2026-04-16T22:03:43.3333460Z [1m[92m   Compiling[0m git-version-macro v0.3.9
+2026-04-16T22:03:43.7550640Z [1m[92m   Compiling[0m minisign-verify v0.2.5
+2026-04-16T22:03:47.0943160Z [1m[92m   Compiling[0m git-version v0.3.9
+2026-04-16T22:03:47.2212150Z [1m[92m   Compiling[0m koharu-rpc v0.44.6 (/Users/runner/work/koharu/koharu/koharu-rpc)
+2026-04-16T22:05:40.6757260Z [1m[92m    Finished[0m `release` profile [optimized] target(s) in 10m 58s
+2026-04-16T22:05:40.9683410Z        Built application at: /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/koharu
+2026-04-16T22:05:41.0765430Z     Bundling koharu.app (/Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app)
+2026-04-16T22:05:41.3556760Z 1 identity imported.
+2026-04-16T22:05:41.4201140Z keychain: "/Users/runner/Library/Keychains/DqpWuShhtZEmnFUJ.keychain-db"
+2026-04-16T22:05:41.4214770Z version: 512
+2026-04-16T22:05:41.4215450Z class: 0x00000010 
+2026-04-16T22:05:41.4215690Z attributes:
+2026-04-16T22:05:41.4215970Z     0x00000000 <uint32>=0x00000010 
+2026-04-16T22:05:41.4216310Z     0x00000001 <blob>="Mayo Takanashi"
+2026-04-16T22:05:41.4224710Z     0x00000002 <blob>=<NULL>
+2026-04-16T22:05:41.4225010Z     0x00000003 <uint32>=0x00000001 
+2026-04-16T22:05:41.4225360Z     0x00000004 <uint32>=0x00000000 
+2026-04-16T22:05:41.4225720Z     0x00000005 <uint32>=0x00000000 
+2026-04-16T22:05:41.4226290Z     0x00000006 <blob>=0x23DC561A6AD60E497B248BC202B203AA76F49A71  "#\334V\032j\326\016I{$\213\302\002\262\003\252v\364\232q"
+2026-04-16T22:05:41.4226790Z     0x00000007 <blob>=<NULL>
+2026-04-16T22:05:41.4227390Z     0x00000008 <blob>=0x7B38373139316361322D306663392D313164342D383439612D3030303530326235323132327D00  "{87191ca2-0fc9-11d4-849a-000502b52122}\000"
+2026-04-16T22:05:41.4228020Z     0x00000009 <uint32>=0x0000002A  "\000\000\000*"
+2026-04-16T22:05:41.4228390Z     0x0000000A <uint32>=0x00000800 
+2026-04-16T22:05:41.4228670Z     0x0000000B <uint32>=0x00000800 
+2026-04-16T22:05:41.4229000Z     0x0000000C <blob>=0x0000000000000000 
+2026-04-16T22:05:41.4229350Z     0x0000000D <blob>=0x0000000000000000 
+2026-04-16T22:05:41.4229660Z     0x0000000E <uint32>=0x00000001 
+2026-04-16T22:05:41.4229910Z     0x0000000F <uint32>=0x00000001 
+2026-04-16T22:05:41.4230220Z     0x00000010 <uint32>=0x00000001 
+2026-04-16T22:05:41.4230540Z     0x00000011 <uint32>=0x00000000 
+2026-04-16T22:05:41.4230780Z     0x00000012 <uint32>=0x00000001 
+2026-04-16T22:05:41.4231100Z     0x00000013 <uint32>=0x00000001 
+2026-04-16T22:05:41.4231420Z     0x00000014 <uint32>=0x00000001 
+2026-04-16T22:05:41.4231720Z     0x00000015 <uint32>=0x00000001 
+2026-04-16T22:05:41.4231990Z     0x00000016 <uint32>=0x00000001 
+2026-04-16T22:05:41.4232330Z     0x00000017 <uint32>=0x00000001 
+2026-04-16T22:05:41.4232640Z     0x00000018 <uint32>=0x00000001 
+2026-04-16T22:05:41.4232990Z     0x00000019 <uint32>=0x00000001 
+2026-04-16T22:05:41.4233250Z     0x0000001A <uint32>=0x00000001 
+2026-04-16T22:05:41.5102910Z found cert "Developer ID Application: Mayo Takanashi (***)" with organization "Mayo Takanashi"
+2026-04-16T22:05:41.5148870Z      Signing with identity "Developer ID Application: Mayo Takanashi (***)"
+2026-04-16T22:05:41.5149810Z Signing with identity "Developer ID Application: Mayo Takanashi (***)"
+2026-04-16T22:05:41.5150630Z Signing /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app/Contents/MacOS/koharu
+2026-04-16T22:05:41.5389270Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app/Contents/MacOS/koharu: replacing existing signature
+2026-04-16T22:05:41.9590810Z Signing with identity "Developer ID Application: Mayo Takanashi (***)"
+2026-04-16T22:05:41.9591680Z Signing /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app
+2026-04-16T22:05:41.9866150Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app: replacing existing signature
+2026-04-16T22:05:44.9320470Z Signing with identity "Developer ID Application: Mayo Takanashi (***)"
+2026-04-16T22:05:44.9374410Z Signing /var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/.tmpyCJOBX/koharu.zip
+2026-04-16T22:05:45.0843790Z Notarizing /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app
+2026-04-16T22:06:28.4616190Z Notarizing Finished with status Accepted for id 0f28c9f5-f279-4739-8bdc-fd23f7071536 (Processing complete)
+2026-04-16T22:06:28.4621550Z Stapling app...
+2026-04-16T22:06:30.7324290Z     Bundling koharu_0.44.6_aarch64.dmg (/Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/dmg/koharu_0.44.6_aarch64.dmg)
+2026-04-16T22:06:30.7716200Z      Running bundle_dmg.sh
+2026-04-16T22:06:57.2711160Z 1 identity imported.
+2026-04-16T22:06:57.3161930Z keychain: "/Users/runner/Library/Keychains/jU1AOt2RSnfHrDqJ.keychain-db"
+2026-04-16T22:06:57.3163520Z version: 512
+2026-04-16T22:06:57.3164460Z class: 0x00000010 
+2026-04-16T22:06:57.3164830Z attributes:
+2026-04-16T22:06:57.3165230Z     0x00000000 <uint32>=0x00000010 
+2026-04-16T22:06:57.3167120Z     0x00000001 <blob>="Mayo Takanashi"
+2026-04-16T22:06:57.3168070Z     0x00000002 <blob>=<NULL>
+2026-04-16T22:06:57.3170340Z     0x00000003 <uint32>=0x00000001 
+2026-04-16T22:06:57.3171720Z     0x00000004 <uint32>=0x00000000 
+2026-04-16T22:06:57.3172340Z     0x00000005 <uint32>=0x00000000 
+2026-04-16T22:06:57.3172850Z     0x00000006 <blob>=0x23DC561A6AD60E497B248BC202B203AA76F49A71  "#\334V\032j\326\016I{$\213\302\002\262\003\252v\364\232q"
+2026-04-16T22:06:57.3173350Z     0x00000007 <blob>=<NULL>
+2026-04-16T22:06:57.3174200Z     0x00000008 <blob>=0x7B38373139316361322D306663392D313164342D383439612D3030303530326235323132327D00  "{87191ca2-0fc9-11d4-849a-000502b52122}\000"
+2026-04-16T22:06:57.3174840Z     0x00000009 <uint32>=0x0000002A  "\000\000\000*"
+2026-04-16T22:06:57.3175200Z     0x0000000A <uint32>=0x00000800 
+2026-04-16T22:06:57.3175460Z     0x0000000B <uint32>=0x00000800 
+2026-04-16T22:06:57.3436010Z     0x0000000C <blob>=0x0000000000000000 
+2026-04-16T22:06:57.3436320Z     0x0000000D <blob>=0x0000000000000000 
+2026-04-16T22:06:57.3436690Z     0x0000000E <uint32>=0x00000001 
+2026-04-16T22:06:57.3436940Z     0x0000000F <uint32>=0x00000001 
+2026-04-16T22:06:57.3437210Z     0x00000010 <uint32>=0x00000001 
+2026-04-16T22:06:57.3437470Z     0x00000011 <uint32>=0x00000000 
+2026-04-16T22:06:57.3437700Z     0x00000012 <uint32>=0x00000001 
+2026-04-16T22:06:57.3438160Z     0x00000013 <uint32>=0x00000001 
+2026-04-16T22:06:57.3438720Z     0x00000014 <uint32>=0x00000001 
+2026-04-16T22:06:57.3438940Z     0x00000015 <uint32>=0x00000001 
+2026-04-16T22:06:57.3443940Z     0x00000016 <uint32>=0x00000001 
+2026-04-16T22:06:57.3445130Z     0x00000017 <uint32>=0x00000001 
+2026-04-16T22:06:57.3445380Z     0x00000018 <uint32>=0x00000001 
+2026-04-16T22:06:57.3445790Z     0x00000019 <uint32>=0x00000001 
+2026-04-16T22:06:57.3446070Z     0x0000001A <uint32>=0x00000001 
+2026-04-16T22:06:57.4801630Z found cert "Developer ID Application: Mayo Takanashi (***)" with organization "Mayo Takanashi"
+2026-04-16T22:06:57.4807010Z      Signing with identity "Developer ID Application: Mayo Takanashi (***)"
+2026-04-16T22:06:57.4807520Z Signing with identity "Developer ID Application: Mayo Takanashi (***)"
+2026-04-16T22:06:57.4810210Z Signing /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/dmg/koharu_0.44.6_aarch64.dmg
+2026-04-16T22:07:00.3038860Z     Bundling /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app.tar.gz (/Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app.tar.gz)
+2026-04-16T22:07:00.3039810Z     Finished 2 bundles at:
+2026-04-16T22:07:00.3040300Z         /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app
+2026-04-16T22:07:00.3041020Z         /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/dmg/koharu_0.44.6_aarch64.dmg
+2026-04-16T22:07:00.3041770Z         /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app.tar.gz (updater)
+2026-04-16T22:07:00.3042270Z 
+2026-04-16T22:07:00.6101530Z     Finished 1 updater signature at:
+2026-04-16T22:07:00.6102180Z         /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app.tar.gz.sig
+2026-04-16T22:07:00.6102660Z 
+2026-04-16T22:07:01.3069550Z Looking for artifacts in:
+2026-04-16T22:07:01.3080070Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/dmg/koharu_0.44.6_aarch64.dmg
+2026-04-16T22:07:01.3081990Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app
+2026-04-16T22:07:01.3083490Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app.tar.gz
+2026-04-16T22:07:01.3085240Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app.tar.gz.sig
+2026-04-16T22:07:01.3088200Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/koharu
+2026-04-16T22:07:01.3089230Z Found artifacts:
+2026-04-16T22:07:01.3090290Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/dmg/koharu_0.44.6_aarch64.dmg
+2026-04-16T22:07:01.3092870Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app
+2026-04-16T22:07:01.3094670Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app.tar.gz
+2026-04-16T22:07:01.3096660Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/bundle/macos/koharu.app.tar.gz.sig
+2026-04-16T22:07:01.3097460Z /Users/runner/work/koharu/koharu/target/aarch64-apple-darwin/release/koharu
+2026-04-16T22:07:01.7767990Z Couldn't find release with tag 0.44.6. Creating one.
+2026-04-16T22:07:02.7594910Z Uploading koharu_0.44.6_aarch64.dmg...
+2026-04-16T22:07:08.3780790Z Uploading koharu_aarch64.app.tar.gz...
+2026-04-16T22:07:12.0920450Z Uploading koharu_aarch64.app.tar.gz.sig...
+2026-04-16T22:07:12.5090400Z Uploading koharu_darwin_aarch64...
+2026-04-16T22:07:18.0666300Z Uploading latest.json...
+2026-04-16T22:07:18.6323820Z Post job cleanup.
+2026-04-16T22:07:19.1161560Z Post job cleanup.
+2026-04-16T22:07:19.3199660Z [command]/opt/homebrew/bin/git version
+2026-04-16T22:07:19.3376770Z git version 2.53.0
+2026-04-16T22:07:19.3398340Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/59c03c13-cc50-4c02-a1ca-3f69147c505c/.gitconfig'
+2026-04-16T22:07:19.3406330Z Temporarily overriding HOME='/Users/runner/work/_temp/59c03c13-cc50-4c02-a1ca-3f69147c505c' before making global git config changes
+2026-04-16T22:07:19.3407260Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-16T22:07:19.3409890Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/koharu/koharu
+2026-04-16T22:07:19.3537210Z Removing SSH command configuration
+2026-04-16T22:07:19.3550860Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-16T22:07:19.3652680Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-16T22:07:19.6242370Z Removing HTTP extra header
+2026-04-16T22:07:19.6290360Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-16T22:07:19.6442400Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-16T22:07:19.8256050Z Removing includeIf entries pointing to credentials config files
+2026-04-16T22:07:19.8358840Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-16T22:07:19.8460820Z includeif.gitdir:/Users/runner/work/koharu/koharu/.git.path
+2026-04-16T22:07:19.8562130Z includeif.gitdir:/Users/runner/work/koharu/koharu/.git/worktrees/*.path
+2026-04-16T22:07:19.8646600Z includeif.gitdir:/github/workspace/.git.path
+2026-04-16T22:07:19.8650430Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-04-16T22:07:19.8652130Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/koharu/koharu/.git.path
+2026-04-16T22:07:19.8653040Z /Users/runner/work/_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T22:07:19.8661340Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/koharu/koharu/.git.path /Users/runner/work/_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T22:07:19.8665520Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/koharu/koharu/.git/worktrees/*.path
+2026-04-16T22:07:19.8669090Z /Users/runner/work/_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T22:07:19.8673540Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/koharu/koharu/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T22:07:19.8801270Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-04-16T22:07:19.8869990Z /github/runner_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T22:07:19.8877680Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T22:07:19.9037460Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-04-16T22:07:19.9135830Z /github/runner_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T22:07:19.9153620Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config
+2026-04-16T22:07:19.9243470Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-16T22:07:20.0589900Z Removing credentials config '/Users/runner/work/_temp/git-credentials-44732433-7f2c-47fa-ab5c-60e4c7fb303b.config'
+2026-04-16T22:07:20.0752500Z Cleaning up orphan processes

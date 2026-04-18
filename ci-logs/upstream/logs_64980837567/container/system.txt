@@ -1,0 +1,8 @@
+2026-04-16T22:20:06.0130000Z Evaluating container.if
+2026-04-16T22:20:06.0130000Z Evaluating: success()
+2026-04-16T22:20:06.0130000Z Result: true
+2026-04-16T22:20:06.0160000Z Requested labels: ubuntu-latest
+2026-04-16T22:20:06.0160000Z Job defined at: mayocream/koharu/.github/workflows/release.yml@refs/tags/0.44.6
+2026-04-16T22:20:06.0160000Z Waiting for a runner to pick up this job...
+2026-04-16T22:20:09.2080000Z Job is waiting for a hosted runner to come online.
+2026-04-16T22:20:09.2080000Z Job is about to start running on the hosted runner: GitHub Actions 1000274360

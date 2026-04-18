@@ -65,6 +65,11 @@ jobs:
         uses: ilammy/msvc-dev-cmd@v1
         if: matrix.platform == 'windows-latest'
 
+      - name: Set LIBZ_SYS_STATIC for Windows
+        if: matrix.platform == 'windows-latest'
+        run: echo "LIBZ_SYS_STATIC=1" >> $env:GITHUB_ENV
+        shell: pwsh
+
       - name: Install dependencies
         run: bun install
 
