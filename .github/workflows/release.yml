@@ -75,10 +75,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          CHANGELOG=$(bun git-cliff --current --strip all | head -c 120000)
           {
-            echo 'release_body<<EOF'
-            bun git-cliff --current --strip all | head -c 120000
-            echo 'EOF'
+            echo "release_body<<EOF"
+            echo "$CHANGELOG"
+            echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
       - name: Install trusted-signing-cli (windows only)
