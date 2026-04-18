@@ -152,6 +152,7 @@ candle-core = { git = "https://github.com/mayocream/candle", branch = "cuda-dyna
 candle-nn = { git = "https://github.com/mayocream/candle", branch = "cuda-dynamic-loading" }
 ug = { git = "https://github.com/mayocream/ug", branch = "cuda-dynamic-loading" }
 ug-cuda = { git = "https://github.com/mayocream/ug", branch = "cuda-dynamic-loading" }
+libz-sys = "1.1.25"
 
 [profile.dev.package.image]
 opt-level = 3
