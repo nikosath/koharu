@@ -31,7 +31,7 @@ jobs:
           - platform: '${{ inputs.platform }}'
             args: ${{ inputs.platform == 'macos-latest' && '--target aarch64-apple-darwin' || '' }}
 
-    runs-on: ${{ matrix.platform == 'windows-latest' && 'windows-2025@20260405.77.1' || matrix.platform }}
+    runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v6
         with:
